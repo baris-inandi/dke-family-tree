@@ -33,7 +33,7 @@ const nodeTypes = {
 // - If there are multiple roots, each root is a family
 // - If there's a single root (e.g. Adam Akkach), treat that root's
 //   immediate children as separate families so branches get distinct colors
-// IMPORTANT: key by Brother object, not name, so multiple \"REDACTED\"
+// IMPORTANT: key by Brother object, not name, so multiple "REDACTED"
 // nodes in different branches still get their branch's family color.
 function calculateFamilyColors(data: Brother[]): Map<Brother, string> {
   const familyColors = new Map<Brother, string>();
@@ -323,8 +323,8 @@ function FlowCanvas({
       attributionPosition="bottom-left"
     >
       <Background />
-      <MiniMap />
-      <Controls position="center-right" />
+      <MiniMap zoomable />
+      <Controls showInteractive={false} position="center-right" />
     </ReactFlow>
   );
 }
@@ -391,6 +391,22 @@ export default function FamilyTree() {
     [hideRedacted, viewClass, familyColors, colorBy]
   );
 
+  const resultCount = useMemo(() => {
+    return initialNodes.filter((node) => {
+      const data = node.data as {
+        faded?: boolean;
+        redactedFaded?: boolean;
+      };
+      return !data.faded && !data.redactedFaded;
+    }).length;
+  }, [initialNodes]);
+
+  const handleClearFilters = () => {
+    setHideRedacted(false);
+    setViewClass("All Classes");
+    setSearchQuery("");
+  };
+
   return (
     <div className="w-full h-screen relative">
       <Sidebar
@@ -405,6 +421,8 @@ export default function FamilyTree() {
         availableClasses={availableClasses}
         searchQuery={searchQuery}
         onSearchQueryChange={setSearchQuery}
+        resultCount={resultCount}
+        onClearFilters={handleClearFilters}
       />
 
       <ReactFlowProvider>

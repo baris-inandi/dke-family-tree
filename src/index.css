@@ -2,8 +2,8 @@
 
 /* Ensure React Flow edges are visible */
 .react-flow__edge-path {
-  stroke-width: 3px !important;
-  stroke: #3b82f6 !important;
+  stroke-width: 2px !important;
+  stroke: #9ca3af !important;
 }
 
 .react-flow__edge {
@@ -18,7 +18,7 @@
   50% {
     transform: scale(1);
   }
-  75% {
+  80% {
     transform: scale(1.2);
   }
   100% {

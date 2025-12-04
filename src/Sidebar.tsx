@@ -12,6 +12,8 @@ interface SidebarProps {
   availableClasses: string[];
   searchQuery: string;
   onSearchQueryChange: (value: string) => void;
+  resultCount: number;
+  onClearFilters: () => void;
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({
@@ -26,6 +28,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
   availableClasses,
   searchQuery,
   onSearchQueryChange,
+  resultCount,
+  onClearFilters,
 }) => {
   const searchInputRef = React.useRef<HTMLInputElement | null>(null);
 
@@ -50,7 +54,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
   return (
     <div className="absolute p-4 top-0 left-0 h-full w-96 z-50 pointer-events-none">
-      <div className="h-full w-full bg-white/50 backdrop-blur-md border border-gray-300 rounded-xl shadow-lg pointer-events-auto p-4 overflow-y-auto">
+      <div className="h-full w-full bg-white/50 backdrop-blur-md border border-gray-300 rounded-xl shadow-lg pointer-events-auto p-4 overflow-y-auto flex flex-col">
         <h2 className="text-2xl font-bold mb-4">∆KE</h2>
 
         {/* Stats */}
@@ -75,7 +79,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
           </p>
         </div>
 
-        <div className="space-y-6">
+        <div className="space-y-6 flex-1">
           {/* Hide Redacted Toggle */}
           <div>
             <label className="flex items-center space-x-2 cursor-pointer">
@@ -137,6 +141,21 @@ export const Sidebar: React.FC<SidebarProps> = ({
               ))}
             </select>
           </div>
+        </div>
+
+        {/* Result count */}
+        <div className="mt-4 pt-3 border-t border-gray-200 text-sm text-gray-700">
+          <span className="font-medium">Results:</span> {resultCount}
+        </div>
+
+        {/* Clear Filters Button */}
+        <div className="mt-4">
+          <button
+            onClick={onClearFilters}
+            className="w-full px-4 py-2 bg-gray-200 hover:bg-gray-300 text-gray-800 rounded-md text-sm font-medium transition-colors"
+          >
+            Clear Filters
+          </button>
         </div>
       </div>
     </div>
