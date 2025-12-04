@@ -4,8 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
+    "tree": "bun ./tree/compile.ts",
+    "dev": "bun tree && vite",
+    "build": "bun tree && tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },

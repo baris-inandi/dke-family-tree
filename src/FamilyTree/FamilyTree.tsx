@@ -13,7 +13,7 @@ import {
 } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
 import { useEffect, useMemo, useState } from "react";
-import familyTreeData from "../../FAMILYTREE.json";
+import familyTreeData from "../../tree/tree.json";
 import { getSequentialColor } from "../lib/colors";
 import { GREEK_ORDER } from "../lib/greekAlphabet";
 import { Sidebar } from "../Sidebar";

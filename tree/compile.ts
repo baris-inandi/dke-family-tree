@@ -1,8 +1,8 @@
 import { readFileSync, writeFileSync } from "fs";
 import { join } from "path";
 
-const inputFilename = "FAMILYTREE.txt";
-const outputFilename = "FAMILYTREE.json";
+const inputFilename = "./FAMILYTREE.txt";
+const outputFilename = "./tree/tree.json";
 
 interface Brother {
   name: string;
@@ -80,11 +80,10 @@ function main() {
   const inputPath = join(cwd, inputFilename);
   const outputPath = join(cwd, outputFilename);
 
-  console.log(`Reading ${inputPath}...`);
+  console.log(`Reading from ${inputPath}...`);
   const content = readFileSync(inputPath, "utf-8");
   const lines = content.split("\n");
 
-  console.log("Parsing lines...");
   const parsedLines: Line[] = [];
   for (let i = 0; i < lines.length; i++) {
     const parsed = parseLine(lines[i]);
@@ -93,15 +92,13 @@ function main() {
     }
   }
 
-  console.log("Building tree structure...");
   const tree = buildTree(parsedLines);
 
-  console.log("Writing JSON file...");
   const json = JSON.stringify(tree, null, 2);
   writeFileSync(outputPath, json, "utf-8");
 
-  console.log(`✓ Successfully compiled to ${outputPath}`);
-  console.log(`  Total brothers: ${countBrothers(tree)}`);
+  console.log(`Successfully compiled to ${outputPath}`);
+  console.log(`Total brothers: ${countBrothers(tree)}`);
 }
 
 function countBrothers(tree: Brother[]): number {
