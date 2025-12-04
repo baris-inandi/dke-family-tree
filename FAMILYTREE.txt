@@ -83,7 +83,7 @@ Adam Akkach, Alpha
                         Chris Pyle, Lambda
                             Mikhail Utyashev, Nu
                         Lex Tremblay, Mu
-                            Vinny Fardella, Nu
+                            Vincenzo Fardella, Nu
                     Kai Barbara, Iota
                         Chris Bialzik, Kappa
                             Sid Chandra, Nu

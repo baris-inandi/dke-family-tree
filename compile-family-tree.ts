@@ -1,7 +1,7 @@
 import { readFileSync, writeFileSync } from "fs";
 import { join } from "path";
 
-const inputFilename = "FAMILYTREE";
+const inputFilename = "FAMILYTREE.txt";
 const outputFilename = "FAMILYTREE.json";
 
 interface Brother {

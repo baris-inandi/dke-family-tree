@@ -22,22 +22,39 @@ function getClassColor(className: string): string {
 export const BrotherNode = ({
   data,
 }: {
-  data: { name: string; class: string };
+  data: {
+    name: string;
+    class: string;
+    faded?: boolean;
+    familyColor?: string;
+    colorBy?: "class" | "family";
+  };
 }) => {
   const isRedacted = data.name === "REDACTED";
-  const classColor = getClassColor(data.class);
+  const colorBy = data.colorBy || "class";
+  const color =
+    colorBy === "family" && data.familyColor
+      ? data.familyColor
+      : getClassColor(data.class);
+
+  const faded = data.faded ?? false;
+  const opacity = faded ? 0.3 : 1.0;
 
   return (
     <div
       className="px-4 py-2 rounded-lg shadow-md border-2 bg-white min-w-[120px] text-center relative"
-      style={{ borderColor: classColor }}
+      style={{
+        borderColor: color,
+        opacity,
+        filter: faded ? "grayscale(1)" : undefined,
+      }}
     >
       {/* Source handle at the bottom for outgoing edges */}
       <Handle
         type="source"
         position={Position.Bottom}
         id="source"
-        style={{ background: classColor }}
+        style={{ background: color, opacity }}
         isConnectable={false}
       />
       {/* Target handle at the top for incoming edges */}
@@ -45,7 +62,7 @@ export const BrotherNode = ({
         type="target"
         position={Position.Top}
         id="target"
-        style={{ background: classColor }}
+        style={{ background: color, opacity }}
         isConnectable={false}
       />
       <div className="font-semibold text-sm">
@@ -55,7 +72,7 @@ export const BrotherNode = ({
           data.name
         )}
       </div>
-      <div className="text-xs mt-1 font-medium" style={{ color: classColor }}>
+      <div className="text-xs mt-1 font-medium" style={{ color }}>
         {data.class !== "null" && data.class !== "unknown" ? data.class : ""}
       </div>
     </div>
