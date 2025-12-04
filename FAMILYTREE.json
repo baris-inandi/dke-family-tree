@@ -1,0 +1,613 @@
+[
+  {
+    "name": "Adam Akkach",
+    "class": "Alpha",
+    "children": [
+      {
+        "name": "Steve Holt",
+        "class": "Alpha",
+        "children": [
+          {
+            "name": "REDACTED",
+            "class": "unknown",
+            "children": [
+              {
+                "name": "REDACTED",
+                "class": "unknown",
+                "children": [
+                  {
+                    "name": "Marcus Yi",
+                    "class": "Theta",
+                    "children": [
+                      {
+                        "name": "Aashish Hassam",
+                        "class": "Iota",
+                        "children": [
+                          {
+                            "name": "Matt Kohen",
+                            "class": "Lambda",
+                            "children": [
+                              {
+                                "name": "Ryan Alexander",
+                                "class": "Nu",
+                                "children": []
+                              },
+                              {
+                                "name": "Ryan Hatcher",
+                                "class": "Nu",
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Briggs Kroeger",
+                            "class": "Lambda",
+                            "children": [
+                              {
+                                "name": "Brendan Keefe",
+                                "class": "Nu",
+                                "children": []
+                              },
+                              {
+                                "name": "James Mallon",
+                                "class": "Nu",
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Evan Yee",
+                        "class": "Kappa",
+                        "children": [
+                          {
+                            "name": "Dom Cheng",
+                            "class": "Nu",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Matt Bertoncini",
+                        "class": "Nu",
+                        "children": []
+                      },
+                      {
+                        "name": "Brayden Ramseier",
+                        "class": "Lambda",
+                        "children": [
+                          {
+                            "name": "Zach Upson",
+                            "class": "Mu",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Umut Tanrivierdi",
+                "class": "Epsilon",
+                "children": [
+                  {
+                    "name": "Armagan Karakas",
+                    "class": "Eta",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Adil Ikiz",
+                "class": "Epsilon",
+                "children": [
+                  {
+                    "name": "Derek Uhrich",
+                    "class": "Kappa",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Calvin Norstad",
+        "class": "Alpha",
+        "children": [
+          {
+            "name": "REDACTED",
+            "class": "unknown",
+            "children": [
+              {
+                "name": "Sepehr Rashigi",
+                "class": "null",
+                "children": []
+              },
+              {
+                "name": "Matt O'Rourke",
+                "class": "Epsilon",
+                "children": [
+                  {
+                    "name": "Bobby Palazzi",
+                    "class": "Iota",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Kieran Heneghan",
+            "class": "Zeta",
+            "children": [
+              {
+                "name": "Brandon Petersen",
+                "class": "Iota",
+                "children": []
+              },
+              {
+                "name": "Ellis Coco",
+                "class": "Lambda",
+                "children": [
+                  {
+                    "name": "George Giakouminakis",
+                    "class": "Mu",
+                    "children": [
+                      {
+                        "name": "Gio Malpartida",
+                        "class": "Nu",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Finn Oldenburg",
+                    "class": "Lambda",
+                    "children": [
+                      {
+                        "name": "Nick Vallary",
+                        "class": "Nu",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Matt Lowe",
+        "class": "Alpha",
+        "children": [
+          {
+            "name": "John Berry",
+            "class": "Delta",
+            "children": [
+              {
+                "name": "Rod Tavangar",
+                "class": "Theta",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tanner Lederman",
+        "class": "Alpha",
+        "children": [
+          {
+            "name": "Jacob Gottesman",
+            "class": "Zeta",
+            "children": [
+              {
+                "name": "Batu Isik",
+                "class": "Eta",
+                "children": [
+                  {
+                    "name": "Cameron Hornbarger",
+                    "class": "Theta",
+                    "children": [
+                      {
+                        "name": "Jack Podesta",
+                        "class": "Kappa",
+                        "children": [
+                          {
+                            "name": "Alex Keefe",
+                            "class": "Lambda",
+                            "children": [
+                              {
+                                "name": "David Panin",
+                                "class": "Nu",
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Brian Yang",
+                            "class": "Nu",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Ben Marler",
+                    "class": "Kappa",
+                    "children": [
+                      {
+                        "name": "Harrison Feldman",
+                        "class": "Mu",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Mike Grbic",
+                "class": "Kappa",
+                "children": [
+                  {
+                    "name": "Matt Tobin",
+                    "class": "Nu",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Agastya Das",
+        "class": "Alpha",
+        "children": [
+          {
+            "name": "Tom Glassman",
+            "class": "Zeta",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Jacob Horowitz",
+        "class": "Alpha",
+        "children": [
+          {
+            "name": "Gio Panagiotakis",
+            "class": "Epsilon",
+            "children": [
+              {
+                "name": "Nick Condoleo",
+                "class": "Iota",
+                "children": [
+                  {
+                    "name": "Max Mayer",
+                    "class": "Lambda",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Ben Agatone",
+                "class": "Iota",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Sam Gildea",
+            "class": "Alpha",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Tyler Kavanaugh",
+        "class": "Alpha",
+        "children": [
+          {
+            "name": "Alex Levin",
+            "class": "Epsilon",
+            "children": [
+              {
+                "name": "Nate Nagel",
+                "class": "Iota",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Evan Massa",
+        "class": "Alpha",
+        "children": [
+          {
+            "name": "Harry Merlin",
+            "class": "Epsilon",
+            "children": [
+              {
+                "name": "Ben Clott",
+                "class": "Zeta",
+                "children": [
+                  {
+                    "name": "George Foster",
+                    "class": "Iota",
+                    "children": [
+                      {
+                        "name": "Marley McKinsey",
+                        "class": "Lambda",
+                        "children": [
+                          {
+                            "name": "Thomas Clark",
+                            "class": "Mu",
+                            "children": [
+                              {
+                                "name": "Hunter Lund",
+                                "class": "Nu",
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Will von Ahnen",
+        "class": "Alpha",
+        "children": [
+          {
+            "name": "Noah Mack",
+            "class": "Alpha",
+            "children": [
+              {
+                "name": "Alex Menikoff",
+                "class": "Gamma",
+                "children": [
+                  {
+                    "name": "Alex Prokey",
+                    "class": "Epsilon",
+                    "children": [
+                      {
+                        "name": "Ian Menachery",
+                        "class": "Iota",
+                        "children": [
+                          {
+                            "name": "Theo Cairns",
+                            "class": "Mu",
+                            "children": [
+                              {
+                                "name": "Guilherme Barcellos",
+                                "class": "Nu",
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Aidan Webster",
+        "class": "Alpha",
+        "children": [
+          {
+            "name": "Max Brotman",
+            "class": "Gamma",
+            "children": [
+              {
+                "name": "Matt Hiller",
+                "class": "Epsilon",
+                "children": [
+                  {
+                    "name": "Chris Wilk",
+                    "class": "Eta",
+                    "children": [
+                      {
+                        "name": "Luke Lange",
+                        "class": "Iota",
+                        "children": [
+                          {
+                            "name": "Chris Pyle",
+                            "class": "Lambda",
+                            "children": [
+                              {
+                                "name": "Mikhail Utyashev",
+                                "class": "Nu",
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Lex Tremblay",
+                            "class": "Mu",
+                            "children": [
+                              {
+                                "name": "Vinny Fardella",
+                                "class": "Nu",
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Kai Barbara",
+                        "class": "Iota",
+                        "children": [
+                          {
+                            "name": "Chris Bialzik",
+                            "class": "Kappa",
+                            "children": [
+                              {
+                                "name": "Sid Chandra",
+                                "class": "Nu",
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Jack Guo",
+                            "class": "Nu",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Klaus Ohlweiler",
+                "class": "Iota",
+                "children": [
+                  {
+                    "name": "Tyler Heidke",
+                    "class": "Lambda",
+                    "children": [
+                      {
+                        "name": "Jason Liku",
+                        "class": "Nu",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Tim Vaquero",
+            "class": "Epsilon",
+            "children": [
+              {
+                "name": "Chase Houser",
+                "class": "Iota",
+                "children": [
+                  {
+                    "name": "Zach Berde",
+                    "class": "Kappa",
+                    "children": [
+                      {
+                        "name": "Harrison Mitchell",
+                        "class": "Lambda",
+                        "children": [
+                          {
+                            "name": "Fernando Ramos",
+                            "class": "Nu",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Ian Cole",
+                        "class": "Nu",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "REDACTED",
+        "class": "Alpha",
+        "children": [
+          {
+            "name": "Max Leblang",
+            "class": "null",
+            "children": [
+              {
+                "name": "KJ Graham",
+                "class": "Eta",
+                "children": [
+                  {
+                    "name": "Jonathan Grbic",
+                    "class": "Iota",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "REDACTED",
+        "class": "Alpha",
+        "children": [
+          {
+            "name": "Martin Bulanowski",
+            "class": "Beta",
+            "children": [
+              {
+                "name": "Josh Weissert",
+                "class": "Epsilon",
+                "children": [
+                  {
+                    "name": "Declan Javers",
+                    "class": "Eta",
+                    "children": [
+                      {
+                        "name": "Jayden Romano",
+                        "class": "Lambda",
+                        "children": [
+                          {
+                            "name": "Luke Daniel",
+                            "class": "Mu",
+                            "children": [
+                              {
+                                "name": "Beck Carlson",
+                                "class": "Nu",
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Baris Inandi",
+                            "class": "Nu",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Fred Hodgson",
+                    "class": "Kappa",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

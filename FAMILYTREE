@@ -1,0 +1,112 @@
+# Add Brothers to this file using the "Name, Class" i.e. "John Doe, Alpha" notation
+# Indent with four spaces to signify big/little relationship
+# To redact someone, use "REDACTED, class"
+
+Adam Akkach, Alpha
+    Steve Holt, Alpha
+        REDACTED, unknown
+            REDACTED, unknown
+                Marcus Yi, Theta
+                    Aashish Hassam, Iota
+                        Matt Kohen, Lambda
+                            Ryan Alexander, Nu
+                            Ryan Hatcher, Nu
+                        Briggs Kroeger, Lambda
+                            Brendan Keefe, Nu
+                            James Mallon, Nu
+                    Evan Yee, Kappa
+                        Dom Cheng, Nu
+                    Matt Bertoncini, Nu
+                    Brayden Ramseier, Lambda
+                        Zach Upson, Mu
+            Umut Tanrivierdi, Epsilon
+                Armagan Karakas, Eta
+            Adil Ikiz, Epsilon
+                Derek Uhrich, Kappa
+    Calvin Norstad, Alpha
+        REDACTED, unknown
+            Sepehr Rashigi, null
+            Matt O'Rourke, Epsilon
+                Bobby Palazzi, Iota
+        Kieran Heneghan, Zeta
+            Brandon Petersen, Iota
+            Ellis Coco, Lambda
+                George Giakouminakis, Mu
+                    Gio Malpartida, Nu
+                Finn Oldenburg, Lambda
+                    Nick Vallary, Nu
+    Matt Lowe, Alpha
+        John Berry, Delta
+            Rod Tavangar, Theta
+    Tanner Lederman, Alpha
+        Jacob Gottesman, Zeta
+            Batu Isik, Eta
+                Cameron Hornbarger, Theta
+                    Jack Podesta, Kappa
+                        Alex Keefe, Lambda
+                            David Panin, Nu
+                        Brian Yang, Nu
+                Ben Marler, Kappa
+                    Harrison Feldman, Mu
+            Mike Grbic, Kappa
+                Matt Tobin, Nu
+    Agastya Das, Alpha
+        Tom Glassman, Zeta
+    Jacob Horowitz, Alpha
+        Gio Panagiotakis, Epsilon
+            Nick Condoleo, Iota
+                Max Mayer, Lambda
+            Ben Agatone, Iota
+        Sam Gildea, Alpha
+    Tyler Kavanaugh, Alpha
+        Alex Levin, Epsilon
+            Nate Nagel, Iota
+    Evan Massa, Alpha
+        Harry Merlin, Epsilon
+            Ben Clott, Zeta
+                George Foster, Iota
+                    Marley McKinsey, Lambda
+                        Thomas Clark, Mu
+                            Hunter Lund, Nu
+    Will von Ahnen, Alpha
+        Noah Mack, Alpha
+            Alex Menikoff, Gamma
+                Alex Prokey, Epsilon
+                    Ian Menachery, Iota
+                        Theo Cairns, Mu
+                            Guilherme Barcellos, Nu
+    Aidan Webster, Alpha
+        Max Brotman, Gamma
+            Matt Hiller, Epsilon
+                Chris Wilk, Eta
+                    Luke Lange, Iota
+                        Chris Pyle, Lambda
+                            Mikhail Utyashev, Nu
+                        Lex Tremblay, Mu
+                            Vinny Fardella, Nu
+                    Kai Barbara, Iota
+                        Chris Bialzik, Kappa
+                            Sid Chandra, Nu
+                        Jack Guo, Nu
+            Klaus Ohlweiler, Iota
+                Tyler Heidke, Lambda
+                    Jason Liku, Nu
+        Tim Vaquero, Epsilon
+            Chase Houser, Iota
+                Zach Berde, Kappa
+                    Harrison Mitchell, Lambda
+                        Fernando Ramos, Nu
+                    Ian Cole, Nu
+    REDACTED, Alpha
+        Max Leblang, null
+            KJ Graham, Eta
+                Jonathan Grbic, Iota
+    REDACTED, Alpha
+        Martin Bulanowski, Beta
+            Josh Weissert, Epsilon
+                Declan Javers, Eta
+                    Jayden Romano, Lambda
+                        Luke Daniel, Mu
+                            Beck Carlson, Nu
+                        Baris Inandi, Nu
+                Fred Hodgson, Kappa
