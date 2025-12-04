@@ -7,6 +7,7 @@ import {
   ReactFlowProvider,
   useEdgesState,
   useNodesState,
+  useReactFlow,
   type Edge,
   type Node,
 } from "@xyflow/react";
@@ -104,13 +105,8 @@ function convertToFlowData(
           brother.class === viewClass ||
           (viewClass === "All Classes" && brother.class === "unknown");
 
-        // Search-based visibility
-        const query = searchQuery.trim().toLowerCase();
-        const matchesSearch =
-          !query || brother.name.toLowerCase().includes(query);
-
-        // Single faded flag: faded if it fails class filter OR search
-        const faded = !(isTargetClass && matchesSearch);
+        // Faded flag: only based on class filter, not search
+        const faded = !isTargetClass;
 
         // Calculate width needed for this subtree
         const subtreeWidth = calculateSubtreeWidth(brother, nodeSpacing);
@@ -248,6 +244,71 @@ function convertToFlowData(
   return { nodes, edges };
 }
 
+type FlowCanvasProps = {
+  initialNodes: Node[];
+  initialEdges: Edge[];
+  searchQuery: string;
+};
+
+function FlowCanvas({
+  initialNodes,
+  initialEdges,
+  searchQuery,
+}: FlowCanvasProps) {
+  const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
+  const [edges, , onEdgesChange] = useEdgesState(initialEdges);
+  const reactFlow = useReactFlow();
+
+  // Update nodes when filters change
+  useEffect(() => {
+    setNodes(initialNodes);
+  }, [initialNodes, setNodes]);
+
+  // Center/zoom on the top matching node when search changes (debounced)
+  useEffect(() => {
+    const query = searchQuery.trim().toLowerCase();
+    if (!query) return;
+
+    const timeoutId = setTimeout(() => {
+      const match = nodes.find(
+        (node) =>
+          typeof (node.data as { name?: string })?.name === "string" &&
+          (node.data as { name?: string }).name!.toLowerCase().includes(query)
+      );
+
+      if (!match) return;
+
+      const width = (match.width as number | undefined) ?? 120;
+      const height = (match.height as number | undefined) ?? 60;
+      const centerX = match.position.x + width / 2;
+      const centerY = match.position.y + height / 2;
+
+      reactFlow.setCenter(centerX, centerY, { zoom: 1.2, duration: 300 });
+    }, 200);
+
+    return () => clearTimeout(timeoutId);
+  }, [searchQuery, nodes, reactFlow]);
+
+  return (
+    <ReactFlow
+      nodes={nodes}
+      edges={edges}
+      onNodesChange={onNodesChange}
+      onEdgesChange={onEdgesChange}
+      nodeTypes={nodeTypes}
+      connectionMode={ConnectionMode.Loose}
+      nodesDraggable={false}
+      nodesConnectable={false}
+      fitView
+      attributionPosition="bottom-left"
+    >
+      <Background />
+      <MiniMap />
+      <Controls position="center-right" />
+    </ReactFlow>
+  );
+}
+
 export default function FamilyTree() {
   const [hideRedacted, setHideRedacted] = useState(false);
   const [colorBy, setColorBy] = useState<"class" | "family">("class");
@@ -272,19 +333,11 @@ export default function FamilyTree() {
     [hideRedacted, viewClass, familyColors, colorBy, searchQuery]
   );
 
-  const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
-  const [edges, , onEdgesChange] = useEdgesState(initialEdges);
-
-  // Update nodes when filters change
-  useEffect(() => {
-    setNodes(initialNodes);
-  }, [initialNodes, setNodes]);
-
   return (
     <div className="w-full h-screen relative">
       <Sidebar
-        nodeCount={nodes.length}
-        edgeCount={edges.length}
+        nodeCount={initialNodes.length}
+        edgeCount={initialEdges.length}
         hideRedacted={hideRedacted}
         onHideRedactedChange={setHideRedacted}
         colorBy={colorBy}
@@ -296,22 +349,11 @@ export default function FamilyTree() {
       />
 
       <ReactFlowProvider>
-        <ReactFlow
-          nodes={nodes}
-          edges={edges}
-          onNodesChange={onNodesChange}
-          onEdgesChange={onEdgesChange}
-          nodeTypes={nodeTypes}
-          connectionMode={ConnectionMode.Loose}
-          nodesDraggable={false}
-          nodesConnectable={false}
-          fitView
-          attributionPosition="bottom-left"
-        >
-          <Background />
-          <MiniMap />
-          <Controls position="center-right" />
-        </ReactFlow>
+        <FlowCanvas
+          initialNodes={initialNodes}
+          initialEdges={initialEdges}
+          searchQuery={searchQuery}
+        />
       </ReactFlowProvider>
     </div>
   );

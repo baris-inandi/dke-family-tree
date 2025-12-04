@@ -42,6 +42,27 @@ export const Sidebar: React.FC<SidebarProps> = ({
   searchQuery,
   onSearchQueryChange,
 }) => {
+  const searchInputRef = React.useRef<HTMLInputElement | null>(null);
+
+  // Capture Cmd/Ctrl+F globally and focus the sidebar search input
+  React.useEffect(() => {
+    const handler = (event: KeyboardEvent) => {
+      const isMac = navigator.platform.toLowerCase().includes("mac");
+      const isCmdF =
+        isMac && event.metaKey && (event.key === "f" || event.key === "F");
+      const isCtrlF =
+        !isMac && event.ctrlKey && (event.key === "f" || event.key === "F");
+
+      if (isCmdF || isCtrlF) {
+        event.preventDefault();
+        searchInputRef.current?.focus();
+      }
+    };
+
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, []);
+
   return (
     <div className="absolute p-4 top-0 left-0 h-full w-96 z-50 pointer-events-none">
       <div className="h-full w-full bg-white/50 backdrop-blur-md border border-gray-300 rounded-xl shadow-lg pointer-events-auto p-4 overflow-y-auto">
@@ -58,6 +79,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
           <label className="block text-sm font-medium mb-1">Search</label>
           <input
             type="text"
+            ref={searchInputRef}
             value={searchQuery}
             onChange={(e) => onSearchQueryChange(e.target.value)}
             placeholder="Search brothers..."
