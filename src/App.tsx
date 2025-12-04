@@ -1,4 +1,4 @@
-import FamilyTree from "./FamilyTree";
+import FamilyTree from "./FamilyTree/FamilyTree";
 
 const App: React.FC = () => {
   return <FamilyTree />;
