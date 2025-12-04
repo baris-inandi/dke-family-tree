@@ -1,5 +1,6 @@
-const NUM_POINTS_IN_COLOR_WHEEL_CYCLE = 10;
-const LIGHTNESS_STEP_PERCENTAGE = 15;
+const NUM_POINTS_IN_COLOR_WHEEL_CYCLE = 12;
+const LIGHTNESS_STEP_PERCENTAGE = 7;
+const SATURATION_PERCENTAGE = 95;
 
 export function getSequentialColor(index: number): string {
   const i = Math.max(0, Math.floor(index));
@@ -11,9 +12,12 @@ export function getSequentialColor(index: number): string {
   const lightnessIndex = Math.floor(i / cycleSize);
 
   const hue = (hueIndex * hueStep) % 360;
-  const baseLightness = 20;
-  const lightness = Math.min(100, baseLightness + lightnessIndex * LIGHTNESS_STEP_PERCENTAGE);
-  const saturation = 90;
+  const baseLightness = 25;
+  const lightness = Math.min(
+    100,
+    baseLightness + lightnessIndex * LIGHTNESS_STEP_PERCENTAGE
+  );
+  const saturation = SATURATION_PERCENTAGE;
 
   return `hsl(${hue} ${saturation}% ${lightness}%)`;
 }

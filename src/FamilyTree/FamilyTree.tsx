@@ -15,6 +15,7 @@ import "@xyflow/react/dist/style.css";
 import { useEffect, useMemo, useState } from "react";
 import familyTreeData from "../../FAMILYTREE.json";
 import { getSequentialColor } from "../lib/colors";
+import { GREEK_ORDER } from "../lib/greekAlphabet";
 import { Sidebar } from "../Sidebar";
 import { BrotherNode } from "./BrotherNode";
 
@@ -346,6 +347,45 @@ export default function FamilyTree() {
     []
   );
 
+  // Dynamically derive all classes present in the data,
+  // sorted by Greek order when possible so new classes
+  // automatically show up in the sidebar dropdown.
+  const availableClasses = useMemo(() => {
+    const classes = new Set<string>();
+
+    function collect(brothers: Brother[]) {
+      for (const b of brothers) {
+        if (
+          b.class &&
+          b.class !== "null" &&
+          b.class !== "unknown" &&
+          b.class !== "All Classes"
+        ) {
+          classes.add(b.class);
+        }
+        if (b.children && b.children.length > 0) {
+          collect(b.children);
+        }
+      }
+    }
+
+    collect(familyTreeData as Brother[]);
+
+    const orderIndex = new Map<string, number>();
+    GREEK_ORDER.forEach((name, idx) => orderIndex.set(name, idx));
+
+    return Array.from(classes).sort((a, b) => {
+      const ai = orderIndex.has(a)
+        ? orderIndex.get(a)!
+        : Number.MAX_SAFE_INTEGER;
+      const bi = orderIndex.has(b)
+        ? orderIndex.get(b)!
+        : Number.MAX_SAFE_INTEGER;
+      if (ai !== bi) return ai - bi;
+      return a.localeCompare(b);
+    });
+  }, []);
+
   const { nodes: initialNodes, edges: initialEdges } = useMemo(
     () =>
       convertToFlowData(
@@ -369,6 +409,7 @@ export default function FamilyTree() {
         onColorByChange={setColorBy}
         viewClass={viewClass}
         onViewClassChange={setViewClass}
+        availableClasses={availableClasses}
         searchQuery={searchQuery}
         onSearchQueryChange={setSearchQuery}
       />

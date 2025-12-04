@@ -9,26 +9,10 @@ interface SidebarProps {
   onColorByChange: (value: "class" | "family") => void;
   viewClass: string;
   onViewClassChange: (value: string) => void;
+  availableClasses: string[];
   searchQuery: string;
   onSearchQueryChange: (value: string) => void;
 }
-
-const CLASSES = [
-  "All Classes",
-  "Alpha",
-  "Beta",
-  "Gamma",
-  "Delta",
-  "Epsilon",
-  "Zeta",
-  "Eta",
-  "Theta",
-  "Iota",
-  "Kappa",
-  "Lambda",
-  "Mu",
-  "Nu",
-];
 
 export const Sidebar: React.FC<SidebarProps> = ({
   nodeCount,
@@ -39,6 +23,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
   onColorByChange,
   viewClass,
   onViewClassChange,
+  availableClasses,
   searchQuery,
   onSearchQueryChange,
 }) => {
@@ -145,7 +130,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
               onChange={(e) => onViewClassChange(e.target.value)}
               className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-sm"
             >
-              {CLASSES.map((className) => (
+              {["All Classes", ...availableClasses].map((className) => (
                 <option key={className} value={className}>
                   {className}
                 </option>
