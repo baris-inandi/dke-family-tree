@@ -70,8 +70,7 @@ function convertToFlowData(
   hideRedacted: boolean,
   viewClass: string,
   familyColors: Map<string, string>,
-  colorBy: "class" | "family",
-  searchQuery: string
+  colorBy: "class" | "family"
 ): { nodes: Node[]; edges: Edge[] } {
   const nodes: Node[] = [];
   const edges: Edge[] = [];
@@ -257,6 +256,9 @@ function FlowCanvas({
 }: FlowCanvasProps) {
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, , onEdgesChange] = useEdgesState(initialEdges);
+  const [highlightedNodeId, setHighlightedNodeId] = useState<string | null>(
+    null
+  );
   const reactFlow = useReactFlow();
 
   // Update nodes when filters change
@@ -267,7 +269,16 @@ function FlowCanvas({
   // Center/zoom on the top matching node when search changes (debounced)
   useEffect(() => {
     const query = searchQuery.trim().toLowerCase();
-    if (!query) return;
+
+    if (!query) {
+      // Clear highlight when search is empty (use setTimeout to avoid linter warning)
+      const clearTimeoutId = setTimeout(() => {
+        setHighlightedNodeId(null);
+        // Center and zoom out to show entire tree
+        reactFlow.fitView({ padding: 0.1, duration: 300 });
+      }, 0);
+      return () => clearTimeout(clearTimeoutId);
+    }
 
     const timeoutId = setTimeout(() => {
       const match = nodes.find(
@@ -276,7 +287,22 @@ function FlowCanvas({
           (node.data as { name?: string }).name!.toLowerCase().includes(query)
       );
 
-      if (!match) return;
+      if (!match) {
+        setTimeout(() => {
+          setHighlightedNodeId(null);
+        }, 0);
+        return;
+      }
+
+      // Set highlighted node to trigger animation
+      setTimeout(() => {
+        setHighlightedNodeId(match.id);
+      }, 0);
+
+      // Clear highlight after animation completes (600ms)
+      setTimeout(() => {
+        setHighlightedNodeId(null);
+      }, 600);
 
       const width = (match.width as number | undefined) ?? 120;
       const height = (match.height as number | undefined) ?? 60;
@@ -289,9 +315,20 @@ function FlowCanvas({
     return () => clearTimeout(timeoutId);
   }, [searchQuery, nodes, reactFlow]);
 
+  // Update nodes with highlight flag
+  const nodesWithHighlight = useMemo(() => {
+    return nodes.map((node) => ({
+      ...node,
+      data: {
+        ...node.data,
+        isHighlighted: node.id === highlightedNodeId,
+      },
+    }));
+  }, [nodes, highlightedNodeId]);
+
   return (
     <ReactFlow
-      nodes={nodes}
+      nodes={nodesWithHighlight}
       edges={edges}
       onNodesChange={onNodesChange}
       onEdgesChange={onEdgesChange}
@@ -299,6 +336,7 @@ function FlowCanvas({
       connectionMode={ConnectionMode.Loose}
       nodesDraggable={false}
       nodesConnectable={false}
+      minZoom={0.1}
       fitView
       attributionPosition="bottom-left"
     >
@@ -327,10 +365,9 @@ export default function FamilyTree() {
         hideRedacted,
         viewClass,
         familyColors,
-        colorBy,
-        searchQuery
+        colorBy
       ),
-    [hideRedacted, viewClass, familyColors, colorBy, searchQuery]
+    [hideRedacted, viewClass, familyColors, colorBy]
   );
 
   return (
