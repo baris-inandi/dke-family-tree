@@ -17,486 +17,486 @@
     ],
     "classColors": {
       "Alpha": {
-        "foreground": "hsl(0 95% 25%)",
-        "background": "hsla(0 105% 35% / 0.2)"
+        "foreground": "hsl(0 100% 25%)",
+        "background": "hsla(0 110% 35% / 0.2)"
       },
       "Beta": {
-        "foreground": "hsl(30 95% 25%)",
-        "background": "hsla(30 105% 35% / 0.2)"
+        "foreground": "hsl(30 100% 25%)",
+        "background": "hsla(30 110% 35% / 0.2)"
       },
       "Gamma": {
-        "foreground": "hsl(60 95% 25%)",
-        "background": "hsla(60 105% 35% / 0.2)"
+        "foreground": "hsl(60 100% 25%)",
+        "background": "hsla(60 110% 35% / 0.2)"
       },
       "Delta": {
-        "foreground": "hsl(90 95% 25%)",
-        "background": "hsla(90 105% 35% / 0.2)"
+        "foreground": "hsl(90 100% 25%)",
+        "background": "hsla(90 110% 35% / 0.2)"
       },
       "Epsilon": {
-        "foreground": "hsl(120 95% 25%)",
-        "background": "hsla(120 105% 35% / 0.2)"
+        "foreground": "hsl(120 100% 25%)",
+        "background": "hsla(120 110% 35% / 0.2)"
       },
       "Zeta": {
-        "foreground": "hsl(150 95% 25%)",
-        "background": "hsla(150 105% 35% / 0.2)"
+        "foreground": "hsl(150 100% 25%)",
+        "background": "hsla(150 110% 35% / 0.2)"
       },
       "Eta": {
-        "foreground": "hsl(180 95% 25%)",
-        "background": "hsla(180 105% 35% / 0.2)"
+        "foreground": "hsl(180 100% 25%)",
+        "background": "hsla(180 110% 35% / 0.2)"
       },
       "Theta": {
-        "foreground": "hsl(210 95% 25%)",
-        "background": "hsla(210 105% 35% / 0.2)"
+        "foreground": "hsl(210 100% 25%)",
+        "background": "hsla(210 110% 35% / 0.2)"
       },
       "Iota": {
-        "foreground": "hsl(240 95% 25%)",
-        "background": "hsla(240 105% 35% / 0.2)"
+        "foreground": "hsl(240 100% 25%)",
+        "background": "hsla(240 110% 35% / 0.2)"
       },
       "Kappa": {
-        "foreground": "hsl(270 95% 25%)",
-        "background": "hsla(270 105% 35% / 0.2)"
+        "foreground": "hsl(270 100% 25%)",
+        "background": "hsla(270 110% 35% / 0.2)"
       },
       "Lambda": {
-        "foreground": "hsl(300 95% 25%)",
-        "background": "hsla(300 105% 35% / 0.2)"
+        "foreground": "hsl(300 100% 25%)",
+        "background": "hsla(300 110% 35% / 0.2)"
       },
       "Mu": {
-        "foreground": "hsl(330 95% 25%)",
-        "background": "hsla(330 105% 35% / 0.2)"
+        "foreground": "hsl(330 100% 25%)",
+        "background": "hsla(330 110% 35% / 0.2)"
       },
       "Nu": {
-        "foreground": "hsl(0 95% 32%)",
-        "background": "hsla(0 105% 42% / 0.2)"
+        "foreground": "hsl(0 91% 32%)",
+        "background": "hsla(0 101% 42% / 0.2)"
       }
     },
     "familyColors": {
       "brother-steve-holt-alpha-1": {
-        "foreground": "hsl(0 95% 25%)",
-        "background": "hsla(0 105% 35% / 0.2)"
+        "foreground": "hsl(0 100% 25%)",
+        "background": "hsla(0 110% 35% / 0.2)"
       },
       "brother-redacted-unknown-2": {
-        "foreground": "hsl(0 95% 25%)",
-        "background": "hsla(0 105% 35% / 0.2)"
+        "foreground": "hsl(0 100% 25%)",
+        "background": "hsla(0 110% 35% / 0.2)"
       },
       "brother-redacted-unknown-3": {
-        "foreground": "hsl(0 95% 25%)",
-        "background": "hsla(0 105% 35% / 0.2)"
+        "foreground": "hsl(0 100% 25%)",
+        "background": "hsla(0 110% 35% / 0.2)"
       },
       "brother-marcus-yi-theta-4": {
-        "foreground": "hsl(0 95% 25%)",
-        "background": "hsla(0 105% 35% / 0.2)"
+        "foreground": "hsl(0 100% 25%)",
+        "background": "hsla(0 110% 35% / 0.2)"
       },
       "brother-aashish-hassam-iota-5": {
-        "foreground": "hsl(0 95% 25%)",
-        "background": "hsla(0 105% 35% / 0.2)"
+        "foreground": "hsl(0 100% 25%)",
+        "background": "hsla(0 110% 35% / 0.2)"
       },
       "brother-matt-kohen-lambda-6": {
-        "foreground": "hsl(0 95% 25%)",
-        "background": "hsla(0 105% 35% / 0.2)"
+        "foreground": "hsl(0 100% 25%)",
+        "background": "hsla(0 110% 35% / 0.2)"
       },
       "brother-ryan-alexander-nu-7": {
-        "foreground": "hsl(0 95% 25%)",
-        "background": "hsla(0 105% 35% / 0.2)"
+        "foreground": "hsl(0 100% 25%)",
+        "background": "hsla(0 110% 35% / 0.2)"
       },
       "brother-ryan-hatcher-nu-8": {
-        "foreground": "hsl(0 95% 25%)",
-        "background": "hsla(0 105% 35% / 0.2)"
+        "foreground": "hsl(0 100% 25%)",
+        "background": "hsla(0 110% 35% / 0.2)"
       },
       "brother-briggs-kroeger-lambda-9": {
-        "foreground": "hsl(0 95% 25%)",
-        "background": "hsla(0 105% 35% / 0.2)"
+        "foreground": "hsl(0 100% 25%)",
+        "background": "hsla(0 110% 35% / 0.2)"
       },
       "brother-brendan-keefe-nu-10": {
-        "foreground": "hsl(0 95% 25%)",
-        "background": "hsla(0 105% 35% / 0.2)"
+        "foreground": "hsl(0 100% 25%)",
+        "background": "hsla(0 110% 35% / 0.2)"
       },
       "brother-james-mallon-nu-11": {
-        "foreground": "hsl(0 95% 25%)",
-        "background": "hsla(0 105% 35% / 0.2)"
+        "foreground": "hsl(0 100% 25%)",
+        "background": "hsla(0 110% 35% / 0.2)"
       },
       "brother-evan-yee-kappa-12": {
-        "foreground": "hsl(0 95% 25%)",
-        "background": "hsla(0 105% 35% / 0.2)"
+        "foreground": "hsl(0 100% 25%)",
+        "background": "hsla(0 110% 35% / 0.2)"
       },
       "brother-dom-cheng-nu-13": {
-        "foreground": "hsl(0 95% 25%)",
-        "background": "hsla(0 105% 35% / 0.2)"
+        "foreground": "hsl(0 100% 25%)",
+        "background": "hsla(0 110% 35% / 0.2)"
       },
       "brother-matt-bertoncini-nu-14": {
-        "foreground": "hsl(0 95% 25%)",
-        "background": "hsla(0 105% 35% / 0.2)"
+        "foreground": "hsl(0 100% 25%)",
+        "background": "hsla(0 110% 35% / 0.2)"
       },
       "brother-brayden-ramseier-lambda-15": {
-        "foreground": "hsl(0 95% 25%)",
-        "background": "hsla(0 105% 35% / 0.2)"
+        "foreground": "hsl(0 100% 25%)",
+        "background": "hsla(0 110% 35% / 0.2)"
       },
       "brother-zach-upson-mu-16": {
-        "foreground": "hsl(0 95% 25%)",
-        "background": "hsla(0 105% 35% / 0.2)"
+        "foreground": "hsl(0 100% 25%)",
+        "background": "hsla(0 110% 35% / 0.2)"
       },
       "brother-umut-tanrivierdi-epsilon-17": {
-        "foreground": "hsl(0 95% 25%)",
-        "background": "hsla(0 105% 35% / 0.2)"
+        "foreground": "hsl(0 100% 25%)",
+        "background": "hsla(0 110% 35% / 0.2)"
       },
       "brother-armagan-karakas-eta-18": {
-        "foreground": "hsl(0 95% 25%)",
-        "background": "hsla(0 105% 35% / 0.2)"
+        "foreground": "hsl(0 100% 25%)",
+        "background": "hsla(0 110% 35% / 0.2)"
       },
       "brother-adil-ikiz-epsilon-19": {
-        "foreground": "hsl(0 95% 25%)",
-        "background": "hsla(0 105% 35% / 0.2)"
+        "foreground": "hsl(0 100% 25%)",
+        "background": "hsla(0 110% 35% / 0.2)"
       },
       "brother-derek-uhrich-kappa-20": {
-        "foreground": "hsl(0 95% 25%)",
-        "background": "hsla(0 105% 35% / 0.2)"
+        "foreground": "hsl(0 100% 25%)",
+        "background": "hsla(0 110% 35% / 0.2)"
       },
       "brother-calvin-norstad-alpha-21": {
-        "foreground": "hsl(30 95% 25%)",
-        "background": "hsla(30 105% 35% / 0.2)"
+        "foreground": "hsl(30 100% 25%)",
+        "background": "hsla(30 110% 35% / 0.2)"
       },
       "brother-redacted-unknown-22": {
-        "foreground": "hsl(30 95% 25%)",
-        "background": "hsla(30 105% 35% / 0.2)"
+        "foreground": "hsl(30 100% 25%)",
+        "background": "hsla(30 110% 35% / 0.2)"
       },
       "brother-sepehr-rashigi-null-23": {
-        "foreground": "hsl(30 95% 25%)",
-        "background": "hsla(30 105% 35% / 0.2)"
+        "foreground": "hsl(30 100% 25%)",
+        "background": "hsla(30 110% 35% / 0.2)"
       },
       "brother-matt-o'rourke-epsilon-24": {
-        "foreground": "hsl(30 95% 25%)",
-        "background": "hsla(30 105% 35% / 0.2)"
+        "foreground": "hsl(30 100% 25%)",
+        "background": "hsla(30 110% 35% / 0.2)"
       },
       "brother-bobby-palazzi-iota-25": {
-        "foreground": "hsl(30 95% 25%)",
-        "background": "hsla(30 105% 35% / 0.2)"
+        "foreground": "hsl(30 100% 25%)",
+        "background": "hsla(30 110% 35% / 0.2)"
       },
       "brother-kieran-heneghan-zeta-26": {
-        "foreground": "hsl(30 95% 25%)",
-        "background": "hsla(30 105% 35% / 0.2)"
+        "foreground": "hsl(30 100% 25%)",
+        "background": "hsla(30 110% 35% / 0.2)"
       },
       "brother-brandon-petersen-iota-27": {
-        "foreground": "hsl(30 95% 25%)",
-        "background": "hsla(30 105% 35% / 0.2)"
+        "foreground": "hsl(30 100% 25%)",
+        "background": "hsla(30 110% 35% / 0.2)"
       },
       "brother-ellis-coco-lambda-28": {
-        "foreground": "hsl(30 95% 25%)",
-        "background": "hsla(30 105% 35% / 0.2)"
+        "foreground": "hsl(30 100% 25%)",
+        "background": "hsla(30 110% 35% / 0.2)"
       },
       "brother-george-giakouminakis-mu-29": {
-        "foreground": "hsl(30 95% 25%)",
-        "background": "hsla(30 105% 35% / 0.2)"
+        "foreground": "hsl(30 100% 25%)",
+        "background": "hsla(30 110% 35% / 0.2)"
       },
       "brother-gio-malpartida-nu-30": {
-        "foreground": "hsl(30 95% 25%)",
-        "background": "hsla(30 105% 35% / 0.2)"
+        "foreground": "hsl(30 100% 25%)",
+        "background": "hsla(30 110% 35% / 0.2)"
       },
       "brother-finn-oldenburg-lambda-31": {
-        "foreground": "hsl(30 95% 25%)",
-        "background": "hsla(30 105% 35% / 0.2)"
+        "foreground": "hsl(30 100% 25%)",
+        "background": "hsla(30 110% 35% / 0.2)"
       },
       "brother-nick-vallary-nu-32": {
-        "foreground": "hsl(30 95% 25%)",
-        "background": "hsla(30 105% 35% / 0.2)"
+        "foreground": "hsl(30 100% 25%)",
+        "background": "hsla(30 110% 35% / 0.2)"
       },
       "brother-matt-lowe-alpha-33": {
-        "foreground": "hsl(60 95% 25%)",
-        "background": "hsla(60 105% 35% / 0.2)"
+        "foreground": "hsl(60 100% 25%)",
+        "background": "hsla(60 110% 35% / 0.2)"
       },
       "brother-john-berry-delta-34": {
-        "foreground": "hsl(60 95% 25%)",
-        "background": "hsla(60 105% 35% / 0.2)"
+        "foreground": "hsl(60 100% 25%)",
+        "background": "hsla(60 110% 35% / 0.2)"
       },
       "brother-rod-tavangar-theta-35": {
-        "foreground": "hsl(60 95% 25%)",
-        "background": "hsla(60 105% 35% / 0.2)"
+        "foreground": "hsl(60 100% 25%)",
+        "background": "hsla(60 110% 35% / 0.2)"
       },
       "brother-tanner-lederman-alpha-36": {
-        "foreground": "hsl(90 95% 25%)",
-        "background": "hsla(90 105% 35% / 0.2)"
+        "foreground": "hsl(90 100% 25%)",
+        "background": "hsla(90 110% 35% / 0.2)"
       },
       "brother-jacob-gottesman-zeta-37": {
-        "foreground": "hsl(90 95% 25%)",
-        "background": "hsla(90 105% 35% / 0.2)"
+        "foreground": "hsl(90 100% 25%)",
+        "background": "hsla(90 110% 35% / 0.2)"
       },
       "brother-batu-isik-eta-38": {
-        "foreground": "hsl(90 95% 25%)",
-        "background": "hsla(90 105% 35% / 0.2)"
+        "foreground": "hsl(90 100% 25%)",
+        "background": "hsla(90 110% 35% / 0.2)"
       },
       "brother-cameron-hornbarger-theta-39": {
-        "foreground": "hsl(90 95% 25%)",
-        "background": "hsla(90 105% 35% / 0.2)"
+        "foreground": "hsl(90 100% 25%)",
+        "background": "hsla(90 110% 35% / 0.2)"
       },
       "brother-jack-podesta-kappa-40": {
-        "foreground": "hsl(90 95% 25%)",
-        "background": "hsla(90 105% 35% / 0.2)"
+        "foreground": "hsl(90 100% 25%)",
+        "background": "hsla(90 110% 35% / 0.2)"
       },
       "brother-alex-keefe-lambda-41": {
-        "foreground": "hsl(90 95% 25%)",
-        "background": "hsla(90 105% 35% / 0.2)"
+        "foreground": "hsl(90 100% 25%)",
+        "background": "hsla(90 110% 35% / 0.2)"
       },
       "brother-david-panin-nu-42": {
-        "foreground": "hsl(90 95% 25%)",
-        "background": "hsla(90 105% 35% / 0.2)"
+        "foreground": "hsl(90 100% 25%)",
+        "background": "hsla(90 110% 35% / 0.2)"
       },
       "brother-brian-yang-nu-43": {
-        "foreground": "hsl(90 95% 25%)",
-        "background": "hsla(90 105% 35% / 0.2)"
+        "foreground": "hsl(90 100% 25%)",
+        "background": "hsla(90 110% 35% / 0.2)"
       },
       "brother-ben-marler-kappa-44": {
-        "foreground": "hsl(90 95% 25%)",
-        "background": "hsla(90 105% 35% / 0.2)"
+        "foreground": "hsl(90 100% 25%)",
+        "background": "hsla(90 110% 35% / 0.2)"
       },
       "brother-harrison-feldman-mu-45": {
-        "foreground": "hsl(90 95% 25%)",
-        "background": "hsla(90 105% 35% / 0.2)"
+        "foreground": "hsl(90 100% 25%)",
+        "background": "hsla(90 110% 35% / 0.2)"
       },
       "brother-mike-grbic-kappa-46": {
-        "foreground": "hsl(90 95% 25%)",
-        "background": "hsla(90 105% 35% / 0.2)"
+        "foreground": "hsl(90 100% 25%)",
+        "background": "hsla(90 110% 35% / 0.2)"
       },
       "brother-matt-tobin-nu-47": {
-        "foreground": "hsl(90 95% 25%)",
-        "background": "hsla(90 105% 35% / 0.2)"
+        "foreground": "hsl(90 100% 25%)",
+        "background": "hsla(90 110% 35% / 0.2)"
       },
       "brother-agastya-das-alpha-48": {
-        "foreground": "hsl(120 95% 25%)",
-        "background": "hsla(120 105% 35% / 0.2)"
+        "foreground": "hsl(120 100% 25%)",
+        "background": "hsla(120 110% 35% / 0.2)"
       },
       "brother-tom-glassman-zeta-49": {
-        "foreground": "hsl(120 95% 25%)",
-        "background": "hsla(120 105% 35% / 0.2)"
+        "foreground": "hsl(120 100% 25%)",
+        "background": "hsla(120 110% 35% / 0.2)"
       },
       "brother-jacob-horowitz-alpha-50": {
-        "foreground": "hsl(150 95% 25%)",
-        "background": "hsla(150 105% 35% / 0.2)"
+        "foreground": "hsl(150 100% 25%)",
+        "background": "hsla(150 110% 35% / 0.2)"
       },
       "brother-gio-panagiotakis-epsilon-51": {
-        "foreground": "hsl(150 95% 25%)",
-        "background": "hsla(150 105% 35% / 0.2)"
+        "foreground": "hsl(150 100% 25%)",
+        "background": "hsla(150 110% 35% / 0.2)"
       },
       "brother-nick-condoleo-iota-52": {
-        "foreground": "hsl(150 95% 25%)",
-        "background": "hsla(150 105% 35% / 0.2)"
+        "foreground": "hsl(150 100% 25%)",
+        "background": "hsla(150 110% 35% / 0.2)"
       },
       "brother-max-mayer-lambda-53": {
-        "foreground": "hsl(150 95% 25%)",
-        "background": "hsla(150 105% 35% / 0.2)"
+        "foreground": "hsl(150 100% 25%)",
+        "background": "hsla(150 110% 35% / 0.2)"
       },
       "brother-ben-agatone-iota-54": {
-        "foreground": "hsl(150 95% 25%)",
-        "background": "hsla(150 105% 35% / 0.2)"
+        "foreground": "hsl(150 100% 25%)",
+        "background": "hsla(150 110% 35% / 0.2)"
       },
       "brother-sam-gildea-alpha-55": {
-        "foreground": "hsl(150 95% 25%)",
-        "background": "hsla(150 105% 35% / 0.2)"
+        "foreground": "hsl(150 100% 25%)",
+        "background": "hsla(150 110% 35% / 0.2)"
       },
       "brother-tyler-kavanaugh-alpha-56": {
-        "foreground": "hsl(180 95% 25%)",
-        "background": "hsla(180 105% 35% / 0.2)"
+        "foreground": "hsl(180 100% 25%)",
+        "background": "hsla(180 110% 35% / 0.2)"
       },
       "brother-alex-levin-epsilon-57": {
-        "foreground": "hsl(180 95% 25%)",
-        "background": "hsla(180 105% 35% / 0.2)"
+        "foreground": "hsl(180 100% 25%)",
+        "background": "hsla(180 110% 35% / 0.2)"
       },
       "brother-nate-nagel-iota-58": {
-        "foreground": "hsl(180 95% 25%)",
-        "background": "hsla(180 105% 35% / 0.2)"
+        "foreground": "hsl(180 100% 25%)",
+        "background": "hsla(180 110% 35% / 0.2)"
       },
       "brother-evan-massa-alpha-59": {
-        "foreground": "hsl(210 95% 25%)",
-        "background": "hsla(210 105% 35% / 0.2)"
+        "foreground": "hsl(210 100% 25%)",
+        "background": "hsla(210 110% 35% / 0.2)"
       },
       "brother-harry-merlin-epsilon-60": {
-        "foreground": "hsl(210 95% 25%)",
-        "background": "hsla(210 105% 35% / 0.2)"
+        "foreground": "hsl(210 100% 25%)",
+        "background": "hsla(210 110% 35% / 0.2)"
       },
       "brother-ben-clott-zeta-61": {
-        "foreground": "hsl(210 95% 25%)",
-        "background": "hsla(210 105% 35% / 0.2)"
+        "foreground": "hsl(210 100% 25%)",
+        "background": "hsla(210 110% 35% / 0.2)"
       },
       "brother-george-foster-iota-62": {
-        "foreground": "hsl(210 95% 25%)",
-        "background": "hsla(210 105% 35% / 0.2)"
+        "foreground": "hsl(210 100% 25%)",
+        "background": "hsla(210 110% 35% / 0.2)"
       },
       "brother-marley-mckinsey-lambda-63": {
-        "foreground": "hsl(210 95% 25%)",
-        "background": "hsla(210 105% 35% / 0.2)"
+        "foreground": "hsl(210 100% 25%)",
+        "background": "hsla(210 110% 35% / 0.2)"
       },
       "brother-thomas-clark-mu-64": {
-        "foreground": "hsl(210 95% 25%)",
-        "background": "hsla(210 105% 35% / 0.2)"
+        "foreground": "hsl(210 100% 25%)",
+        "background": "hsla(210 110% 35% / 0.2)"
       },
       "brother-hunter-lund-nu-65": {
-        "foreground": "hsl(210 95% 25%)",
-        "background": "hsla(210 105% 35% / 0.2)"
+        "foreground": "hsl(210 100% 25%)",
+        "background": "hsla(210 110% 35% / 0.2)"
       },
       "brother-will-von-ahnen-alpha-66": {
-        "foreground": "hsl(240 95% 25%)",
-        "background": "hsla(240 105% 35% / 0.2)"
+        "foreground": "hsl(240 100% 25%)",
+        "background": "hsla(240 110% 35% / 0.2)"
       },
       "brother-noah-mack-alpha-67": {
-        "foreground": "hsl(240 95% 25%)",
-        "background": "hsla(240 105% 35% / 0.2)"
+        "foreground": "hsl(240 100% 25%)",
+        "background": "hsla(240 110% 35% / 0.2)"
       },
       "brother-alex-menikoff-gamma-68": {
-        "foreground": "hsl(240 95% 25%)",
-        "background": "hsla(240 105% 35% / 0.2)"
+        "foreground": "hsl(240 100% 25%)",
+        "background": "hsla(240 110% 35% / 0.2)"
       },
       "brother-alex-prokey-epsilon-69": {
-        "foreground": "hsl(240 95% 25%)",
-        "background": "hsla(240 105% 35% / 0.2)"
+        "foreground": "hsl(240 100% 25%)",
+        "background": "hsla(240 110% 35% / 0.2)"
       },
       "brother-ian-menachery-iota-70": {
-        "foreground": "hsl(240 95% 25%)",
-        "background": "hsla(240 105% 35% / 0.2)"
+        "foreground": "hsl(240 100% 25%)",
+        "background": "hsla(240 110% 35% / 0.2)"
       },
       "brother-theo-cairns-mu-71": {
-        "foreground": "hsl(240 95% 25%)",
-        "background": "hsla(240 105% 35% / 0.2)"
+        "foreground": "hsl(240 100% 25%)",
+        "background": "hsla(240 110% 35% / 0.2)"
       },
       "brother-guilherme-barcellos-nu-72": {
-        "foreground": "hsl(240 95% 25%)",
-        "background": "hsla(240 105% 35% / 0.2)"
+        "foreground": "hsl(240 100% 25%)",
+        "background": "hsla(240 110% 35% / 0.2)"
       },
       "brother-aidan-webster-alpha-73": {
-        "foreground": "hsl(270 95% 25%)",
-        "background": "hsla(270 105% 35% / 0.2)"
+        "foreground": "hsl(270 100% 25%)",
+        "background": "hsla(270 110% 35% / 0.2)"
       },
       "brother-max-brotman-gamma-74": {
-        "foreground": "hsl(270 95% 25%)",
-        "background": "hsla(270 105% 35% / 0.2)"
+        "foreground": "hsl(270 100% 25%)",
+        "background": "hsla(270 110% 35% / 0.2)"
       },
       "brother-matt-hiller-epsilon-75": {
-        "foreground": "hsl(270 95% 25%)",
-        "background": "hsla(270 105% 35% / 0.2)"
+        "foreground": "hsl(270 100% 25%)",
+        "background": "hsla(270 110% 35% / 0.2)"
       },
       "brother-chris-wilk-eta-76": {
-        "foreground": "hsl(270 95% 25%)",
-        "background": "hsla(270 105% 35% / 0.2)"
+        "foreground": "hsl(270 100% 25%)",
+        "background": "hsla(270 110% 35% / 0.2)"
       },
       "brother-luke-lange-iota-77": {
-        "foreground": "hsl(270 95% 25%)",
-        "background": "hsla(270 105% 35% / 0.2)"
+        "foreground": "hsl(270 100% 25%)",
+        "background": "hsla(270 110% 35% / 0.2)"
       },
       "brother-chris-pyle-lambda-78": {
-        "foreground": "hsl(270 95% 25%)",
-        "background": "hsla(270 105% 35% / 0.2)"
+        "foreground": "hsl(270 100% 25%)",
+        "background": "hsla(270 110% 35% / 0.2)"
       },
       "brother-mikhail-utyashev-nu-79": {
-        "foreground": "hsl(270 95% 25%)",
-        "background": "hsla(270 105% 35% / 0.2)"
+        "foreground": "hsl(270 100% 25%)",
+        "background": "hsla(270 110% 35% / 0.2)"
       },
       "brother-lex-tremblay-mu-80": {
-        "foreground": "hsl(270 95% 25%)",
-        "background": "hsla(270 105% 35% / 0.2)"
+        "foreground": "hsl(270 100% 25%)",
+        "background": "hsla(270 110% 35% / 0.2)"
       },
       "brother-vincenzo-fardella-nu-81": {
-        "foreground": "hsl(270 95% 25%)",
-        "background": "hsla(270 105% 35% / 0.2)"
+        "foreground": "hsl(270 100% 25%)",
+        "background": "hsla(270 110% 35% / 0.2)"
       },
       "brother-kai-barbara-iota-82": {
-        "foreground": "hsl(270 95% 25%)",
-        "background": "hsla(270 105% 35% / 0.2)"
+        "foreground": "hsl(270 100% 25%)",
+        "background": "hsla(270 110% 35% / 0.2)"
       },
       "brother-chris-bialzik-kappa-83": {
-        "foreground": "hsl(270 95% 25%)",
-        "background": "hsla(270 105% 35% / 0.2)"
+        "foreground": "hsl(270 100% 25%)",
+        "background": "hsla(270 110% 35% / 0.2)"
       },
       "brother-sid-chandra-nu-84": {
-        "foreground": "hsl(270 95% 25%)",
-        "background": "hsla(270 105% 35% / 0.2)"
+        "foreground": "hsl(270 100% 25%)",
+        "background": "hsla(270 110% 35% / 0.2)"
       },
       "brother-jack-guo-nu-85": {
-        "foreground": "hsl(270 95% 25%)",
-        "background": "hsla(270 105% 35% / 0.2)"
+        "foreground": "hsl(270 100% 25%)",
+        "background": "hsla(270 110% 35% / 0.2)"
       },
       "brother-klaus-ohlweiler-iota-86": {
-        "foreground": "hsl(270 95% 25%)",
-        "background": "hsla(270 105% 35% / 0.2)"
+        "foreground": "hsl(270 100% 25%)",
+        "background": "hsla(270 110% 35% / 0.2)"
       },
       "brother-tyler-heidke-lambda-87": {
-        "foreground": "hsl(270 95% 25%)",
-        "background": "hsla(270 105% 35% / 0.2)"
+        "foreground": "hsl(270 100% 25%)",
+        "background": "hsla(270 110% 35% / 0.2)"
       },
       "brother-jason-liku-nu-88": {
-        "foreground": "hsl(270 95% 25%)",
-        "background": "hsla(270 105% 35% / 0.2)"
+        "foreground": "hsl(270 100% 25%)",
+        "background": "hsla(270 110% 35% / 0.2)"
       },
       "brother-tim-vaquero-epsilon-89": {
-        "foreground": "hsl(270 95% 25%)",
-        "background": "hsla(270 105% 35% / 0.2)"
+        "foreground": "hsl(270 100% 25%)",
+        "background": "hsla(270 110% 35% / 0.2)"
       },
       "brother-chase-houser-iota-90": {
-        "foreground": "hsl(270 95% 25%)",
-        "background": "hsla(270 105% 35% / 0.2)"
+        "foreground": "hsl(270 100% 25%)",
+        "background": "hsla(270 110% 35% / 0.2)"
       },
       "brother-zach-berde-kappa-91": {
-        "foreground": "hsl(270 95% 25%)",
-        "background": "hsla(270 105% 35% / 0.2)"
+        "foreground": "hsl(270 100% 25%)",
+        "background": "hsla(270 110% 35% / 0.2)"
       },
       "brother-harrison-mitchell-lambda-92": {
-        "foreground": "hsl(270 95% 25%)",
-        "background": "hsla(270 105% 35% / 0.2)"
+        "foreground": "hsl(270 100% 25%)",
+        "background": "hsla(270 110% 35% / 0.2)"
       },
       "brother-fernando-ramos-nu-93": {
-        "foreground": "hsl(270 95% 25%)",
-        "background": "hsla(270 105% 35% / 0.2)"
+        "foreground": "hsl(270 100% 25%)",
+        "background": "hsla(270 110% 35% / 0.2)"
       },
       "brother-ian-cole-nu-94": {
-        "foreground": "hsl(270 95% 25%)",
-        "background": "hsla(270 105% 35% / 0.2)"
+        "foreground": "hsl(270 100% 25%)",
+        "background": "hsla(270 110% 35% / 0.2)"
       },
       "brother-redacted-alpha-95": {
-        "foreground": "hsl(300 95% 25%)",
-        "background": "hsla(300 105% 35% / 0.2)"
+        "foreground": "hsl(300 100% 25%)",
+        "background": "hsla(300 110% 35% / 0.2)"
       },
       "brother-max-leblang-null-96": {
-        "foreground": "hsl(300 95% 25%)",
-        "background": "hsla(300 105% 35% / 0.2)"
+        "foreground": "hsl(300 100% 25%)",
+        "background": "hsla(300 110% 35% / 0.2)"
       },
       "brother-kj-graham-eta-97": {
-        "foreground": "hsl(300 95% 25%)",
-        "background": "hsla(300 105% 35% / 0.2)"
+        "foreground": "hsl(300 100% 25%)",
+        "background": "hsla(300 110% 35% / 0.2)"
       },
       "brother-jonathan-grbic-iota-98": {
-        "foreground": "hsl(300 95% 25%)",
-        "background": "hsla(300 105% 35% / 0.2)"
+        "foreground": "hsl(300 100% 25%)",
+        "background": "hsla(300 110% 35% / 0.2)"
       },
       "brother-redacted-alpha-99": {
-        "foreground": "hsl(330 95% 25%)",
-        "background": "hsla(330 105% 35% / 0.2)"
+        "foreground": "hsl(330 100% 25%)",
+        "background": "hsla(330 110% 35% / 0.2)"
       },
       "brother-martin-bulanowski-beta-100": {
-        "foreground": "hsl(330 95% 25%)",
-        "background": "hsla(330 105% 35% / 0.2)"
+        "foreground": "hsl(330 100% 25%)",
+        "background": "hsla(330 110% 35% / 0.2)"
       },
       "brother-josh-weissert-epsilon-101": {
-        "foreground": "hsl(330 95% 25%)",
-        "background": "hsla(330 105% 35% / 0.2)"
+        "foreground": "hsl(330 100% 25%)",
+        "background": "hsla(330 110% 35% / 0.2)"
       },
       "brother-declan-javers-eta-102": {
-        "foreground": "hsl(330 95% 25%)",
-        "background": "hsla(330 105% 35% / 0.2)"
+        "foreground": "hsl(330 100% 25%)",
+        "background": "hsla(330 110% 35% / 0.2)"
       },
       "brother-jayden-romano-lambda-103": {
-        "foreground": "hsl(330 95% 25%)",
-        "background": "hsla(330 105% 35% / 0.2)"
+        "foreground": "hsl(330 100% 25%)",
+        "background": "hsla(330 110% 35% / 0.2)"
       },
       "brother-luke-daniel-mu-104": {
-        "foreground": "hsl(330 95% 25%)",
-        "background": "hsla(330 105% 35% / 0.2)"
+        "foreground": "hsl(330 100% 25%)",
+        "background": "hsla(330 110% 35% / 0.2)"
       },
       "brother-beck-carlson-nu-105": {
-        "foreground": "hsl(330 95% 25%)",
-        "background": "hsla(330 105% 35% / 0.2)"
+        "foreground": "hsl(330 100% 25%)",
+        "background": "hsla(330 110% 35% / 0.2)"
       },
       "brother-baris-inandi-nu-106": {
-        "foreground": "hsl(330 95% 25%)",
-        "background": "hsla(330 105% 35% / 0.2)"
+        "foreground": "hsl(330 100% 25%)",
+        "background": "hsla(330 110% 35% / 0.2)"
       },
       "brother-fred-hodgson-kappa-107": {
-        "foreground": "hsl(330 95% 25%)",
-        "background": "hsla(330 105% 35% / 0.2)"
+        "foreground": "hsl(330 100% 25%)",
+        "background": "hsla(330 110% 35% / 0.2)"
       }
     }
   },

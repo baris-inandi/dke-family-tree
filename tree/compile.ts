@@ -59,7 +59,6 @@ const GREEK_ORDER = [
   "Omega",
 ] as const;
 
-// Sequential color generator (same as in src/lib/colors.ts)
 function getSequentialColor(index: number): string {
   const i = Math.max(0, Math.floor(index));
   const cycleSize = 12;
@@ -68,12 +67,12 @@ function getSequentialColor(index: number): string {
   const lightnessIndex = Math.floor(i / cycleSize);
   const hue = (hueIndex * hueStep) % 360;
   const baseLightness = 25;
+  const baseSaturation = 100;
   const lightness = Math.min(100, baseLightness + lightnessIndex * 7);
-  const saturation = 95;
+  const saturation = Math.max(0, baseSaturation - lightnessIndex * 9);
   return `hsl(${hue} ${saturation}% ${lightness}%)`;
 }
 
-// Lowkey color generator (same as in src/lib/colors.ts)
 function lowkeyColor(hslString: string, opacity: number): string {
   const match = hslString.match(/hsl\((\d+)\s+(\d+)%\s+(\d+)%\)/);
   if (!match) {
