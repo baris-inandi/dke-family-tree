@@ -13,66 +13,49 @@ import {
 } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
 import { useEffect, useMemo, useState } from "react";
-import familyTreeData from "../../tree/tree.json";
-import { getSequentialColor } from "../lib/colors";
-import { GREEK_ORDER } from "../lib/greekAlphabet";
+import compiledData from "../../tree/tree.json";
 import { Sidebar } from "../Sidebar";
 import { BrotherNode } from "./BrotherNode";
 
+interface Color {
+  foreground: string;
+  background: string;
+}
+
 interface Brother {
+  id: string;
   name: string;
   class: string;
   children: Brother[];
 }
 
+interface CompiledData {
+  tree: Brother[];
+  metadata: {
+    availableClasses: string[];
+    classColors: Record<string, Color>;
+    familyColors: Record<string, Color>;
+  };
+}
+
+const familyTreeData = compiledData as unknown as CompiledData;
+
 const nodeTypes = {
   brother: BrotherNode,
 };
-
-// Calculate family colors
-// - If there are multiple roots, each root is a family
-// - If there's a single root (e.g. Adam Akkach), treat that root's
-//   immediate children as separate families so branches get distinct colors
-// IMPORTANT: key by Brother object, not name, so multiple "REDACTED"
-// nodes in different branches still get their branch's family color.
-function calculateFamilyColors(data: Brother[]): Map<Brother, string> {
-  const familyColors = new Map<Brother, string>();
-
-  function colorSubtree(brother: Brother, colorIndex: number) {
-    const color = getSequentialColor(colorIndex);
-    familyColors.set(brother, color);
-    brother.children.forEach((child) => colorSubtree(child, colorIndex));
-  }
-
-  if (data.length === 1) {
-    // Single global root (e.g. Adam Akkach) – use its immediate children
-    // as "family roots" so each major branch gets its own color
-    const root = data[0];
-    root.children.forEach((familyRoot, index) => {
-      colorSubtree(familyRoot, index);
-    });
-  } else {
-    // Multiple disjoint roots – each root is its own family
-    data.forEach((root, index) => {
-      colorSubtree(root, index);
-    });
-  }
-
-  return familyColors;
-}
 
 // Convert hierarchical data to nodes and edges with hierarchical layout
 function convertToFlowData(
   data: Brother[],
   hideRedacted: boolean,
   viewClass: string,
-  familyColors: Map<Brother, string>,
+  classColors: Record<string, Color>,
+  familyColors: Record<string, Color>,
   colorBy: "class" | "family"
 ): { nodes: Node[]; edges: Edge[] } {
   const nodes: Node[] = [];
   const edges: Edge[] = [];
   const parentChildMap = new Map<string, string[]>(); // parentId -> [childIds]
-  let nodeIdCounter = 0;
 
   function createTree(
     brothers: Brother[],
@@ -88,7 +71,7 @@ function convertToFlowData(
 
     for (const brother of brothers) {
       const isRedacted = brother.name === "REDACTED";
-      const id = `node-${nodeIdCounter++}`;
+      const id = brother.id; // Use brother.id directly
       nodeIds.push(id);
 
       // Class-based visibility
@@ -116,7 +99,8 @@ function convertToFlowData(
           class: brother.class,
           faded,
           redactedFaded,
-          familyColor: familyColors.get(brother) || getSequentialColor(0),
+          classColor: classColors[brother.class],
+          familyColor: familyColors[brother.id],
           colorBy,
         },
         width: 120,
@@ -335,60 +319,21 @@ export default function FamilyTree() {
   const [viewClass, setViewClass] = useState("All Classes");
   const [searchQuery, setSearchQuery] = useState("");
 
-  const familyColors = useMemo(
-    () => calculateFamilyColors(familyTreeData as Brother[]),
-    []
-  );
-
-  // Dynamically derive all classes present in the data,
-  // sorted by Greek order when possible so new classes
-  // automatically show up in the sidebar dropdown.
-  const availableClasses = useMemo(() => {
-    const classes = new Set<string>();
-
-    function collect(brothers: Brother[]) {
-      for (const b of brothers) {
-        if (
-          b.class &&
-          b.class !== "null" &&
-          b.class !== "unknown" &&
-          b.class !== "All Classes"
-        ) {
-          classes.add(b.class);
-        }
-        if (b.children && b.children.length > 0) {
-          collect(b.children);
-        }
-      }
-    }
-
-    collect(familyTreeData as Brother[]);
-
-    const orderIndex = new Map<string, number>();
-    GREEK_ORDER.forEach((name, idx) => orderIndex.set(name, idx));
-
-    return Array.from(classes).sort((a, b) => {
-      const ai = orderIndex.has(a)
-        ? orderIndex.get(a)!
-        : Number.MAX_SAFE_INTEGER;
-      const bi = orderIndex.has(b)
-        ? orderIndex.get(b)!
-        : Number.MAX_SAFE_INTEGER;
-      if (ai !== bi) return ai - bi;
-      return a.localeCompare(b);
-    });
-  }, []);
+  // Use pre-computed metadata from compilation
+  const { classColors, familyColors, availableClasses } =
+    familyTreeData.metadata;
 
   const { nodes: initialNodes, edges: initialEdges } = useMemo(
     () =>
       convertToFlowData(
-        familyTreeData as Brother[],
+        familyTreeData.tree,
         hideRedacted,
         viewClass,
+        classColors,
         familyColors,
         colorBy
       ),
-    [hideRedacted, viewClass, familyColors, colorBy]
+    [hideRedacted, viewClass, classColors, familyColors, colorBy]
   );
 
   const resultCount = useMemo(() => {

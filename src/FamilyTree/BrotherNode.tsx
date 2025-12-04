@@ -1,45 +1,8 @@
 import { Handle, Position } from "@xyflow/react";
-import { getSequentialColor, lowkeyColor } from "../lib/colors";
-import { GREEK_ORDER } from "../lib/greekAlphabet";
 
-// Fixed ordering of Greek classes, from Alpha to Omega
-
-// Also handle future multi-part classes like "Alpha Alpha", "Alpha Beta", etc.
-// We keep them deterministic by mapping:
-//   baseIndex = index of first word in GREEK_ORDER
-//   extIndex  = index of second word in GREEK_ORDER (if present)
-//   final palette index = baseIndex                     // simple class
-//   or                 = GREEK_ORDER.length + baseIndex * GREEK_ORDER.length + extIndex
-function getClassColor(className: string): string {
-  if (!className || className === "null" || className === "unknown") {
-    return getSequentialColor(0);
-  }
-
-  const parts = className.trim().split(/\s+/);
-  const base = parts[0];
-  const baseIndex = GREEK_ORDER.indexOf(base as (typeof GREEK_ORDER)[number]);
-
-  // Unknown base: just fall back to the first color
-  if (baseIndex === -1) {
-    return getSequentialColor(0);
-  }
-
-  // Simple class like "Alpha", "Beta", ...
-  if (parts.length === 1) {
-    return getSequentialColor(baseIndex);
-  }
-
-  // Extended class like "Alpha Alpha", "Alpha Beta", ...
-  const ext = parts[1];
-  const extIndex = GREEK_ORDER.indexOf(ext as (typeof GREEK_ORDER)[number]);
-
-  // If extension is unknown, treat it as the first extension slot
-  const safeExtIndex = extIndex === -1 ? 0 : extIndex;
-
-  const offset = GREEK_ORDER.length;
-  const paletteIndex = offset + baseIndex * GREEK_ORDER.length + safeExtIndex;
-
-  return getSequentialColor(paletteIndex);
+interface Color {
+  foreground: string;
+  background: string;
 }
 
 export const BrotherNode = ({
@@ -50,17 +13,27 @@ export const BrotherNode = ({
     class: string;
     faded?: boolean;
     redactedFaded?: boolean;
-    familyColor?: string;
+    classColor?: Color;
+    familyColor?: Color;
     colorBy?: "class" | "family";
     isHighlighted?: boolean;
   };
 }) => {
   const isRedacted = data.name === "REDACTED";
   const colorBy = data.colorBy || "class";
+
+  // Get color based on mode - use pre-computed colors
   const color =
     colorBy === "family" && data.familyColor
       ? data.familyColor
-      : getClassColor(data.class);
+      : data.classColor;
+
+  // Fallback to a default color if none found
+  const defaultColor: Color = {
+    foreground: "hsl(0 95% 25%)",
+    background: "hsla(0 95% 35% / 0.2)",
+  };
+  const finalColor = color || defaultColor;
 
   const faded = data.faded ?? false;
   const redactedFaded = data.redactedFaded ?? false;
@@ -74,10 +47,10 @@ export const BrotherNode = ({
         isHighlighted ? "animate-pulse-scale" : ""
       }`}
       style={{
-        borderColor: color,
+        borderColor: finalColor.foreground,
         opacity,
         filter: faded ? "grayscale(1)" : undefined,
-        background: lowkeyColor(color, 0.2),
+        background: finalColor.background,
       }}
     >
       {/* Source handle at the bottom for outgoing edges */}
@@ -85,7 +58,7 @@ export const BrotherNode = ({
         type="source"
         position={Position.Bottom}
         id="source"
-        style={{ background: color, opacity }}
+        style={{ background: finalColor.foreground, opacity }}
         isConnectable={false}
       />
       {/* Target handle at the top for incoming edges */}
@@ -93,10 +66,13 @@ export const BrotherNode = ({
         type="target"
         position={Position.Top}
         id="target"
-        style={{ background: color, opacity }}
+        style={{ background: finalColor.foreground, opacity }}
         isConnectable={false}
       />
-      <div className="font-medium text-sm" style={{ color: color }}>
+      <div
+        className="font-medium text-sm"
+        style={{ color: finalColor.foreground }}
+      >
         {isRedacted ? (
           <span className="opacity-60">[REDACTED]</span>
         ) : (
@@ -106,7 +82,7 @@ export const BrotherNode = ({
       <div
         className="text-xs"
         style={{
-          color,
+          color: finalColor.foreground,
           opacity: isRedacted ? 0.6 : 1,
         }}
       >

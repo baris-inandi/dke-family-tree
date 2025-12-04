@@ -54,7 +54,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
   return (
     <div className="absolute p-4 top-0 left-0 h-full w-96 z-50 pointer-events-none">
-      <div className="h-full w-full bg-white/50 backdrop-blur-md border border-gray-300 rounded-xl shadow-lg pointer-events-auto p-4 overflow-y-auto flex flex-col">
+      <div className="h-full w-full bg-white/60 backdrop-blur-lg border border-gray-300 rounded-xl shadow-lg pointer-events-auto p-4 overflow-y-auto flex flex-col">
         <h2 className="text-2xl font-bold mb-4">∆KE</h2>
 
         {/* Stats */}
