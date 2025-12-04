@@ -14,6 +14,7 @@ import {
 import "@xyflow/react/dist/style.css";
 import { useEffect, useMemo, useState } from "react";
 import familyTreeData from "../../FAMILYTREE.json";
+import { getSequentialColor } from "../lib/colors";
 import { Sidebar } from "../Sidebar";
 import { BrotherNode } from "./BrotherNode";
 
@@ -27,39 +28,34 @@ const nodeTypes = {
   brother: BrotherNode,
 };
 
-// Calculate family colors (based on root ancestor)
-function calculateFamilyColors(data: Brother[]): Map<string, string> {
-  const familyColors = new Map<string, string>();
-  const colors = [
-    "#1e40af",
-    "#7c3aed",
-    "#059669",
-    "#dc2626",
-    "#ea580c",
-    "#0891b2",
-    "#be185d",
-    "#0d9488",
-    "#ca8a04",
-    "#0284c7",
-    "#16a34a",
-    "#9333ea",
-    "#e11d48",
-  ];
+// Calculate family colors
+// - If there are multiple roots, each root is a family
+// - If there's a single root (e.g. Adam Akkach), treat that root's
+//   immediate children as separate families so branches get distinct colors
+// IMPORTANT: key by Brother object, not name, so multiple \"REDACTED\"
+// nodes in different branches still get their branch's family color.
+function calculateFamilyColors(data: Brother[]): Map<Brother, string> {
+  const familyColors = new Map<Brother, string>();
 
-  function assignFamilyColor(
-    brother: Brother,
-    familyId: string,
-    index: number
-  ) {
-    familyColors.set(brother.name, colors[index % colors.length]);
-    brother.children.forEach((child) => {
-      assignFamilyColor(child, familyId, index);
-    });
+  function colorSubtree(brother: Brother, colorIndex: number) {
+    const color = getSequentialColor(colorIndex);
+    familyColors.set(brother, color);
+    brother.children.forEach((child) => colorSubtree(child, colorIndex));
   }
 
-  data.forEach((root, index) => {
-    assignFamilyColor(root, root.name, index);
-  });
+  if (data.length === 1) {
+    // Single global root (e.g. Adam Akkach) – use its immediate children
+    // as "family roots" so each major branch gets its own color
+    const root = data[0];
+    root.children.forEach((familyRoot, index) => {
+      colorSubtree(familyRoot, index);
+    });
+  } else {
+    // Multiple disjoint roots – each root is its own family
+    data.forEach((root, index) => {
+      colorSubtree(root, index);
+    });
+  }
 
   return familyColors;
 }
@@ -69,7 +65,7 @@ function convertToFlowData(
   data: Brother[],
   hideRedacted: boolean,
   viewClass: string,
-  familyColors: Map<string, string>,
+  familyColors: Map<Brother, string>,
   colorBy: "class" | "family"
 ): { nodes: Node[]; edges: Edge[] } {
   const nodes: Node[] = [];
@@ -119,7 +115,7 @@ function convertToFlowData(
             name: brother.name,
             class: brother.class,
             faded,
-            familyColor: familyColors.get(brother.name) || "#6b7280",
+            familyColor: familyColors.get(brother) || getSequentialColor(0),
             colorBy,
           },
           width: 120,
@@ -232,13 +228,6 @@ function convertToFlowData(
   if (invalidEdges.length > 0) {
     console.error("Invalid edges (missing source/target):", invalidEdges);
   }
-  if (edges.length > 0) {
-    console.log("Sample edge:", edges[0]);
-    console.log(
-      "First few node IDs:",
-      nodes.slice(0, 5).map((n) => n.id)
-    );
-  }
 
   return { nodes, edges };
 }
@@ -271,10 +260,9 @@ function FlowCanvas({
     const query = searchQuery.trim().toLowerCase();
 
     if (!query) {
-      // Clear highlight when search is empty (use setTimeout to avoid linter warning)
+      // Clear highlight when search is empty and fit entire tree
       const clearTimeoutId = setTimeout(() => {
         setHighlightedNodeId(null);
-        // Center and zoom out to show entire tree
         reactFlow.fitView({ padding: 0.1, duration: 300 });
       }, 0);
       return () => clearTimeout(clearTimeoutId);
@@ -349,7 +337,7 @@ function FlowCanvas({
 
 export default function FamilyTree() {
   const [hideRedacted, setHideRedacted] = useState(false);
-  const [colorBy, setColorBy] = useState<"class" | "family">("class");
+  const [colorBy, setColorBy] = useState<"class" | "family">("family");
   const [viewClass, setViewClass] = useState("All Classes");
   const [searchQuery, setSearchQuery] = useState("");
 
