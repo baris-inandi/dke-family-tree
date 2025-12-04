@@ -1,6 +1,11 @@
+#############################
+#  Family Tree of Nu Alpha  #
+#  of Delta Kappa Epsilon   #
+#############################
+
 # Add Brothers to this file using the "Name, Class" i.e. "John Doe, Alpha" notation
 # Indent with four spaces to signify big/little relationship
-# To redact someone, use "REDACTED, class"
+# To redact someone, use the "REDACTED, class" notation.
 
 Adam Akkach, Alpha
     Steve Holt, Alpha

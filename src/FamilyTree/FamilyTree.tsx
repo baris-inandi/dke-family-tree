@@ -298,7 +298,7 @@ function FlowCanvas({
       const centerX = match.position.x + width / 2;
       const centerY = match.position.y + height / 2;
 
-      reactFlow.setCenter(centerX, centerY, { zoom: 1.2, duration: 300 });
+      reactFlow.setCenter(centerX, centerY, { zoom: 1.4, duration: 333 });
     }, 200);
 
     return () => clearTimeout(timeoutId);
