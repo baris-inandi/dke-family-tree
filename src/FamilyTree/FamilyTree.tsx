@@ -88,61 +88,54 @@ function convertToFlowData(
 
     for (const brother of brothers) {
       const isRedacted = brother.name === "REDACTED";
-      const shouldSkipNode = hideRedacted && isRedacted;
+      const id = `node-${nodeIdCounter++}`;
+      nodeIds.push(id);
 
-      let id: string | null = null;
-      if (!shouldSkipNode) {
-        id = `node-${nodeIdCounter++}`;
-        nodeIds.push(id);
+      // Class-based visibility
+      const isTargetClass =
+        viewClass === "All Classes" ||
+        brother.class === viewClass ||
+        (viewClass === "All Classes" && brother.class === "unknown");
 
-        // Class-based visibility
-        const isTargetClass =
-          viewClass === "All Classes" ||
-          brother.class === viewClass ||
-          (viewClass === "All Classes" && brother.class === "unknown");
+      // Faded flag: based on class filter
+      const faded = !isTargetClass;
 
-        // Faded flag: only based on class filter, not search
-        const faded = !isTargetClass;
+      // Redacted faded: fade redacted nodes when hideRedacted is on
+      const redactedFaded = hideRedacted && isRedacted;
 
-        // Calculate width needed for this subtree
-        const subtreeWidth = calculateSubtreeWidth(brother, nodeSpacing);
-        const nodeX = currentX + subtreeWidth / 2 - 60; // Center the node
+      // Calculate width needed for this subtree
+      const subtreeWidth = calculateSubtreeWidth(brother, nodeSpacing);
+      const nodeX = currentX + subtreeWidth / 2 - 60; // Center the node
 
-        nodes.push({
-          id,
-          type: "brother",
-          position: { x: nodeX, y: levelY },
-          data: {
-            name: brother.name,
-            class: brother.class,
-            faded,
-            familyColor: familyColors.get(brother) || getSequentialColor(0),
-            colorBy,
-          },
-          width: 120,
-          height: 60,
-        });
+      nodes.push({
+        id,
+        type: "brother",
+        position: { x: nodeX, y: levelY },
+        data: {
+          name: brother.name,
+          class: brother.class,
+          faded,
+          redactedFaded,
+          familyColor: familyColors.get(brother) || getSequentialColor(0),
+          colorBy,
+        },
+        width: 120,
+        height: 60,
+      });
 
-        // Store parent-child relationship
-        if (parentId) {
-          if (!parentChildMap.has(parentId)) {
-            parentChildMap.set(parentId, []);
-          }
-          parentChildMap.get(parentId)!.push(id);
+      // Store parent-child relationship
+      if (parentId) {
+        if (!parentChildMap.has(parentId)) {
+          parentChildMap.set(parentId, []);
         }
+        parentChildMap.get(parentId)!.push(id);
       }
 
-      // Process children (filter out redacted if needed)
-      const childrenToProcess = hideRedacted
-        ? brother.children.filter((child) => child.name !== "REDACTED")
-        : brother.children;
-
-      if (childrenToProcess.length > 0) {
-        // Use the current node as parent, or the original parent if we skipped this node
-        const effectiveParentId = id || parentId;
+      // Process children (always traverse all children)
+      if (brother.children.length > 0) {
         const childrenResult = createTree(
-          childrenToProcess,
-          effectiveParentId,
+          brother.children,
+          id,
           level + 1,
           currentX,
           levelY + levelHeight

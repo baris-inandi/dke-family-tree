@@ -49,6 +49,7 @@ export const BrotherNode = ({
     name: string;
     class: string;
     faded?: boolean;
+    redactedFaded?: boolean;
     familyColor?: string;
     colorBy?: "class" | "family";
     isHighlighted?: boolean;
@@ -62,12 +63,14 @@ export const BrotherNode = ({
       : getClassColor(data.class);
 
   const faded = data.faded ?? false;
-  const opacity = faded ? 0.3 : 1.0;
+  const redactedFaded = data.redactedFaded ?? false;
+  // Combine both faded states: if either is true, reduce opacity
+  const opacity = faded || redactedFaded ? 0.15 : 1.0;
   const isHighlighted = data.isHighlighted ?? false;
 
   return (
     <div
-      className={`px-4 py-2 rounded-lg shadow-md border-2  min-w-[120px] text-center relative ${
+      className={`px-2 py-1 rounded-xl border-2 shadow-sm min-w-[100px] text-center relative ${
         isHighlighted ? "animate-pulse-scale" : ""
       }`}
       style={{
