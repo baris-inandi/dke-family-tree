@@ -70,431 +70,431 @@
       }
     },
     "familyColors": {
-      "brother-steve-holt-alpha-1": {
+      "steveholtalpha1": {
         "foreground": "hsl(0 100% 25%)",
         "background": "hsla(0 110% 35% / 0.2)"
       },
-      "brother-redacted-unknown-2": {
+      "redactedunknown2": {
         "foreground": "hsl(0 100% 25%)",
         "background": "hsla(0 110% 35% / 0.2)"
       },
-      "brother-redacted-unknown-3": {
+      "redactedunknown3": {
         "foreground": "hsl(0 100% 25%)",
         "background": "hsla(0 110% 35% / 0.2)"
       },
-      "brother-marcus-yi-theta-4": {
+      "marcusyitheta4": {
         "foreground": "hsl(0 100% 25%)",
         "background": "hsla(0 110% 35% / 0.2)"
       },
-      "brother-aashish-hassam-iota-5": {
+      "aashishhassamiota5": {
         "foreground": "hsl(0 100% 25%)",
         "background": "hsla(0 110% 35% / 0.2)"
       },
-      "brother-matt-kohen-lambda-6": {
+      "mattkohenlambda6": {
         "foreground": "hsl(0 100% 25%)",
         "background": "hsla(0 110% 35% / 0.2)"
       },
-      "brother-ryan-alexander-nu-7": {
+      "ryanalexandernu7": {
         "foreground": "hsl(0 100% 25%)",
         "background": "hsla(0 110% 35% / 0.2)"
       },
-      "brother-ryan-hatcher-nu-8": {
+      "ryanhatchernu8": {
         "foreground": "hsl(0 100% 25%)",
         "background": "hsla(0 110% 35% / 0.2)"
       },
-      "brother-briggs-kroeger-lambda-9": {
+      "briggskroegerlambda9": {
         "foreground": "hsl(0 100% 25%)",
         "background": "hsla(0 110% 35% / 0.2)"
       },
-      "brother-brendan-keefe-nu-10": {
+      "brendankeefenu10": {
         "foreground": "hsl(0 100% 25%)",
         "background": "hsla(0 110% 35% / 0.2)"
       },
-      "brother-james-mallon-nu-11": {
+      "jamesmallonnu11": {
         "foreground": "hsl(0 100% 25%)",
         "background": "hsla(0 110% 35% / 0.2)"
       },
-      "brother-evan-yee-kappa-12": {
+      "evanyeekappa12": {
         "foreground": "hsl(0 100% 25%)",
         "background": "hsla(0 110% 35% / 0.2)"
       },
-      "brother-dom-cheng-nu-13": {
+      "domchengnu13": {
         "foreground": "hsl(0 100% 25%)",
         "background": "hsla(0 110% 35% / 0.2)"
       },
-      "brother-matt-bertoncini-nu-14": {
+      "mattbertoncininu14": {
         "foreground": "hsl(0 100% 25%)",
         "background": "hsla(0 110% 35% / 0.2)"
       },
-      "brother-brayden-ramseier-lambda-15": {
+      "braydenramseierlambda15": {
         "foreground": "hsl(0 100% 25%)",
         "background": "hsla(0 110% 35% / 0.2)"
       },
-      "brother-zach-upson-mu-16": {
+      "zachupsonmu16": {
         "foreground": "hsl(0 100% 25%)",
         "background": "hsla(0 110% 35% / 0.2)"
       },
-      "brother-umut-tanrivierdi-epsilon-17": {
+      "umuttanrivierdiepsilon17": {
         "foreground": "hsl(0 100% 25%)",
         "background": "hsla(0 110% 35% / 0.2)"
       },
-      "brother-armagan-karakas-eta-18": {
+      "armagankarakaseta18": {
         "foreground": "hsl(0 100% 25%)",
         "background": "hsla(0 110% 35% / 0.2)"
       },
-      "brother-adil-ikiz-epsilon-19": {
+      "adilikizepsilon19": {
         "foreground": "hsl(0 100% 25%)",
         "background": "hsla(0 110% 35% / 0.2)"
       },
-      "brother-derek-uhrich-kappa-20": {
+      "derekuhrichkappa20": {
         "foreground": "hsl(0 100% 25%)",
         "background": "hsla(0 110% 35% / 0.2)"
       },
-      "brother-calvin-norstad-alpha-21": {
+      "calvinnorstadalpha21": {
         "foreground": "hsl(30 100% 25%)",
         "background": "hsla(30 110% 35% / 0.2)"
       },
-      "brother-redacted-unknown-22": {
+      "redactedunknown22": {
         "foreground": "hsl(30 100% 25%)",
         "background": "hsla(30 110% 35% / 0.2)"
       },
-      "brother-sepehr-rashigi-null-23": {
+      "sepehrrashiginull23": {
         "foreground": "hsl(30 100% 25%)",
         "background": "hsla(30 110% 35% / 0.2)"
       },
-      "brother-matt-o'rourke-epsilon-24": {
+      "matto'rourkeepsilon24": {
         "foreground": "hsl(30 100% 25%)",
         "background": "hsla(30 110% 35% / 0.2)"
       },
-      "brother-bobby-palazzi-iota-25": {
+      "bobbypalazziiota25": {
         "foreground": "hsl(30 100% 25%)",
         "background": "hsla(30 110% 35% / 0.2)"
       },
-      "brother-kieran-heneghan-zeta-26": {
+      "kieranheneghanzeta26": {
         "foreground": "hsl(30 100% 25%)",
         "background": "hsla(30 110% 35% / 0.2)"
       },
-      "brother-brandon-petersen-iota-27": {
+      "brandonpeterseniota27": {
         "foreground": "hsl(30 100% 25%)",
         "background": "hsla(30 110% 35% / 0.2)"
       },
-      "brother-ellis-coco-lambda-28": {
+      "elliscocolambda28": {
         "foreground": "hsl(30 100% 25%)",
         "background": "hsla(30 110% 35% / 0.2)"
       },
-      "brother-george-giakouminakis-mu-29": {
+      "georgegiakouminakismu29": {
         "foreground": "hsl(30 100% 25%)",
         "background": "hsla(30 110% 35% / 0.2)"
       },
-      "brother-gio-malpartida-nu-30": {
+      "giomalpartidanu30": {
         "foreground": "hsl(30 100% 25%)",
         "background": "hsla(30 110% 35% / 0.2)"
       },
-      "brother-finn-oldenburg-lambda-31": {
+      "finnoldenburglambda31": {
         "foreground": "hsl(30 100% 25%)",
         "background": "hsla(30 110% 35% / 0.2)"
       },
-      "brother-nick-vallary-nu-32": {
+      "nickvallarynu32": {
         "foreground": "hsl(30 100% 25%)",
         "background": "hsla(30 110% 35% / 0.2)"
       },
-      "brother-matt-lowe-alpha-33": {
+      "mattlowealpha33": {
         "foreground": "hsl(60 100% 25%)",
         "background": "hsla(60 110% 35% / 0.2)"
       },
-      "brother-john-berry-delta-34": {
+      "johnberrydelta34": {
         "foreground": "hsl(60 100% 25%)",
         "background": "hsla(60 110% 35% / 0.2)"
       },
-      "brother-rod-tavangar-theta-35": {
+      "rodtavangartheta35": {
         "foreground": "hsl(60 100% 25%)",
         "background": "hsla(60 110% 35% / 0.2)"
       },
-      "brother-tanner-lederman-alpha-36": {
+      "tannerledermanalpha36": {
         "foreground": "hsl(90 100% 25%)",
         "background": "hsla(90 110% 35% / 0.2)"
       },
-      "brother-jacob-gottesman-zeta-37": {
+      "jacobgottesmanzeta37": {
         "foreground": "hsl(90 100% 25%)",
         "background": "hsla(90 110% 35% / 0.2)"
       },
-      "brother-batu-isik-eta-38": {
+      "batuisiketa38": {
         "foreground": "hsl(90 100% 25%)",
         "background": "hsla(90 110% 35% / 0.2)"
       },
-      "brother-cameron-hornbarger-theta-39": {
+      "cameronhornbargertheta39": {
         "foreground": "hsl(90 100% 25%)",
         "background": "hsla(90 110% 35% / 0.2)"
       },
-      "brother-jack-podesta-kappa-40": {
+      "jackpodestakappa40": {
         "foreground": "hsl(90 100% 25%)",
         "background": "hsla(90 110% 35% / 0.2)"
       },
-      "brother-alex-keefe-lambda-41": {
+      "alexkeefelambda41": {
         "foreground": "hsl(90 100% 25%)",
         "background": "hsla(90 110% 35% / 0.2)"
       },
-      "brother-david-panin-nu-42": {
+      "davidpaninnu42": {
         "foreground": "hsl(90 100% 25%)",
         "background": "hsla(90 110% 35% / 0.2)"
       },
-      "brother-brian-yang-nu-43": {
+      "brianyangnu43": {
         "foreground": "hsl(90 100% 25%)",
         "background": "hsla(90 110% 35% / 0.2)"
       },
-      "brother-ben-marler-kappa-44": {
+      "benmarlerkappa44": {
         "foreground": "hsl(90 100% 25%)",
         "background": "hsla(90 110% 35% / 0.2)"
       },
-      "brother-harrison-feldman-mu-45": {
+      "harrisonfeldmanmu45": {
         "foreground": "hsl(90 100% 25%)",
         "background": "hsla(90 110% 35% / 0.2)"
       },
-      "brother-mike-grbic-kappa-46": {
+      "mikegrbickappa46": {
         "foreground": "hsl(90 100% 25%)",
         "background": "hsla(90 110% 35% / 0.2)"
       },
-      "brother-matt-tobin-nu-47": {
+      "matttobinnu47": {
         "foreground": "hsl(90 100% 25%)",
         "background": "hsla(90 110% 35% / 0.2)"
       },
-      "brother-agastya-das-alpha-48": {
+      "agastyadasalpha48": {
         "foreground": "hsl(120 100% 25%)",
         "background": "hsla(120 110% 35% / 0.2)"
       },
-      "brother-tom-glassman-zeta-49": {
+      "tomglassmanzeta49": {
         "foreground": "hsl(120 100% 25%)",
         "background": "hsla(120 110% 35% / 0.2)"
       },
-      "brother-jacob-horowitz-alpha-50": {
+      "jacobhorowitzalpha50": {
         "foreground": "hsl(150 100% 25%)",
         "background": "hsla(150 110% 35% / 0.2)"
       },
-      "brother-gio-panagiotakis-epsilon-51": {
+      "giopanagiotakisepsilon51": {
         "foreground": "hsl(150 100% 25%)",
         "background": "hsla(150 110% 35% / 0.2)"
       },
-      "brother-nick-condoleo-iota-52": {
+      "nickcondoleoiota52": {
         "foreground": "hsl(150 100% 25%)",
         "background": "hsla(150 110% 35% / 0.2)"
       },
-      "brother-max-mayer-lambda-53": {
+      "maxmayerlambda53": {
         "foreground": "hsl(150 100% 25%)",
         "background": "hsla(150 110% 35% / 0.2)"
       },
-      "brother-ben-agatone-iota-54": {
+      "benagatoneiota54": {
         "foreground": "hsl(150 100% 25%)",
         "background": "hsla(150 110% 35% / 0.2)"
       },
-      "brother-sam-gildea-alpha-55": {
+      "samgildeaalpha55": {
         "foreground": "hsl(150 100% 25%)",
         "background": "hsla(150 110% 35% / 0.2)"
       },
-      "brother-tyler-kavanaugh-alpha-56": {
+      "tylerkavanaughalpha56": {
         "foreground": "hsl(180 100% 25%)",
         "background": "hsla(180 110% 35% / 0.2)"
       },
-      "brother-alex-levin-epsilon-57": {
+      "alexlevinepsilon57": {
         "foreground": "hsl(180 100% 25%)",
         "background": "hsla(180 110% 35% / 0.2)"
       },
-      "brother-nate-nagel-iota-58": {
+      "natenageliota58": {
         "foreground": "hsl(180 100% 25%)",
         "background": "hsla(180 110% 35% / 0.2)"
       },
-      "brother-evan-massa-alpha-59": {
+      "evanmassaalpha59": {
         "foreground": "hsl(210 100% 25%)",
         "background": "hsla(210 110% 35% / 0.2)"
       },
-      "brother-harry-merlin-epsilon-60": {
+      "harrymerlinepsilon60": {
         "foreground": "hsl(210 100% 25%)",
         "background": "hsla(210 110% 35% / 0.2)"
       },
-      "brother-ben-clott-zeta-61": {
+      "benclottzeta61": {
         "foreground": "hsl(210 100% 25%)",
         "background": "hsla(210 110% 35% / 0.2)"
       },
-      "brother-george-foster-iota-62": {
+      "georgefosteriota62": {
         "foreground": "hsl(210 100% 25%)",
         "background": "hsla(210 110% 35% / 0.2)"
       },
-      "brother-marley-mckinsey-lambda-63": {
+      "marleymckinseylambda63": {
         "foreground": "hsl(210 100% 25%)",
         "background": "hsla(210 110% 35% / 0.2)"
       },
-      "brother-thomas-clark-mu-64": {
+      "thomasclarkmu64": {
         "foreground": "hsl(210 100% 25%)",
         "background": "hsla(210 110% 35% / 0.2)"
       },
-      "brother-hunter-lund-nu-65": {
+      "hunterlundnu65": {
         "foreground": "hsl(210 100% 25%)",
         "background": "hsla(210 110% 35% / 0.2)"
       },
-      "brother-will-von-ahnen-alpha-66": {
+      "willvonahnenalpha66": {
         "foreground": "hsl(240 100% 25%)",
         "background": "hsla(240 110% 35% / 0.2)"
       },
-      "brother-noah-mack-alpha-67": {
+      "noahmackalpha67": {
         "foreground": "hsl(240 100% 25%)",
         "background": "hsla(240 110% 35% / 0.2)"
       },
-      "brother-alex-menikoff-gamma-68": {
+      "alexmenikoffgamma68": {
         "foreground": "hsl(240 100% 25%)",
         "background": "hsla(240 110% 35% / 0.2)"
       },
-      "brother-alex-prokey-epsilon-69": {
+      "alexprokeyepsilon69": {
         "foreground": "hsl(240 100% 25%)",
         "background": "hsla(240 110% 35% / 0.2)"
       },
-      "brother-ian-menachery-iota-70": {
+      "ianmenacheryiota70": {
         "foreground": "hsl(240 100% 25%)",
         "background": "hsla(240 110% 35% / 0.2)"
       },
-      "brother-theo-cairns-mu-71": {
+      "theocairnsmu71": {
         "foreground": "hsl(240 100% 25%)",
         "background": "hsla(240 110% 35% / 0.2)"
       },
-      "brother-guilherme-barcellos-nu-72": {
+      "guilhermebarcellosnu72": {
         "foreground": "hsl(240 100% 25%)",
         "background": "hsla(240 110% 35% / 0.2)"
       },
-      "brother-aidan-webster-alpha-73": {
+      "aidanwebsteralpha73": {
         "foreground": "hsl(270 100% 25%)",
         "background": "hsla(270 110% 35% / 0.2)"
       },
-      "brother-max-brotman-gamma-74": {
+      "maxbrotmangamma74": {
         "foreground": "hsl(270 100% 25%)",
         "background": "hsla(270 110% 35% / 0.2)"
       },
-      "brother-matt-hiller-epsilon-75": {
+      "matthillerepsilon75": {
         "foreground": "hsl(270 100% 25%)",
         "background": "hsla(270 110% 35% / 0.2)"
       },
-      "brother-chris-wilk-eta-76": {
+      "chriswilketa76": {
         "foreground": "hsl(270 100% 25%)",
         "background": "hsla(270 110% 35% / 0.2)"
       },
-      "brother-luke-lange-iota-77": {
+      "lukelangeiota77": {
         "foreground": "hsl(270 100% 25%)",
         "background": "hsla(270 110% 35% / 0.2)"
       },
-      "brother-chris-pyle-lambda-78": {
+      "chrispylelambda78": {
         "foreground": "hsl(270 100% 25%)",
         "background": "hsla(270 110% 35% / 0.2)"
       },
-      "brother-mikhail-utyashev-nu-79": {
+      "mikhailutyashevnu79": {
         "foreground": "hsl(270 100% 25%)",
         "background": "hsla(270 110% 35% / 0.2)"
       },
-      "brother-lex-tremblay-mu-80": {
+      "lextremblaymu80": {
         "foreground": "hsl(270 100% 25%)",
         "background": "hsla(270 110% 35% / 0.2)"
       },
-      "brother-vincenzo-fardella-nu-81": {
+      "vincenzofardellanu81": {
         "foreground": "hsl(270 100% 25%)",
         "background": "hsla(270 110% 35% / 0.2)"
       },
-      "brother-kai-barbara-iota-82": {
+      "kaibarbaraiota82": {
         "foreground": "hsl(270 100% 25%)",
         "background": "hsla(270 110% 35% / 0.2)"
       },
-      "brother-chris-bialzik-kappa-83": {
+      "chrisbialzikkappa83": {
         "foreground": "hsl(270 100% 25%)",
         "background": "hsla(270 110% 35% / 0.2)"
       },
-      "brother-sid-chandra-nu-84": {
+      "sidchandranu84": {
         "foreground": "hsl(270 100% 25%)",
         "background": "hsla(270 110% 35% / 0.2)"
       },
-      "brother-jack-guo-nu-85": {
+      "jackguonu85": {
         "foreground": "hsl(270 100% 25%)",
         "background": "hsla(270 110% 35% / 0.2)"
       },
-      "brother-klaus-ohlweiler-iota-86": {
+      "klausohlweileriota86": {
         "foreground": "hsl(270 100% 25%)",
         "background": "hsla(270 110% 35% / 0.2)"
       },
-      "brother-tyler-heidke-lambda-87": {
+      "tylerheidkelambda87": {
         "foreground": "hsl(270 100% 25%)",
         "background": "hsla(270 110% 35% / 0.2)"
       },
-      "brother-jason-liku-nu-88": {
+      "jasonlikunu88": {
         "foreground": "hsl(270 100% 25%)",
         "background": "hsla(270 110% 35% / 0.2)"
       },
-      "brother-tim-vaquero-epsilon-89": {
+      "timvaqueroepsilon89": {
         "foreground": "hsl(270 100% 25%)",
         "background": "hsla(270 110% 35% / 0.2)"
       },
-      "brother-chase-houser-iota-90": {
+      "chasehouseriota90": {
         "foreground": "hsl(270 100% 25%)",
         "background": "hsla(270 110% 35% / 0.2)"
       },
-      "brother-zach-berde-kappa-91": {
+      "zachberdekappa91": {
         "foreground": "hsl(270 100% 25%)",
         "background": "hsla(270 110% 35% / 0.2)"
       },
-      "brother-harrison-mitchell-lambda-92": {
+      "harrisonmitchelllambda92": {
         "foreground": "hsl(270 100% 25%)",
         "background": "hsla(270 110% 35% / 0.2)"
       },
-      "brother-fernando-ramos-nu-93": {
+      "fernandoramosnu93": {
         "foreground": "hsl(270 100% 25%)",
         "background": "hsla(270 110% 35% / 0.2)"
       },
-      "brother-ian-cole-nu-94": {
+      "iancolenu94": {
         "foreground": "hsl(270 100% 25%)",
         "background": "hsla(270 110% 35% / 0.2)"
       },
-      "brother-redacted-alpha-95": {
+      "redactedalpha95": {
         "foreground": "hsl(300 100% 25%)",
         "background": "hsla(300 110% 35% / 0.2)"
       },
-      "brother-max-leblang-null-96": {
+      "maxleblangnull96": {
         "foreground": "hsl(300 100% 25%)",
         "background": "hsla(300 110% 35% / 0.2)"
       },
-      "brother-kj-graham-eta-97": {
+      "kjgrahameta97": {
         "foreground": "hsl(300 100% 25%)",
         "background": "hsla(300 110% 35% / 0.2)"
       },
-      "brother-jonathan-grbic-iota-98": {
+      "jonathangrbiciota98": {
         "foreground": "hsl(300 100% 25%)",
         "background": "hsla(300 110% 35% / 0.2)"
       },
-      "brother-redacted-alpha-99": {
+      "redactedalpha99": {
         "foreground": "hsl(330 100% 25%)",
         "background": "hsla(330 110% 35% / 0.2)"
       },
-      "brother-martin-bulanowski-beta-100": {
+      "martinbulanowskibeta100": {
         "foreground": "hsl(330 100% 25%)",
         "background": "hsla(330 110% 35% / 0.2)"
       },
-      "brother-josh-weissert-epsilon-101": {
+      "joshweissertepsilon101": {
         "foreground": "hsl(330 100% 25%)",
         "background": "hsla(330 110% 35% / 0.2)"
       },
-      "brother-declan-javers-eta-102": {
+      "declanjaverseta102": {
         "foreground": "hsl(330 100% 25%)",
         "background": "hsla(330 110% 35% / 0.2)"
       },
-      "brother-jayden-romano-lambda-103": {
+      "jaydenromanolambda103": {
         "foreground": "hsl(330 100% 25%)",
         "background": "hsla(330 110% 35% / 0.2)"
       },
-      "brother-luke-daniel-mu-104": {
+      "lukedanielmu104": {
         "foreground": "hsl(330 100% 25%)",
         "background": "hsla(330 110% 35% / 0.2)"
       },
-      "brother-beck-carlson-nu-105": {
+      "beckcarlsonnu105": {
         "foreground": "hsl(330 100% 25%)",
         "background": "hsla(330 110% 35% / 0.2)"
       },
-      "brother-baris-inandi-nu-106": {
+      "barisinandinu106": {
         "foreground": "hsl(330 100% 25%)",
         "background": "hsla(330 110% 35% / 0.2)"
       },
-      "brother-fred-hodgson-kappa-107": {
+      "fredhodgsonkappa107": {
         "foreground": "hsl(330 100% 25%)",
         "background": "hsla(330 110% 35% / 0.2)"
       }
@@ -502,48 +502,48 @@
   },
   "tree": [
     {
-      "id": "brother-adam-akkach-alpha-0",
+      "id": "adamakkachalpha0",
       "name": "Adam Akkach",
       "class": "Alpha",
       "children": [
         {
-          "id": "brother-steve-holt-alpha-1",
+          "id": "steveholtalpha1",
           "name": "Steve Holt",
           "class": "Alpha",
           "children": [
             {
-              "id": "brother-redacted-unknown-2",
+              "id": "redactedunknown2",
               "name": "REDACTED",
               "class": "unknown",
               "children": [
                 {
-                  "id": "brother-redacted-unknown-3",
+                  "id": "redactedunknown3",
                   "name": "REDACTED",
                   "class": "unknown",
                   "children": [
                     {
-                      "id": "brother-marcus-yi-theta-4",
+                      "id": "marcusyitheta4",
                       "name": "Marcus Yi",
                       "class": "Theta",
                       "children": [
                         {
-                          "id": "brother-aashish-hassam-iota-5",
+                          "id": "aashishhassamiota5",
                           "name": "Aashish Hassam",
                           "class": "Iota",
                           "children": [
                             {
-                              "id": "brother-matt-kohen-lambda-6",
+                              "id": "mattkohenlambda6",
                               "name": "Matt Kohen",
                               "class": "Lambda",
                               "children": [
                                 {
-                                  "id": "brother-ryan-alexander-nu-7",
+                                  "id": "ryanalexandernu7",
                                   "name": "Ryan Alexander",
                                   "class": "Nu",
                                   "children": []
                                 },
                                 {
-                                  "id": "brother-ryan-hatcher-nu-8",
+                                  "id": "ryanhatchernu8",
                                   "name": "Ryan Hatcher",
                                   "class": "Nu",
                                   "children": []
@@ -551,18 +551,18 @@
                               ]
                             },
                             {
-                              "id": "brother-briggs-kroeger-lambda-9",
+                              "id": "briggskroegerlambda9",
                               "name": "Briggs Kroeger",
                               "class": "Lambda",
                               "children": [
                                 {
-                                  "id": "brother-brendan-keefe-nu-10",
+                                  "id": "brendankeefenu10",
                                   "name": "Brendan Keefe",
                                   "class": "Nu",
                                   "children": []
                                 },
                                 {
-                                  "id": "brother-james-mallon-nu-11",
+                                  "id": "jamesmallonnu11",
                                   "name": "James Mallon",
                                   "class": "Nu",
                                   "children": []
@@ -572,12 +572,12 @@
                           ]
                         },
                         {
-                          "id": "brother-evan-yee-kappa-12",
+                          "id": "evanyeekappa12",
                           "name": "Evan Yee",
                           "class": "Kappa",
                           "children": [
                             {
-                              "id": "brother-dom-cheng-nu-13",
+                              "id": "domchengnu13",
                               "name": "Dom Cheng",
                               "class": "Nu",
                               "children": []
@@ -585,18 +585,18 @@
                           ]
                         },
                         {
-                          "id": "brother-matt-bertoncini-nu-14",
+                          "id": "mattbertoncininu14",
                           "name": "Matt Bertoncini",
                           "class": "Nu",
                           "children": []
                         },
                         {
-                          "id": "brother-brayden-ramseier-lambda-15",
+                          "id": "braydenramseierlambda15",
                           "name": "Brayden Ramseier",
                           "class": "Lambda",
                           "children": [
                             {
-                              "id": "brother-zach-upson-mu-16",
+                              "id": "zachupsonmu16",
                               "name": "Zach Upson",
                               "class": "Mu",
                               "children": []
@@ -608,12 +608,12 @@
                   ]
                 },
                 {
-                  "id": "brother-umut-tanrivierdi-epsilon-17",
+                  "id": "umuttanrivierdiepsilon17",
                   "name": "Umut Tanrivierdi",
                   "class": "Epsilon",
                   "children": [
                     {
-                      "id": "brother-armagan-karakas-eta-18",
+                      "id": "armagankarakaseta18",
                       "name": "Armagan Karakas",
                       "class": "Eta",
                       "children": []
@@ -621,12 +621,12 @@
                   ]
                 },
                 {
-                  "id": "brother-adil-ikiz-epsilon-19",
+                  "id": "adilikizepsilon19",
                   "name": "Adil Ikiz",
                   "class": "Epsilon",
                   "children": [
                     {
-                      "id": "brother-derek-uhrich-kappa-20",
+                      "id": "derekuhrichkappa20",
                       "name": "Derek Uhrich",
                       "class": "Kappa",
                       "children": []
@@ -638,28 +638,28 @@
           ]
         },
         {
-          "id": "brother-calvin-norstad-alpha-21",
+          "id": "calvinnorstadalpha21",
           "name": "Calvin Norstad",
           "class": "Alpha",
           "children": [
             {
-              "id": "brother-redacted-unknown-22",
+              "id": "redactedunknown22",
               "name": "REDACTED",
               "class": "unknown",
               "children": [
                 {
-                  "id": "brother-sepehr-rashigi-null-23",
+                  "id": "sepehrrashiginull23",
                   "name": "Sepehr Rashigi",
                   "class": "null",
                   "children": []
                 },
                 {
-                  "id": "brother-matt-o'rourke-epsilon-24",
+                  "id": "matto'rourkeepsilon24",
                   "name": "Matt O'Rourke",
                   "class": "Epsilon",
                   "children": [
                     {
-                      "id": "brother-bobby-palazzi-iota-25",
+                      "id": "bobbypalazziiota25",
                       "name": "Bobby Palazzi",
                       "class": "Iota",
                       "children": []
@@ -669,28 +669,28 @@
               ]
             },
             {
-              "id": "brother-kieran-heneghan-zeta-26",
+              "id": "kieranheneghanzeta26",
               "name": "Kieran Heneghan",
               "class": "Zeta",
               "children": [
                 {
-                  "id": "brother-brandon-petersen-iota-27",
+                  "id": "brandonpeterseniota27",
                   "name": "Brandon Petersen",
                   "class": "Iota",
                   "children": []
                 },
                 {
-                  "id": "brother-ellis-coco-lambda-28",
+                  "id": "elliscocolambda28",
                   "name": "Ellis Coco",
                   "class": "Lambda",
                   "children": [
                     {
-                      "id": "brother-george-giakouminakis-mu-29",
+                      "id": "georgegiakouminakismu29",
                       "name": "George Giakouminakis",
                       "class": "Mu",
                       "children": [
                         {
-                          "id": "brother-gio-malpartida-nu-30",
+                          "id": "giomalpartidanu30",
                           "name": "Gio Malpartida",
                           "class": "Nu",
                           "children": []
@@ -698,12 +698,12 @@
                       ]
                     },
                     {
-                      "id": "brother-finn-oldenburg-lambda-31",
+                      "id": "finnoldenburglambda31",
                       "name": "Finn Oldenburg",
                       "class": "Lambda",
                       "children": [
                         {
-                          "id": "brother-nick-vallary-nu-32",
+                          "id": "nickvallarynu32",
                           "name": "Nick Vallary",
                           "class": "Nu",
                           "children": []
@@ -717,17 +717,17 @@
           ]
         },
         {
-          "id": "brother-matt-lowe-alpha-33",
+          "id": "mattlowealpha33",
           "name": "Matt Lowe",
           "class": "Alpha",
           "children": [
             {
-              "id": "brother-john-berry-delta-34",
+              "id": "johnberrydelta34",
               "name": "John Berry",
               "class": "Delta",
               "children": [
                 {
-                  "id": "brother-rod-tavangar-theta-35",
+                  "id": "rodtavangartheta35",
                   "name": "Rod Tavangar",
                   "class": "Theta",
                   "children": []
@@ -737,37 +737,37 @@
           ]
         },
         {
-          "id": "brother-tanner-lederman-alpha-36",
+          "id": "tannerledermanalpha36",
           "name": "Tanner Lederman",
           "class": "Alpha",
           "children": [
             {
-              "id": "brother-jacob-gottesman-zeta-37",
+              "id": "jacobgottesmanzeta37",
               "name": "Jacob Gottesman",
               "class": "Zeta",
               "children": [
                 {
-                  "id": "brother-batu-isik-eta-38",
+                  "id": "batuisiketa38",
                   "name": "Batu Isik",
                   "class": "Eta",
                   "children": [
                     {
-                      "id": "brother-cameron-hornbarger-theta-39",
+                      "id": "cameronhornbargertheta39",
                       "name": "Cameron Hornbarger",
                       "class": "Theta",
                       "children": [
                         {
-                          "id": "brother-jack-podesta-kappa-40",
+                          "id": "jackpodestakappa40",
                           "name": "Jack Podesta",
                           "class": "Kappa",
                           "children": [
                             {
-                              "id": "brother-alex-keefe-lambda-41",
+                              "id": "alexkeefelambda41",
                               "name": "Alex Keefe",
                               "class": "Lambda",
                               "children": [
                                 {
-                                  "id": "brother-david-panin-nu-42",
+                                  "id": "davidpaninnu42",
                                   "name": "David Panin",
                                   "class": "Nu",
                                   "children": []
@@ -775,7 +775,7 @@
                               ]
                             },
                             {
-                              "id": "brother-brian-yang-nu-43",
+                              "id": "brianyangnu43",
                               "name": "Brian Yang",
                               "class": "Nu",
                               "children": []
@@ -785,12 +785,12 @@
                       ]
                     },
                     {
-                      "id": "brother-ben-marler-kappa-44",
+                      "id": "benmarlerkappa44",
                       "name": "Ben Marler",
                       "class": "Kappa",
                       "children": [
                         {
-                          "id": "brother-harrison-feldman-mu-45",
+                          "id": "harrisonfeldmanmu45",
                           "name": "Harrison Feldman",
                           "class": "Mu",
                           "children": []
@@ -800,12 +800,12 @@
                   ]
                 },
                 {
-                  "id": "brother-mike-grbic-kappa-46",
+                  "id": "mikegrbickappa46",
                   "name": "Mike Grbic",
                   "class": "Kappa",
                   "children": [
                     {
-                      "id": "brother-matt-tobin-nu-47",
+                      "id": "matttobinnu47",
                       "name": "Matt Tobin",
                       "class": "Nu",
                       "children": []
@@ -817,12 +817,12 @@
           ]
         },
         {
-          "id": "brother-agastya-das-alpha-48",
+          "id": "agastyadasalpha48",
           "name": "Agastya Das",
           "class": "Alpha",
           "children": [
             {
-              "id": "brother-tom-glassman-zeta-49",
+              "id": "tomglassmanzeta49",
               "name": "Tom Glassman",
               "class": "Zeta",
               "children": []
@@ -830,22 +830,22 @@
           ]
         },
         {
-          "id": "brother-jacob-horowitz-alpha-50",
+          "id": "jacobhorowitzalpha50",
           "name": "Jacob Horowitz",
           "class": "Alpha",
           "children": [
             {
-              "id": "brother-gio-panagiotakis-epsilon-51",
+              "id": "giopanagiotakisepsilon51",
               "name": "Gio Panagiotakis",
               "class": "Epsilon",
               "children": [
                 {
-                  "id": "brother-nick-condoleo-iota-52",
+                  "id": "nickcondoleoiota52",
                   "name": "Nick Condoleo",
                   "class": "Iota",
                   "children": [
                     {
-                      "id": "brother-max-mayer-lambda-53",
+                      "id": "maxmayerlambda53",
                       "name": "Max Mayer",
                       "class": "Lambda",
                       "children": []
@@ -853,7 +853,7 @@
                   ]
                 },
                 {
-                  "id": "brother-ben-agatone-iota-54",
+                  "id": "benagatoneiota54",
                   "name": "Ben Agatone",
                   "class": "Iota",
                   "children": []
@@ -861,7 +861,7 @@
               ]
             },
             {
-              "id": "brother-sam-gildea-alpha-55",
+              "id": "samgildeaalpha55",
               "name": "Sam Gildea",
               "class": "Alpha",
               "children": []
@@ -869,17 +869,17 @@
           ]
         },
         {
-          "id": "brother-tyler-kavanaugh-alpha-56",
+          "id": "tylerkavanaughalpha56",
           "name": "Tyler Kavanaugh",
           "class": "Alpha",
           "children": [
             {
-              "id": "brother-alex-levin-epsilon-57",
+              "id": "alexlevinepsilon57",
               "name": "Alex Levin",
               "class": "Epsilon",
               "children": [
                 {
-                  "id": "brother-nate-nagel-iota-58",
+                  "id": "natenageliota58",
                   "name": "Nate Nagel",
                   "class": "Iota",
                   "children": []
@@ -889,37 +889,37 @@
           ]
         },
         {
-          "id": "brother-evan-massa-alpha-59",
+          "id": "evanmassaalpha59",
           "name": "Evan Massa",
           "class": "Alpha",
           "children": [
             {
-              "id": "brother-harry-merlin-epsilon-60",
+              "id": "harrymerlinepsilon60",
               "name": "Harry Merlin",
               "class": "Epsilon",
               "children": [
                 {
-                  "id": "brother-ben-clott-zeta-61",
+                  "id": "benclottzeta61",
                   "name": "Ben Clott",
                   "class": "Zeta",
                   "children": [
                     {
-                      "id": "brother-george-foster-iota-62",
+                      "id": "georgefosteriota62",
                       "name": "George Foster",
                       "class": "Iota",
                       "children": [
                         {
-                          "id": "brother-marley-mckinsey-lambda-63",
+                          "id": "marleymckinseylambda63",
                           "name": "Marley McKinsey",
                           "class": "Lambda",
                           "children": [
                             {
-                              "id": "brother-thomas-clark-mu-64",
+                              "id": "thomasclarkmu64",
                               "name": "Thomas Clark",
                               "class": "Mu",
                               "children": [
                                 {
-                                  "id": "brother-hunter-lund-nu-65",
+                                  "id": "hunterlundnu65",
                                   "name": "Hunter Lund",
                                   "class": "Nu",
                                   "children": []
@@ -937,37 +937,37 @@
           ]
         },
         {
-          "id": "brother-will-von-ahnen-alpha-66",
+          "id": "willvonahnenalpha66",
           "name": "Will von Ahnen",
           "class": "Alpha",
           "children": [
             {
-              "id": "brother-noah-mack-alpha-67",
+              "id": "noahmackalpha67",
               "name": "Noah Mack",
               "class": "Alpha",
               "children": [
                 {
-                  "id": "brother-alex-menikoff-gamma-68",
+                  "id": "alexmenikoffgamma68",
                   "name": "Alex Menikoff",
                   "class": "Gamma",
                   "children": [
                     {
-                      "id": "brother-alex-prokey-epsilon-69",
+                      "id": "alexprokeyepsilon69",
                       "name": "Alex Prokey",
                       "class": "Epsilon",
                       "children": [
                         {
-                          "id": "brother-ian-menachery-iota-70",
+                          "id": "ianmenacheryiota70",
                           "name": "Ian Menachery",
                           "class": "Iota",
                           "children": [
                             {
-                              "id": "brother-theo-cairns-mu-71",
+                              "id": "theocairnsmu71",
                               "name": "Theo Cairns",
                               "class": "Mu",
                               "children": [
                                 {
-                                  "id": "brother-guilherme-barcellos-nu-72",
+                                  "id": "guilhermebarcellosnu72",
                                   "name": "Guilherme Barcellos",
                                   "class": "Nu",
                                   "children": []
@@ -985,37 +985,37 @@
           ]
         },
         {
-          "id": "brother-aidan-webster-alpha-73",
+          "id": "aidanwebsteralpha73",
           "name": "Aidan Webster",
           "class": "Alpha",
           "children": [
             {
-              "id": "brother-max-brotman-gamma-74",
+              "id": "maxbrotmangamma74",
               "name": "Max Brotman",
               "class": "Gamma",
               "children": [
                 {
-                  "id": "brother-matt-hiller-epsilon-75",
+                  "id": "matthillerepsilon75",
                   "name": "Matt Hiller",
                   "class": "Epsilon",
                   "children": [
                     {
-                      "id": "brother-chris-wilk-eta-76",
+                      "id": "chriswilketa76",
                       "name": "Chris Wilk",
                       "class": "Eta",
                       "children": [
                         {
-                          "id": "brother-luke-lange-iota-77",
+                          "id": "lukelangeiota77",
                           "name": "Luke Lange",
                           "class": "Iota",
                           "children": [
                             {
-                              "id": "brother-chris-pyle-lambda-78",
+                              "id": "chrispylelambda78",
                               "name": "Chris Pyle",
                               "class": "Lambda",
                               "children": [
                                 {
-                                  "id": "brother-mikhail-utyashev-nu-79",
+                                  "id": "mikhailutyashevnu79",
                                   "name": "Mikhail Utyashev",
                                   "class": "Nu",
                                   "children": []
@@ -1023,12 +1023,12 @@
                               ]
                             },
                             {
-                              "id": "brother-lex-tremblay-mu-80",
+                              "id": "lextremblaymu80",
                               "name": "Lex Tremblay",
                               "class": "Mu",
                               "children": [
                                 {
-                                  "id": "brother-vincenzo-fardella-nu-81",
+                                  "id": "vincenzofardellanu81",
                                   "name": "Vincenzo Fardella",
                                   "class": "Nu",
                                   "children": []
@@ -1038,17 +1038,17 @@
                           ]
                         },
                         {
-                          "id": "brother-kai-barbara-iota-82",
+                          "id": "kaibarbaraiota82",
                           "name": "Kai Barbara",
                           "class": "Iota",
                           "children": [
                             {
-                              "id": "brother-chris-bialzik-kappa-83",
+                              "id": "chrisbialzikkappa83",
                               "name": "Chris Bialzik",
                               "class": "Kappa",
                               "children": [
                                 {
-                                  "id": "brother-sid-chandra-nu-84",
+                                  "id": "sidchandranu84",
                                   "name": "Sid Chandra",
                                   "class": "Nu",
                                   "children": []
@@ -1056,7 +1056,7 @@
                               ]
                             },
                             {
-                              "id": "brother-jack-guo-nu-85",
+                              "id": "jackguonu85",
                               "name": "Jack Guo",
                               "class": "Nu",
                               "children": []
@@ -1068,17 +1068,17 @@
                   ]
                 },
                 {
-                  "id": "brother-klaus-ohlweiler-iota-86",
+                  "id": "klausohlweileriota86",
                   "name": "Klaus Ohlweiler",
                   "class": "Iota",
                   "children": [
                     {
-                      "id": "brother-tyler-heidke-lambda-87",
+                      "id": "tylerheidkelambda87",
                       "name": "Tyler Heidke",
                       "class": "Lambda",
                       "children": [
                         {
-                          "id": "brother-jason-liku-nu-88",
+                          "id": "jasonlikunu88",
                           "name": "Jason Liku",
                           "class": "Nu",
                           "children": []
@@ -1090,27 +1090,27 @@
               ]
             },
             {
-              "id": "brother-tim-vaquero-epsilon-89",
+              "id": "timvaqueroepsilon89",
               "name": "Tim Vaquero",
               "class": "Epsilon",
               "children": [
                 {
-                  "id": "brother-chase-houser-iota-90",
+                  "id": "chasehouseriota90",
                   "name": "Chase Houser",
                   "class": "Iota",
                   "children": [
                     {
-                      "id": "brother-zach-berde-kappa-91",
+                      "id": "zachberdekappa91",
                       "name": "Zach Berde",
                       "class": "Kappa",
                       "children": [
                         {
-                          "id": "brother-harrison-mitchell-lambda-92",
+                          "id": "harrisonmitchelllambda92",
                           "name": "Harrison Mitchell",
                           "class": "Lambda",
                           "children": [
                             {
-                              "id": "brother-fernando-ramos-nu-93",
+                              "id": "fernandoramosnu93",
                               "name": "Fernando Ramos",
                               "class": "Nu",
                               "children": []
@@ -1118,7 +1118,7 @@
                           ]
                         },
                         {
-                          "id": "brother-ian-cole-nu-94",
+                          "id": "iancolenu94",
                           "name": "Ian Cole",
                           "class": "Nu",
                           "children": []
@@ -1132,22 +1132,22 @@
           ]
         },
         {
-          "id": "brother-redacted-alpha-95",
+          "id": "redactedalpha95",
           "name": "REDACTED",
           "class": "Alpha",
           "children": [
             {
-              "id": "brother-max-leblang-null-96",
+              "id": "maxleblangnull96",
               "name": "Max Leblang",
               "class": "null",
               "children": [
                 {
-                  "id": "brother-kj-graham-eta-97",
+                  "id": "kjgrahameta97",
                   "name": "KJ Graham",
                   "class": "Eta",
                   "children": [
                     {
-                      "id": "brother-jonathan-grbic-iota-98",
+                      "id": "jonathangrbiciota98",
                       "name": "Jonathan Grbic",
                       "class": "Iota",
                       "children": []
@@ -1159,37 +1159,37 @@
           ]
         },
         {
-          "id": "brother-redacted-alpha-99",
+          "id": "redactedalpha99",
           "name": "REDACTED",
           "class": "Alpha",
           "children": [
             {
-              "id": "brother-martin-bulanowski-beta-100",
+              "id": "martinbulanowskibeta100",
               "name": "Martin Bulanowski",
               "class": "Beta",
               "children": [
                 {
-                  "id": "brother-josh-weissert-epsilon-101",
+                  "id": "joshweissertepsilon101",
                   "name": "Josh Weissert",
                   "class": "Epsilon",
                   "children": [
                     {
-                      "id": "brother-declan-javers-eta-102",
+                      "id": "declanjaverseta102",
                       "name": "Declan Javers",
                       "class": "Eta",
                       "children": [
                         {
-                          "id": "brother-jayden-romano-lambda-103",
+                          "id": "jaydenromanolambda103",
                           "name": "Jayden Romano",
                           "class": "Lambda",
                           "children": [
                             {
-                              "id": "brother-luke-daniel-mu-104",
+                              "id": "lukedanielmu104",
                               "name": "Luke Daniel",
                               "class": "Mu",
                               "children": [
                                 {
-                                  "id": "brother-beck-carlson-nu-105",
+                                  "id": "beckcarlsonnu105",
                                   "name": "Beck Carlson",
                                   "class": "Nu",
                                   "children": []
@@ -1197,7 +1197,7 @@
                               ]
                             },
                             {
-                              "id": "brother-baris-inandi-nu-106",
+                              "id": "barisinandinu106",
                               "name": "Baris Inandi",
                               "class": "Nu",
                               "children": []
@@ -1207,7 +1207,7 @@
                       ]
                     },
                     {
-                      "id": "brother-fred-hodgson-kappa-107",
+                      "id": "fredhodgsonkappa107",
                       "name": "Fred Hodgson",
                       "class": "Kappa",
                       "children": []

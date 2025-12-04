@@ -219,9 +219,9 @@ function buildTree(lines: Line[]): Brother[] {
 
   for (const line of lines) {
     const brother: Brother = {
-      id: `brother-${line.name.replace(/ /g, "-")}-${
-        line.class
-      }-${idCounter++}`.toLowerCase(),
+      id: `${line.name}${line.class}${idCounter++}`
+        .toLowerCase()
+        .replace(/ /g, ""),
       name: line.name,
       class: line.class,
       children: [],
