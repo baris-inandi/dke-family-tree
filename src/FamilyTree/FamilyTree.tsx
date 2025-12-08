@@ -14,6 +14,7 @@ import {
 import "@xyflow/react/dist/style.css";
 import { useEffect, useMemo, useState } from "react";
 import compiledData from "../../tree.json";
+import { BROTHER_NODE_SIZE } from "../consts";
 import { Sidebar } from "../Sidebar";
 import { BrotherNode } from "./BrotherNode";
 
@@ -59,8 +60,8 @@ function convertToFlowData(
     startX: number,
     levelY: number,
   ): { endX: number; nodeIds: string[] } {
-    const nodeSpacing = 160;
-    const levelHeight = 170;
+    const nodeSpacing = BROTHER_NODE_SIZE + 15;
+    const levelHeight = BROTHER_NODE_SIZE;
     let currentX = startX;
     const nodeIds: string[] = [];
 
@@ -113,8 +114,8 @@ function convertToFlowData(
           redactedFaded,
           colorBy,
         },
-        width: 144,
-        height: 70,
+        width: BROTHER_NODE_SIZE,
+        height: BROTHER_NODE_SIZE,
       });
 
       // Store parent-child relationship

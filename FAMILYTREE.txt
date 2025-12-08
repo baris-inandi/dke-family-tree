@@ -4,14 +4,16 @@
 #############################
 
 # Add Brothers to this file using the following comma-separated notation:
+# First Last, Greek Letter Class, College Graduation
+
 @def schema name, class, grad
-# that is, "First Last, Greek Letter Class, College Graduation"
 
 # Indent with four spaces to denote a lineage.
 # To redact someone, replace their line with "REDACTED" in all caps.
 # Start a line with a hash to comment.
 # Run `bun compile <path>` to compile this file.
 
+# the path to the output json the compiler will generate
 @def output tree.json
 
 ##########################
