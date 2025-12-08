@@ -73,8 +73,8 @@ Adam Akkach, Alpha, 2021
     Jacob Horowitz, Alpha, 2023
         Gio Panagiotakis, Epsilon, 2025
             Nick Condoleo, Iota, 2027
-                Max Mayer, Lambda, 2027
             Ben Agatone, Iota, 2027
+                Max Mayer, Lambda, 2027
         Sam Gildea, Alpha, 2022
     Tyler Kavanaugh, Alpha, 2023
         Alex Levin, Epsilon, 2025
