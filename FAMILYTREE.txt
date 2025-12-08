@@ -4,115 +4,126 @@
 #############################
 
 # Add Brothers to this file using the following comma-separated notation:
-# first last, class, graduation year
-# Indent with four spaces to denote a big/little relationship
-# To redact someone, replace name with "REDACTED".
+@def schema name, class, grad
+# that is, "First Last, Greek Letter Class, College Graduation"
 
-Adam Akkach, Alpha
-    Steve Holt, Alpha
-        REDACTED, Unknown
-            REDACTED, Unknown
-                Marcus Yi, Theta
-                    Aashish Hassam, Iota
-                        Matt Kohen, Lambda
-                            Ryan Alexander, Nu
-                            Ryan Hatcher, Nu
-                        Briggs Kroeger, Lambda
-                            Brendan Keefe, Nu
-                            James Mallon, Nu
-                    Evan Yee, Kappa
-                        Dom Cheng, Nu
-                    Matt Bertoncini, Nu
-                    Brayden Ramseier, Lambda
-                        Zach Upson, Mu
-            Umut Tanrivierdi, Epsilon
-                Armagan Karakas, Eta
-            Adil Ikiz, Epsilon
-                Derek Uhrich, Kappa
-    Calvin Norstad, Alpha
-        REDACTED, Unknown
-            Sepehr Rashigi, null
-            Matt O'Rourke, Epsilon
-                Bobby Palazzi, Iota
-        Kieran Heneghan, Zeta
-            Brandon Petersen, Iota
-            Ellis Coco, Lambda
-                George Giakouminakis, Mu
-                    Gio Malpartida, Nu
-    Matt Lowe, Alpha
-        John Berry, Delta
-            Rod Tavangar, Theta
-                Finn Oldenburg, Lambda
-                    Nick Vallary, Nu
-    Tanner Lederman, Alpha
-        Jacob Gottesman, Zeta
-            Batu Isik, Eta
-                Cameron Hornbarger, Theta
-                    Jack Podesta, Kappa
-                        Alex Keefe, Lambda
-                            David Panin, Nu
-                        Brian Yang, Nu
-                Ben Marler, Kappa
-                    Harrison Feldman, Mu
-            Mike Grbic, Kappa
-                Matt Tobin, Nu
-    Agastya Das, Alpha
-        Tom Glassman, Zeta
-    Jacob Horowitz, Alpha
-        Gio Panagiotakis, Epsilon
-            Nick Condoleo, Iota
-                Max Mayer, Lambda
-            Ben Agatone, Iota
-        Sam Gildea, Alpha
-    Tyler Kavanaugh, Alpha
-        Alex Levin, Epsilon
-            Nate Nagel, Iota
-    Evan Massa, Alpha
-        Harry Merzin, Epsilon
-            Ben Clott, Zeta
-                George Foster, Iota
-                    Marley McKinsey, Lambda
-                        Thomas Clark, Mu
-                            Hunter Lund, Nu
-    Will von Ahnen, Alpha
-        Noah Mack, Alpha
-            Alex Menikoff, Gamma
-                Alex Prokey, Epsilon
-                    Ian Menachery, Iota
-                        Theo Cairns, Mu
-                            Guilherme Barcellos, Nu
-    Aidan Webster, Alpha
-        Max Brotman, Gamma
-            Matt Hiller, Epsilon
-                Chris Wilk, Eta
-                    Luke Lange, Iota
-                        Chris Pyle, Lambda
-                            Mikhail Utyashev, Nu
-                        Lex Tremblay, Mu
-                            Vincenzo Fardella, Nu
-                    Kai Barbara, Iota
-                        Chris Bialzik, Kappa
-                            Sid Chandra, Nu
-                        Jack Guo, Nu
-            Klaus Ohlweiler, Iota
-                Tyler Heidke, Lambda
-                    Jason Liku, Nu
-        Tim Vaquero, Epsilon
-            Chase Houser, Iota
+# Indent with four spaces to denote a lineage.
+# To redact someone, replace their line with "REDACTED" in all caps.
+# Start a line with a hash to comment.
+# Run `bun compile <path>` to compile this file.
+
+@def output tree.json
+
+##########################
+#  START OF FAMILY TREE  #
+##########################
+
+Adam Akkach, Alpha, 2021
+    Steve Holt, Alpha, 2022
+        REDACTED
+            REDACTED
+                Marcus Yi, Theta, 2026
+                    Aashish Hassam, Iota, 2027
+                        Matt Kohen, Lambda, 2027
+                            Ryan Alexander, Nu, 2029
+                            Ryan Hatcher, Nu, 2027
+                        Briggs Kroeger, Lambda, 2028
+                            Brendan Keefe, Nu, 2029
+                            James Mallon, Nu, 2028
+                    Evan Yee, Kappa, 2026
+                        Dom Cheng, Nu, 2028
+                    Matt Bertoncini, Nu, 2028
+                    Brayden Ramseier, Lambda, 2027
+                        Zach Upson, Mu, 2027
+            Umut Tanrivierdi, Epsilon, 2025
+                Armagan Karakas, Eta, 2026
+            Adil Ikiz, Epsilon, 2025
+                Derek Uhrich, Kappa, 2027
+    Calvin Norstad, Alpha, 2022
+        REDACTED
+            Sepehr Rashigi, Unknown, Unknown
+            Matt O'Rourke, Epsilon, 2025
+                Bobby Palazzi, Iota, 2027
+        Kieran Heneghan, Zeta, 2025
+            Brandon Petersen, Iota, 2025
+            Ellis Coco, Lambda, 2028
+                George Giakouminakis, Mu, 2028
+                    Gio Malpartida, Nu, 2028
+    Matt Lowe, Alpha, 2021
+        John Berry, Delta, 2024
+            Rod Tavangar, Theta, 2025
+                Finn Oldenburg, Lambda, 2028
+                    Nick Vallary, Nu, 2029
+    Tanner Lederman, Alpha, 2022
+        Jacob Gottesman, Zeta, 2025
+            Batu Isik, Eta, 2026
+                Cameron Hornbarger, Theta, 2024
+                    Jack Podesta, Kappa, 2027
+                        Alex Keefe, Lambda, 2027
+                            David Panin, Nu, 2028
+                        Brian Yang, Nu, 2027
+                Ben Marler, Kappa, 2027
+                    Harrison Feldman, Mu, 2028
+            Mike Grbic, Kappa, 2026
+                Matt Tobin, Nu, 2028
+    Agastya Das, Alpha, 2023
+        Tom Glassman, Zeta, 2025
+    Jacob Horowitz, Alpha, 2023
+        Gio Panagiotakis, Epsilon, 2025
+            Nick Condoleo, Iota, 2027
+                Max Mayer, Lambda, 2027
+            Ben Agatone, Iota, 2027
+        Sam Gildea, Alpha, 2022
+    Tyler Kavanaugh, Alpha, 2023
+        Alex Levin, Epsilon, 2025
+            Nate Nagel, Iota, 2027
+    Evan Massa, Alpha, 2023
+        Harry Merzin, Epsilon, 2023
+            Ben Clott, Zeta, 2025
+                George Foster, Iota, 2027
+                    Marley McKinsey, Lambda, 2027
+                        Thomas Clark, Mu, 2027
+                            Hunter Lund, Nu, 2028
+    Will von Ahnen, Alpha, 2022
+        Noah Mack, Alpha, 2023
+            Alex Menikoff, Gamma, 2024
+                Alex Prokey, Epsilon, 2025
+                    Ian Menachery, Iota, 2027
+                        Theo Cairns, Mu, 2028
+                            Guilherme Barcellos, Nu, 2029
+    Aidan Webster, Alpha, 2022
+        Max Brotman, Gamma, 2024
+            Matt Hiller, Epsilon, 2024
+                Chris Wilk, Eta, 2025
+                    Luke Lange, Iota, 2026
+                        Chris Pyle, Lambda, 2027
+                            Mikhail Utyashev, Nu, 2029
+                        Lex Tremblay, Mu, 2028
+                            Vincenzo Fardella, Nu, 2028
+                    Kai Barbara, Iota, 2027
+                        Chris Bialzik, Kappa, 2027
+                            Sid Chandra, Nu, 2028
+                        Jack Guo, Nu, 2029
+            Klaus Ohlweiler, Iota, 2027
+                Tyler Heidke, Lambda, 2028
+                    Jason Liku, Nu, 2029
+        Tim Vaquero, Epsilon, 2025
+            Chase Houser, Iota, 2027
                 Zach Berde, Kappa
-                    Harrison Mitchell, Lambda
-                        Fernando Ramos, Nu
-                    Ian Cole, Nu
-    REDACTED, Alpha
-        Max Leblang, null
-            KJ Graham, Eta
-                Jonathan Grbic, Iota
-    REDACTED, Alpha
-        Martin Bulanowski, Beta
-            Josh Weissert, Epsilon
-                Declan Javers, Eta
-                    Jayden Romano, Lambda
-                        Luke Daniel, Mu
-                            Beck Carlson, Nu
-                        Baris Inandi, Nu
-                Fred Hodgson, Kappa
+                    Harrison Mitchell, Lambda, 2028
+                        Fernando Ramos, Nu, 2028
+                    Ian Cole, Nu, 2029
+    REDACTED
+        Max Leblang, Unknown, Unknown
+            KJ Graham, Eta, 2026
+                Jonathan Grbic, Iota, 2027
+    REDACTED
+        Martin Bulanowski, Beta, 2022
+            Josh Weissert, Epsilon, 2025
+                Declan Javers, Eta, 2026
+                    Jayden Romano, Lambda, 2027
+                        Luke Daniel, Mu, 2028
+                            Beck Carlson, Nu, 2028
+                        Baris Inandi, Nu, 2028
+                Fred Hodgson, Kappa, 2027
+    

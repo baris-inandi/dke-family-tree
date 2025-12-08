@@ -5,40 +5,46 @@ interface Color {
   background: string;
 }
 
+interface Brother {
+  id: string;
+  info: Record<string, string | { byFamily: Color; byClass: Color }>;
+}
+
 export const BrotherNode = ({
   data,
 }: {
   data: {
-    name: string;
-    class: string;
+    brother: Brother;
     faded?: boolean;
     redactedFaded?: boolean;
-    classColor?: Color;
-    familyColor?: Color;
     colorBy?: "class" | "family";
     isHighlighted?: boolean;
   };
 }) => {
-  const isRedacted = data.name === "REDACTED";
   const colorBy = data.colorBy || "class";
+  const faded = data.faded ?? false;
+  const redactedFaded = data.redactedFaded ?? false;
+  const isHighlighted = data.isHighlighted ?? false;
+
+  // Extract values from brother
+  const nameValue = (data.brother.info.name as string) ?? "[UNKNOWN]";
+  const classValue = (data.brother.info.class as string) ?? "[UNKNOWN]";
+  const gradValue = (data.brother.info.grad as string) ?? "[UNKNOWN]";
+
+  // Get colors from brother's info
+  const colors = data.brother.info.colors as
+    | { byFamily: Color; byClass: Color }
+    | undefined;
 
   // Get color based on mode - use pre-computed colors
-  const color =
-    colorBy === "family" && data.familyColor
-      ? data.familyColor
-      : data.classColor;
-
-  // Fallback to a default color if none found
-  const finalColor = color || {
+  const color = (colorBy === "family" && colors?.byFamily
+    ? colors.byFamily
+    : colors?.byClass) || {
     foreground: "hsl(0 95% 25%)",
     background: "hsla(0 95% 35% / 0.2)",
   };
 
-  const faded = data.faded ?? false;
-  const redactedFaded = data.redactedFaded ?? false;
-  // Combine both faded states: if either is true, reduce opacity
-  const opacity = faded || redactedFaded ? 0.15 : 1.0;
-  const isHighlighted = data.isHighlighted ?? false;
+  const opacity = faded || redactedFaded ? 0.25 : 1.0;
 
   return (
     <div
@@ -46,10 +52,10 @@ export const BrotherNode = ({
         isHighlighted ? "animate-pulse-scale" : ""
       }`}
       style={{
-        borderColor: finalColor.foreground,
+        borderColor: color.foreground,
         opacity,
         filter: faded ? "grayscale(1)" : undefined,
-        background: finalColor.background,
+        background: color.background,
       }}
     >
       {/* Source handle at the bottom for outgoing edges */}
@@ -57,7 +63,7 @@ export const BrotherNode = ({
         type="source"
         position={Position.Bottom}
         id="source"
-        style={{ background: finalColor.foreground, opacity }}
+        style={{ background: color.foreground, opacity }}
         isConnectable={false}
       />
       {/* Target handle at the top for incoming edges */}
@@ -65,27 +71,27 @@ export const BrotherNode = ({
         type="target"
         position={Position.Top}
         id="target"
-        style={{ background: finalColor.foreground, opacity }}
+        style={{ background: color.foreground, opacity }}
         isConnectable={false}
       />
-      <div
-        className="font-medium text-sm"
-        style={{ color: finalColor.foreground }}
-      >
-        {isRedacted ? (
-          <span className="opacity-60">[REDACTED]</span>
-        ) : (
-          data.name
-        )}
+      <div className="font-medium text-sm" style={{ color: color.foreground }}>
+        {nameValue}
       </div>
       <div
         className="text-xs"
         style={{
-          color: finalColor.foreground,
-          opacity: isRedacted ? 0.6 : 1,
+          color: color.foreground,
         }}
       >
-        {data.class ?? "Unknown"} Class
+        {classValue} Class
+      </div>
+      <div
+        className="text-xs opacity-70"
+        style={{
+          color: color.foreground,
+        }}
+      >
+        Northeastern {gradValue}
       </div>
     </div>
   );

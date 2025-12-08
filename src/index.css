@@ -18,8 +18,9 @@
   50% {
     transform: scale(1);
   }
-  80% {
-    transform: scale(1.2);
+  70% {
+    transform: scale(1.25);
+    filter: brightness(1.25);
   }
   100% {
     transform: scale(1);
@@ -27,5 +28,5 @@
 }
 
 .animate-pulse-scale {
-  animation: pulse-scale 0.6s ease-out;
+  animation: pulse-scale 0.7s ease-out;
 }

@@ -13,7 +13,7 @@ import {
 } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
 import { useEffect, useMemo, useState } from "react";
-import compiledData from "../../tree/tree.json";
+import compiledData from "../../tree.json";
 import { Sidebar } from "../Sidebar";
 import { BrotherNode } from "./BrotherNode";
 
@@ -24,17 +24,14 @@ interface Color {
 
 interface Brother {
   id: string;
-  name: string;
-  class: string;
+  info: Record<string, string | { byFamily: Color; byClass: Color }>; // All schema fields + colors
   children: Brother[];
 }
 
 interface CompiledData {
   tree: Brother[];
   metadata: {
-    availableClasses: string[];
-    classColors: Record<string, Color>;
-    familyColors: Record<string, Color>;
+    allClasses: string[];
   };
 }
 
@@ -49,9 +46,7 @@ function convertToFlowData(
   data: Brother[],
   hideRedacted: boolean,
   viewClass: string,
-  classColors: Record<string, Color>,
-  familyColors: Record<string, Color>,
-  colorBy: "class" | "family"
+  colorBy: "class" | "family",
 ): { nodes: Node[]; edges: Edge[] } {
   const nodes: Node[] = [];
   const edges: Edge[] = [];
@@ -62,23 +57,41 @@ function convertToFlowData(
     parentId: string | null,
     level: number,
     startX: number,
-    levelY: number
+    levelY: number,
   ): { endX: number; nodeIds: string[] } {
-    const nodeSpacing = 144;
-    const levelHeight = 160;
+    const nodeSpacing = 160;
+    const levelHeight = 170;
     let currentX = startX;
     const nodeIds: string[] = [];
 
     for (const brother of brothers) {
-      const isRedacted = brother.name === "REDACTED";
+      const nameValue =
+        typeof brother.info.name === "string" ? brother.info.name : "";
+      const isRedacted = nameValue === "[REDACTED]";
       const id = brother.id; // Use brother.id directly
       nodeIds.push(id);
 
-      // Class-based visibility
+      // Class-based visibility (case-insensitive)
+      const classValue =
+        typeof brother.info.class === "string" ? brother.info.class : "";
+
+      const normalizedClassValue =
+        classValue === "[REDACTED]"
+          ? "[REDACTED]"
+          : classValue
+              .split(/\s+/)
+              .map((w) => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())
+              .join(" ");
+
+      const normalizedViewClass = viewClass
+        .split(/\s+/)
+        .map((w) => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())
+        .join(" ");
+
       const isTargetClass =
         viewClass === "All Classes" ||
-        brother.class === viewClass ||
-        (viewClass === "All Classes" && brother.class === "unknown");
+        normalizedClassValue === normalizedViewClass ||
+        (viewClass === "All Classes" && normalizedClassValue === "Unknown");
 
       // Faded flag: based on class filter
       const faded = !isTargetClass;
@@ -95,16 +108,13 @@ function convertToFlowData(
         type: "brother",
         position: { x: nodeX, y: levelY },
         data: {
-          name: brother.name,
-          class: brother.class,
+          brother,
           faded,
           redactedFaded,
-          classColor: classColors[brother.class],
-          familyColor: familyColors[brother.id],
           colorBy,
         },
-        width: 120,
-        height: 60,
+        width: 144,
+        height: 70,
       });
 
       // Store parent-child relationship
@@ -122,7 +132,7 @@ function convertToFlowData(
           id,
           level + 1,
           currentX,
-          levelY + levelHeight
+          levelY + levelHeight,
         );
         currentX = childrenResult.endX;
       } else {
@@ -135,7 +145,7 @@ function convertToFlowData(
 
   function calculateSubtreeWidth(
     brother: Brother,
-    nodeSpacing: number
+    nodeSpacing: number,
   ): number {
     if (brother.children.length === 0) {
       return nodeSpacing;
@@ -152,7 +162,7 @@ function convertToFlowData(
   const levelY = 50;
   for (const root of data) {
     const result = createTree([root], null, 0, currentX, levelY);
-    currentX = result.endX + 200; // Add spacing between root trees
+    currentX = result.endX + 250; // Add spacing between root trees
   }
 
   // Create all edges after all nodes are created
@@ -199,7 +209,7 @@ function convertToFlowData(
   // Verify all edge source/target IDs exist in nodes
   const nodeIds = new Set(nodes.map((n) => n.id));
   const invalidEdges = edges.filter(
-    (e) => !nodeIds.has(e.source) || !nodeIds.has(e.target)
+    (e) => !nodeIds.has(e.source) || !nodeIds.has(e.target),
   );
 
   console.log("Generated nodes:", nodes.length, "edges:", edges.length);
@@ -224,7 +234,7 @@ function FlowCanvas({
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, , onEdgesChange] = useEdgesState(initialEdges);
   const [highlightedNodeId, setHighlightedNodeId] = useState<string | null>(
-    null
+    null,
   );
   const reactFlow = useReactFlow();
 
@@ -247,11 +257,15 @@ function FlowCanvas({
     }
 
     const timeoutId = setTimeout(() => {
-      const match = nodes.find(
-        (node) =>
-          typeof (node.data as { name?: string })?.name === "string" &&
-          (node.data as { name?: string }).name!.toLowerCase().includes(query)
-      );
+      const match = nodes.find((node) => {
+        const data = node.data as { brother?: Brother };
+        if (!data.brother) return false;
+        const nameValue =
+          typeof data.brother.info.name === "string"
+            ? data.brother.info.name
+            : "";
+        return nameValue.toLowerCase().includes(query.toLowerCase());
+      });
 
       if (!match) {
         setTimeout(() => {
@@ -265,10 +279,9 @@ function FlowCanvas({
         setHighlightedNodeId(match.id);
       }, 0);
 
-      // Clear highlight after animation completes (600ms)
       setTimeout(() => {
         setHighlightedNodeId(null);
-      }, 600);
+      }, 1000);
 
       const width = (match.width as number | undefined) ?? 120;
       const height = (match.height as number | undefined) ?? 60;
@@ -314,26 +327,23 @@ function FlowCanvas({
 }
 
 export default function FamilyTree() {
-  const [hideRedacted, setHideRedacted] = useState(false);
+  const [excludeRedacted, setExcludeRedacted] = useState(true);
   const [colorBy, setColorBy] = useState<"class" | "family">("family");
   const [viewClass, setViewClass] = useState("All Classes");
   const [searchQuery, setSearchQuery] = useState("");
 
   // Use pre-computed metadata from compilation
-  const { classColors, familyColors, availableClasses } =
-    familyTreeData.metadata;
+  const { allClasses: availableClasses } = familyTreeData.metadata;
 
   const { nodes: initialNodes, edges: initialEdges } = useMemo(
     () =>
       convertToFlowData(
         familyTreeData.tree,
-        hideRedacted,
+        excludeRedacted,
         viewClass,
-        classColors,
-        familyColors,
-        colorBy
+        colorBy,
       ),
-    [hideRedacted, viewClass, classColors, familyColors, colorBy]
+    [excludeRedacted, viewClass, colorBy],
   );
 
   const resultCount = useMemo(() => {
@@ -347,9 +357,10 @@ export default function FamilyTree() {
   }, [initialNodes]);
 
   const handleClearFilters = () => {
-    setHideRedacted(false);
+    setExcludeRedacted(false);
     setViewClass("All Classes");
     setSearchQuery("");
+    setExcludeRedacted(true);
   };
 
   return (
@@ -357,8 +368,8 @@ export default function FamilyTree() {
       <Sidebar
         nodeCount={initialNodes.length}
         edgeCount={initialEdges.length}
-        hideRedacted={hideRedacted}
-        onHideRedactedChange={setHideRedacted}
+        hideRedacted={excludeRedacted}
+        onHideRedactedChange={setExcludeRedacted}
         colorBy={colorBy}
         onColorByChange={setColorBy}
         viewClass={viewClass}
