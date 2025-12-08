@@ -17,7 +17,6 @@ export class ClassExtractor {
         }
         if (
           typeof classValue === "string" &&
-          classValue !== "Null" &&
           classValue !== "Unknown" &&
           classValue !== "All Classes" &&
           classValue !== "[REDACTED]"

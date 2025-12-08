@@ -40,8 +40,8 @@ export const BrotherNode = ({
   const color = (colorBy === "family" && colors?.byFamily
     ? colors.byFamily
     : colors?.byClass) || {
-    foreground: "hsl(0 95% 25%)",
-    background: "hsla(0 95% 35% / 0.2)",
+    foreground: "hsl(0 0% 25%)",
+    background: "hsla(0 0% 35% / 0.2)",
   };
 
   const opacity = faded || redactedFaded ? 0.25 : 1.0;
@@ -50,11 +50,11 @@ export const BrotherNode = ({
     <div
       className={`px-2 py-1 rounded-xl border-2 shadow-sm min-w-[100px] text-center relative ${
         isHighlighted ? "animate-pulse-scale" : ""
-      }`}
+      } ${faded ? "grayscale" : ""}
+      `}
       style={{
         borderColor: color.foreground,
         opacity,
-        filter: faded ? "grayscale(1)" : undefined,
         background: color.background,
       }}
     >

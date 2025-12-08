@@ -6,8 +6,8 @@ export class ColorCalculator {
   private readonly baseSaturation = 100;
 
   private readonly huesPerCycle = 12;
-  private readonly lightnessStep = 8;
-  private readonly saturationStep = 9;
+  private readonly lightnessStep = 12;
+  private readonly saturationStep = 25;
 
   private readonly lowkeyOpacity = 0.15;
 
@@ -87,11 +87,24 @@ export class ColorCalculator {
       });
     }
 
+    // Gray color for redacted entries in class mode
+    const redactedGrayColor: Color = {
+      foreground: "hsl(0 0% 50%)",
+      background: "hsla(0 0% 60% / 0.15)",
+    };
+
     // Now assign colors to each brother's info
     const assignToBrother = (brother: Brother) => {
       const classValue = (brother.info.class as string) || "";
-      const normalizedClass = toTitleCase(classValue);
-      const byClass = classColors[normalizedClass] || this.createColor(0);
+
+      // Redacted entries get gray in class mode (check before normalization)
+      const byClass =
+        classValue === "[REDACTED]" || classValue === "[Redacted]"
+          ? redactedGrayColor
+          : (() => {
+              const normalizedClass = toTitleCase(classValue);
+              return classColors[normalizedClass] || this.createColor(0);
+            })();
       const byFamily = familyColorMap.get(brother.id) || this.createColor(0);
 
       brother.info.colors = { byFamily, byClass };
