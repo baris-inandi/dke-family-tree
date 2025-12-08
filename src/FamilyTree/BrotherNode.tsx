@@ -29,11 +29,10 @@ export const BrotherNode = ({
       : data.classColor;
 
   // Fallback to a default color if none found
-  const defaultColor: Color = {
+  const finalColor = color || {
     foreground: "hsl(0 95% 25%)",
     background: "hsla(0 95% 35% / 0.2)",
   };
-  const finalColor = color || defaultColor;
 
   const faded = data.faded ?? false;
   const redactedFaded = data.redactedFaded ?? false;
@@ -86,7 +85,7 @@ export const BrotherNode = ({
           opacity: isRedacted ? 0.6 : 1,
         }}
       >
-        {data.class !== "null" && data.class !== "unknown" ? data.class : ""}
+        {data.class !== "null" && data.class !== "unknown" ? data.class : ""} Class
       </div>
     </div>
   );

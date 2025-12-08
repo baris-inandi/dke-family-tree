@@ -89,7 +89,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
                 onChange={(e) => onHideRedactedChange(e.target.checked)}
                 className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
               />
-              <span className="text-sm font-medium">Hide Redacted</span>
+              <span className="text-sm font-medium">Exclude Redacted</span>
             </label>
           </div>
 

@@ -3,9 +3,10 @@
 #  of Delta Kappa Epsilon   #
 #############################
 
-# Add Brothers to this file using the "Name, Class" i.e. "John Doe, Alpha" notation
-# Indent with four spaces to signify big/little relationship
-# To redact someone, use the "REDACTED, class" notation.
+# Add Brothers to this file using the following comma-separated notation:
+# first last, class, graduation year
+# Indent with four spaces to denote a big/little relationship
+# To redact someone, replace name with "REDACTED".
 
 Adam Akkach, Alpha
     Steve Holt, Alpha
