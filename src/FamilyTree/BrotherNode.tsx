@@ -85,7 +85,7 @@ export const BrotherNode = ({
           opacity: isRedacted ? 0.6 : 1,
         }}
       >
-        {data.class !== "null" && data.class !== "unknown" ? data.class : ""} Class
+        {data.class ?? "Unknown"} Class
       </div>
     </div>
   );

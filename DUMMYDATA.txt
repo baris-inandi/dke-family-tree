@@ -1,7 +1,7 @@
 Adam Akkach, Alpha
     Steve Holt, Alpha
-        REDACTED, unknown
-            REDACTED, unknown
+        REDACTED, Unknown
+            REDACTED, Unknown
                 Marcus Yi, Theta
                     Aashish Hassam, Iota
                         Matt Kohen, Lambda
@@ -88,7 +88,7 @@ Adam Akkach, Alpha
             Adil Ikiz, Epsilon
                 Derek Uhrich, Kappa
     Calvin Norstad, Alpha
-        REDACTED, unknown
+        REDACTED, Unknown
             Sepehr Rashigi, null
             Matt O'Rourke, Epsilon
                 Bobby Palazzi, Iota
