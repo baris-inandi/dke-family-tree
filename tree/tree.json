@@ -306,7 +306,7 @@
         "foreground": "hsl(210 100% 25%)",
         "background": "hsla(210 110% 35% / 0.2)"
       },
-      "harrymerlinepsilon60": {
+      "harrymerzinepsilon60": {
         "foreground": "hsl(210 100% 25%)",
         "background": "hsla(210 110% 35% / 0.2)"
       },
@@ -895,8 +895,8 @@
           "class": "Alpha",
           "children": [
             {
-              "id": "harrymerlinepsilon60",
-              "name": "Harry Merlin",
+              "id": "harrymerzinepsilon60",
+              "name": "Harry Merzin",
               "class": "Epsilon",
               "children": [
                 {

@@ -106,6 +106,9 @@ Adam Akkach, Alpha
                                                 Giovanni Bruno, Upsilon
                                                     Francesco Russo, Phi
                                             Carlo Martini, Tau
+    Matt Lowe, Alpha
+        John Berry, Delta
+            Rod Tavangar, Theta
                 Finn Oldenburg, Lambda
                     Nick Vallary, Nu
                         Henrik Nielsen, Xi
@@ -114,9 +117,6 @@ Adam Akkach, Alpha
                                     Magnus Olsen, Rho
                                         Soren Hansen, Sigma
                             Mikkel Berg, Omicron
-    Matt Lowe, Alpha
-        John Berry, Delta
-            Rod Tavangar, Theta
     Tanner Lederman, Alpha
         Jacob Gottesman, Zeta
             Batu Isik, Eta
@@ -177,7 +177,7 @@ Adam Akkach, Alpha
         Alex Levin, Epsilon
             Nate Nagel, Iota
     Evan Massa, Alpha
-        Harry Merlin, Epsilon
+        Harry Merzin, Epsilon
             Ben Clott, Zeta
                 George Foster, Iota
                     Marley McKinsey, Lambda
