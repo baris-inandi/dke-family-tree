@@ -190,23 +190,23 @@
         "foreground": "hsl(30 100% 25%)",
         "background": "hsla(30 110% 35% / 0.2)"
       },
-      "finnoldenburglambda31": {
-        "foreground": "hsl(30 100% 25%)",
-        "background": "hsla(30 110% 35% / 0.2)"
-      },
-      "nickvallarynu32": {
-        "foreground": "hsl(30 100% 25%)",
-        "background": "hsla(30 110% 35% / 0.2)"
-      },
-      "mattlowealpha33": {
+      "mattlowealpha31": {
         "foreground": "hsl(60 100% 25%)",
         "background": "hsla(60 110% 35% / 0.2)"
       },
-      "johnberrydelta34": {
+      "johnberrydelta32": {
         "foreground": "hsl(60 100% 25%)",
         "background": "hsla(60 110% 35% / 0.2)"
       },
-      "rodtavangartheta35": {
+      "rodtavangartheta33": {
+        "foreground": "hsl(60 100% 25%)",
+        "background": "hsla(60 110% 35% / 0.2)"
+      },
+      "finnoldenburglambda34": {
+        "foreground": "hsl(60 100% 25%)",
+        "background": "hsla(60 110% 35% / 0.2)"
+      },
+      "nickvallarynu35": {
         "foreground": "hsl(60 100% 25%)",
         "background": "hsla(60 110% 35% / 0.2)"
       },
@@ -696,19 +696,6 @@
                           "children": []
                         }
                       ]
-                    },
-                    {
-                      "id": "finnoldenburglambda31",
-                      "name": "Finn Oldenburg",
-                      "class": "Lambda",
-                      "children": [
-                        {
-                          "id": "nickvallarynu32",
-                          "name": "Nick Vallary",
-                          "class": "Nu",
-                          "children": []
-                        }
-                      ]
                     }
                   ]
                 }
@@ -717,20 +704,34 @@
           ]
         },
         {
-          "id": "mattlowealpha33",
+          "id": "mattlowealpha31",
           "name": "Matt Lowe",
           "class": "Alpha",
           "children": [
             {
-              "id": "johnberrydelta34",
+              "id": "johnberrydelta32",
               "name": "John Berry",
               "class": "Delta",
               "children": [
                 {
-                  "id": "rodtavangartheta35",
+                  "id": "rodtavangartheta33",
                   "name": "Rod Tavangar",
                   "class": "Theta",
-                  "children": []
+                  "children": [
+                    {
+                      "id": "finnoldenburglambda34",
+                      "name": "Finn Oldenburg",
+                      "class": "Lambda",
+                      "children": [
+                        {
+                          "id": "nickvallarynu35",
+                          "name": "Nick Vallary",
+                          "class": "Nu",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             }

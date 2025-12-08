@@ -38,11 +38,11 @@ Adam Akkach, Alpha
             Ellis Coco, Lambda
                 George Giakouminakis, Mu
                     Gio Malpartida, Nu
-                Finn Oldenburg, Lambda
-                    Nick Vallary, Nu
     Matt Lowe, Alpha
         John Berry, Delta
             Rod Tavangar, Theta
+                Finn Oldenburg, Lambda
+                    Nick Vallary, Nu
     Tanner Lederman, Alpha
         Jacob Gottesman, Zeta
             Batu Isik, Eta
