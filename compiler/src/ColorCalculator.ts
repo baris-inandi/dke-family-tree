@@ -9,7 +9,7 @@ export class ColorCalculator {
   private readonly lightnessStep = 8;
   private readonly saturationStep = 9;
 
-  private readonly backgroundOpacity = 0.25;
+  private readonly lowkeyOpacity = 0.15;
 
   /**
    * Generates a sequential color based on an index.
@@ -36,7 +36,7 @@ export class ColorCalculator {
   /**
    * Creates a low-key background color from a foreground HSL string.
    */
-  lowkeyColor(hslString: string, opacity: number): string {
+  lowkeyColor(hslString: string): string {
     const match = hslString.match(/hsl\((\d+)\s+(\d+)%\s+(\d+)%\)/);
     if (!match) {
       throw new Error(`Invalid HSL string: ${hslString}`);
@@ -46,7 +46,7 @@ export class ColorCalculator {
     const saturation = Number(match[2]) + 10;
     const lightness = Number(match[3]) + 10;
 
-    return `hsla(${hue} ${saturation}% ${lightness}% / ${opacity})`;
+    return `hsla(${hue} ${saturation}% ${lightness}% / ${this.lowkeyOpacity})`;
   }
 
   /**
@@ -54,7 +54,7 @@ export class ColorCalculator {
    */
   createColor(index: number): Color {
     const foreground = this.getSequentialColor(index);
-    const background = this.lowkeyColor(foreground, this.backgroundOpacity);
+    const background = this.lowkeyColor(foreground);
     return { foreground, background };
   }
 
