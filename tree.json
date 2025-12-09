@@ -1049,9 +1049,28 @@
                       }
                     }
                   },
+                  "children": []
+                },
+                {
+                  "id": "benagatoneiota53",
+                  "info": {
+                    "name": "Ben Agatone",
+                    "class": "Iota",
+                    "grad": "2027",
+                    "colors": {
+                      "byFamily": {
+                        "foreground": "hsl(150 100% 25%)",
+                        "background": "hsla(150 110% 35% / 0.15)"
+                      },
+                      "byClass": {
+                        "foreground": "hsl(240 100% 25%)",
+                        "background": "hsla(240 110% 35% / 0.15)"
+                      }
+                    }
+                  },
                   "children": [
                     {
-                      "id": "maxmayerlambda53",
+                      "id": "maxmayerlambda54",
                       "info": {
                         "name": "Max Mayer",
                         "class": "Lambda",
@@ -1070,25 +1089,6 @@
                       "children": []
                     }
                   ]
-                },
-                {
-                  "id": "benagatoneiota54",
-                  "info": {
-                    "name": "Ben Agatone",
-                    "class": "Iota",
-                    "grad": "2027",
-                    "colors": {
-                      "byFamily": {
-                        "foreground": "hsl(150 100% 25%)",
-                        "background": "hsla(150 110% 35% / 0.15)"
-                      },
-                      "byClass": {
-                        "foreground": "hsl(240 100% 25%)",
-                        "background": "hsla(240 110% 35% / 0.15)"
-                      }
-                    }
-                  },
-                  "children": []
                 }
               ]
             },
