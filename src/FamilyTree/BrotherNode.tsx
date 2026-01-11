@@ -1,4 +1,5 @@
 import { Handle, Position } from "@xyflow/react";
+import RedactableText from "./RedactableText";
 
 interface Color {
   foreground: string;
@@ -16,14 +17,12 @@ export const BrotherNode = ({
   data: {
     brother: Brother;
     faded?: boolean;
-    redactedFaded?: boolean;
     colorBy?: "class" | "family";
     isHighlighted?: boolean;
   };
 }) => {
   const colorBy = data.colorBy || "class";
   const faded = data.faded ?? false;
-  const redactedFaded = data.redactedFaded ?? false;
   const isHighlighted = data.isHighlighted ?? false;
 
   // Extract values from brother
@@ -44,13 +43,13 @@ export const BrotherNode = ({
     background: "hsla(0 0% 35% / 0.2)",
   };
 
-  const opacity = faded || redactedFaded ? 0.25 : 1.0;
+  const opacity = faded ? 0.2 : 1.0;
 
   return (
     <div
-      className={`px-2 py-1 rounded-xl border-2 shadow-sm min-w-[100px] text-center relative ${
-        isHighlighted ? "animate-pulse-scale" : ""
-      } ${faded ? "grayscale" : ""}
+      className={`px-2 py-1 rounded-2xl border-2 shadow-md min-w-[100px] text-center relative
+        ${isHighlighted ? "animate-pulse-scale" : ""}
+        ${faded ? "grayscale" : ""}
       `}
       style={{
         borderColor: color.foreground,
@@ -75,7 +74,7 @@ export const BrotherNode = ({
         isConnectable={false}
       />
       <div className="font-medium text-sm" style={{ color: color.foreground }}>
-        {nameValue}
+        <RedactableText length={14}>{nameValue}</RedactableText>
       </div>
       <div
         className="text-xs"
@@ -83,16 +82,18 @@ export const BrotherNode = ({
           color: color.foreground,
         }}
       >
-        {classValue} Class
+        <RedactableText length={4}>{classValue}</RedactableText> Class
       </div>
-      <div
-        className="text-xs opacity-70"
-        style={{
-          color: color.foreground,
-        }}
-      >
-        Northeastern {gradValue}
-      </div>
+      {data.brother.info.grad && (
+        <div
+          className="text-xs opacity-70"
+          style={{
+            color: color.foreground,
+          }}
+        >
+          Northeastern <RedactableText length={4}>{gradValue}</RedactableText>
+        </div>
+      )}
     </div>
   );
 };

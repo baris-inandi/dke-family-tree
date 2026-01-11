@@ -60,7 +60,7 @@ function convertToFlowData(
     startX: number,
     levelY: number,
   ): { endX: number; nodeIds: string[] } {
-    const nodeSpacing = BROTHER_NODE_SIZE + 15;
+    const nodeSpacing = BROTHER_NODE_SIZE + 20;
     const levelHeight = BROTHER_NODE_SIZE;
     let currentX = startX;
     const nodeIds: string[] = [];
@@ -94,11 +94,8 @@ function convertToFlowData(
         normalizedClassValue === normalizedViewClass ||
         (viewClass === "All Classes" && normalizedClassValue === "Unknown");
 
-      // Faded flag: based on class filter
-      const faded = !isTargetClass;
-
-      // Redacted faded: fade redacted nodes when hideRedacted is on
-      const redactedFaded = hideRedacted && isRedacted;
+      // Faded flag: based on class filter or if redacted when hideRedacted is on
+      const faded = !isTargetClass || (hideRedacted && isRedacted);
 
       // Calculate width needed for this subtree
       const subtreeWidth = calculateSubtreeWidth(brother, nodeSpacing);
@@ -111,7 +108,6 @@ function convertToFlowData(
         data: {
           brother,
           faded,
-          redactedFaded,
           colorBy,
         },
         width: BROTHER_NODE_SIZE,
@@ -351,9 +347,8 @@ export default function FamilyTree() {
     return initialNodes.filter((node) => {
       const data = node.data as {
         faded?: boolean;
-        redactedFaded?: boolean;
       };
-      return !data.faded && !data.redactedFaded;
+      return !data.faded;
     }).length;
   }, [initialNodes]);
 
