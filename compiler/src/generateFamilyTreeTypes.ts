@@ -42,16 +42,9 @@ export async function writeFamilyTreeTypes(
   writeFileSync(typesPath, contents, "utf-8");
   console.log(`Types: ${typesPath}`);
 
-  const treeTs = `import jsonTree from "./tree.json";
-import type {
-  By,
-  Colors,
-  DkeNaFamilyTree,
-  Info,
-  Metadata,
-  Tree,
-} from "./${TYPES_FILENAME}";
-export type { By, Colors, DkeNaFamilyTree, Info, Metadata, Tree };
+  const treeTs = `import type { DkeNaFamilyTree } from "./Quicktype.ts";
+import jsonTree from "./tree.json";
+export * from "./Quicktype.ts";
 export const dkeNaFamilyTree = jsonTree as DkeNaFamilyTree;
 `;
 

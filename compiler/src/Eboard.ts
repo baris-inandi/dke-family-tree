@@ -1,12 +1,12 @@
-/** Valid semester codes: F = Fall, S = Spring */
 const VALID_SEMESTERS = ["F", "S"] as const;
 export type Semester = (typeof VALID_SEMESTERS)[number];
 
-export interface EboardEntry {
-  position: string;
+export type BrotherEboardHistory = Array<EboardPosition>;
+
+export interface EboardPosition {
   positionName: string;
-  semester: Semester;
-  year: string;
+  semester: "Fall" | "Spring";
+  year: number;
 }
 
 export class Eboard {
@@ -22,88 +22,49 @@ export class Eboard {
     I: "Secretary",
   };
 
-  private readonly validPositions = new Set(Object.keys(this.expansion));
+  private readonly allEboardPositions = new Set(Object.keys(this.expansion));
 
-  static readonly EBOARD_FIELD_REGEX = /^[A-Za-z]:[FS](-?\d*)$/i;
+  splitEboardString(eboardString: string): BrotherEboardHistory {
+    const raw = eboardString.trim();
+    if (!raw) return [];
 
-  /**
-   * Validates a single eboard field (e.g. G:S-2026). Exits with code 1 if position is not defined or semester is not F or S.
-   */
-  validateEboardField(field: string, lineNumber?: number): void {
-    const loc = lineNumber == null ? "" : ` (line ${lineNumber})`;
-    const colonIndex = field.indexOf(":");
-    if (colonIndex === -1) {
-      console.error(
-        `Eboard error${loc}: expected format POSITION:SEMESTER-YEAR (e.g. G:S-2026), got "${field}"`,
-      );
-      process.exit(1);
-    }
-    const position = field.slice(0, colonIndex).trim();
-    const semesterPart = field.slice(colonIndex + 1).trim();
-    if (!this.validPositions.has(position)) {
-      console.error(
-        `Eboard error${loc}: unknown position "${position}". Valid positions: ${[...this.validPositions].sort().join(", ")}`,
-      );
-      process.exit(1);
-    }
-    const semesterChar = semesterPart.charAt(0).toUpperCase();
-    if (!VALID_SEMESTERS.includes(semesterChar as Semester)) {
-      console.error(
-        `Eboard error${loc}: semester must be F (Fall) or S (Spring), got "${semesterChar}" in "${semesterPart}"`,
-      );
-      process.exit(1);
-    }
-  }
-
-  /**
-   * Parses eboard string (one line per entry: POSITION:SEMESTER-YEAR, e.g. S:F-2026).
-   * Exits the process with code 1 if any position is not defined or semester is not F or S.
-   */
-  parseEboardString(eboardString: string): EboardEntry[] {
-    const lines = eboardString
-      .split(/\r?\n/)
-      .map((line) => line.trim())
-      .filter((line) => line.length > 0);
-
-    const entries: EboardEntry[] = [];
-
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      const colonIndex = line.indexOf(":");
-      if (colonIndex === -1) {
-        console.error(
-          `Eboard error (line ${i + 1}): expected format POSITION:SEMESTER-YEAR (e.g. S:F-2026), got "${line}"`,
+    const positions = raw
+      .split(";")
+      .map((p) => p.trim())
+      .filter(Boolean);
+    return positions.map((position) => {
+      const colon = position.indexOf(":");
+      if (colon === -1) {
+        throw new Error(
+          `Eboard: expected POSITION:SEMESTER-YEAR (e.g. G:S-2026), got "${position}"`,
         );
-        process.exit(1);
       }
+      const positionCode = position.slice(0, colon).trim();
+      const semesterAndYear = position.slice(colon + 1).trim();
+      const semesterChar = semesterAndYear.charAt(0).toUpperCase();
+      const yearStr = semesterAndYear.slice(1).replace(/^-/, "").trim();
 
-      const position = line.slice(0, colonIndex).trim();
-      const semesterPart = line.slice(colonIndex + 1).trim();
-
-      if (!this.validPositions.has(position)) {
-        console.error(
-          `Eboard error (line ${i + 1}): unknown position "${position}". Valid positions: ${[...this.validPositions].sort().join(", ")}`,
-        );
-        process.exit(1);
-      }
-
-      const semesterChar = semesterPart.charAt(0).toUpperCase();
       if (!VALID_SEMESTERS.includes(semesterChar as Semester)) {
-        console.error(
-          `Eboard error (line ${i + 1}): semester must be F (Fall) or S (Spring), got "${semesterChar}" in "${semesterPart}"`,
+        throw new Error(
+          `Eboard: semester must be F or S, got "${semesterChar}"`,
         );
-        process.exit(1);
+      }
+      if (!this.allEboardPositions.has(positionCode)) {
+        throw new Error(
+          `Eboard: unknown position "${positionCode}". Valid: ${[...this.allEboardPositions].sort().join(", ")}`,
+        );
       }
 
-      const year = semesterPart.slice(1).replace(/^-/, "").trim();
-      entries.push({
-        position,
-        positionName: this.expansion[position],
-        semester: semesterChar as Semester,
-        year: year || "",
-      });
-    }
+      const year = yearStr ? Number.parseInt(yearStr, 10) : 0;
+      if (yearStr && Number.isNaN(year)) {
+        throw new Error(`Eboard: invalid year "${yearStr}"`);
+      }
 
-    return entries;
+      return {
+        positionName: this.expansion[positionCode],
+        semester: (semesterChar as Semester) === "F" ? "Fall" : "Spring",
+        year,
+      };
+    });
   }
 }

@@ -1,6 +1,14 @@
+import type { BrotherEboardHistory } from "./src/Eboard.js";
+
+export interface BrotherInfo {
+  name: string;
+  class: string;
+  eboard: BrotherEboardHistory;
+}
+
 export interface Brother {
   id: string;
-  info: Record<string, string>;
+  info: BrotherInfo;
   colors: { byFamily: Color; byClass: Color };
   children: Brother[];
 }

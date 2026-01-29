@@ -1,4 +1,6 @@
 import type { Brother, Color, ParsedLine } from "../types.js";
+import type { BrotherEboardHistory } from "./Eboard.js";
+import { Eboard } from "./Eboard.js";
 
 const PLACEHOLDER_COLOR: Color = {
   foreground: "hsl(0 0% 0%)",
@@ -7,6 +9,7 @@ const PLACEHOLDER_COLOR: Color = {
 
 export class TreeBuilder {
   private idCounter = 0;
+  private readonly eboard = new Eboard();
 
   /**
    * Builds a hierarchical tree structure from parsed lines.
@@ -45,12 +48,17 @@ export class TreeBuilder {
     const name = (line.name as string) || "";
     const classValue = (line.class as string) || "";
 
-    const info: Record<string, string> = {};
-    for (const key in line) {
-      if (key !== "indent") {
-        info[key] = (line[key] as string) || "";
-      }
-    }
+    const eboardRaw = (line.eboard as string) ?? "";
+    const eboard: BrotherEboardHistory =
+      eboardRaw === "[REDACTED]" || !eboardRaw || !eboardRaw.includes(":")
+        ? []
+        : this.eboard.splitEboardString(eboardRaw);
+
+    const info: Brother["info"] = {
+      name,
+      class: classValue,
+      eboard,
+    };
 
     return {
       id: `${name}${classValue}${this.idCounter++}`

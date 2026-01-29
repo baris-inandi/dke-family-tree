@@ -11,7 +11,8 @@ export class LineParser {
   parseLine(
     line: string,
     schemaFields: string[],
-    lineNumber?: number,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    _lineNumber?: number,
   ): ParsedLine | null {
     const trimmed = line.trim();
     if (!trimmed || trimmed.startsWith("#") || trimmed.startsWith("@")) {
@@ -55,13 +56,9 @@ export class LineParser {
       parsed[fieldName] = value;
     }
 
-    // Optional third field: eboard (e.g. G:S-2026). Validate and store.
-    if (parts[2] !== undefined && parts[2].trim() !== "") {
-      const third = parts[2].trim();
-      if (Eboard.EBOARD_FIELD_REGEX.test(third)) {
-        this.eboard.validateEboardField(third, lineNumber);
-        parsed.eboard = third;
-      }
+    const eboardVal = parsed.eboard;
+    if (typeof eboardVal === "string" && eboardVal.includes(":")) {
+      this.eboard.splitEboardString(eboardVal);
     }
 
     return parsed;
