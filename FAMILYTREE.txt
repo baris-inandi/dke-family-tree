@@ -3,7 +3,7 @@
 #  of Delta Kappa Epsilon   #
 #############################
 
-# Add Brothers to this file using the following comma-separated notation:
+# Add Brothers to this file using the following comma-separated notation@
 # First Last, Greek Letter Class, Eboard Positions Array
 
 @SCHEMA name, class, eboard
@@ -21,8 +21,8 @@ Adam Akkach, Alpha
     Steve Holt, Alpha
         REDACTED
             REDACTED
-                Marcus Yi, Theta, G:S2024
-                    Aashish Hassam, Iota, G:F2025
+                Marcus Yi, Theta, PHIL@S2024
+                    Aashish Hassam, Iota, PHIL@F2025
                         Matt Kohen, Lambda
                             Ryan Alexander, Nu
                             Ryan Hatcher, Nu
@@ -32,8 +32,8 @@ Adam Akkach, Alpha
                     Evan Yee, Kappa
                         Dom Cheng, Nu
                     Brayden Ramseier, Lambda
-                        Zach Upson, Mu, G:S2026
-            Umut Tanriverdi, Epsilon, K:F2022
+                        Zach Upson, Mu, PHIL@S2026
+            Umut Tanriverdi, Epsilon, TRES@F2022
                 Armagan Karakas, Eta
                     Matt Bertoncini, Nu
             Adil Ikiz, Epsilon
@@ -41,22 +41,22 @@ Adam Akkach, Alpha
     Calvin Norstad, Alpha
         REDACTED
             Sepehr Rashigi, Unknown, Unknown
-            Matt O'Rourke, Epsilon, M:S2022;I:S2022
-                Bobby Palazzi, Iota, I:F2024;M:S2025
-        Kieran Heneghan, Zeta, D:S2023
+            Matt O'Rourke, Epsilon, VPHS@S2022;SECR@S2022
+                Bobby Palazzi, Iota, SECR@F2024;VPHS@S2025
+        Kieran Heneghan, Zeta, SOCL@S2023
             Brandon Petersen, Iota
             Ellis Coco, Lambda
-                George Giakouminakis, Mu, D:S2026
+                George Giakouminakis, Mu, SOCL@S2026
                     Gio Malpartida, Nu
-    Matt Lowe, Alpha, B:F2019;B:S2020;P:S2020
-        John Berry, Delta, I:F2021;P:F2021;P:S2022;B:F2022;B:S2023
-            Rod Tavangar, Theta, P:S2024
+    Matt Lowe, Alpha, PRES@F2019;PRES@S2020;MSTR@S2020
+        John Berry, Delta, SECR@F2021;MSTR@F2021;MSTR@S2022;PRES@F2022;PRES@S2023
+            Rod Tavangar, Theta, MSTR@S2024
                 Finn Oldenburg, Lambda
                     Nick Vallary, Nu
     Tanner Lederman, Alpha
         Jacob Gottesman, Zeta
-            Batu Isik, Eta, P:S2025
-                Cameron Hornbarger, Theta, A:S2024
+            Batu Isik, Eta, MSTR@S2025
+                Cameron Hornbarger, Theta, RUSH@S2024
                     Jack Podesta, Kappa
                         Alex Keefe, Lambda
                             David Panin, Nu
@@ -66,34 +66,34 @@ Adam Akkach, Alpha
             Mike Grbic, Kappa
                 Matt Tobin, Nu
     Agastya Das, Alpha
-        Tom Glassman, Zeta, M:S2023;S:F2023
-    Jacob Horowitz, Alpha, G:F2021
-        Gio Panagiotakis, Epsilon, G:S2022;S:S2023;B:F2023;B:S2024;P:F2024
+        Tom Glassman, Zeta, VPHS@S2023;VICE@F2023
+    Jacob Horowitz, Alpha, PHIL@F2021
+        Gio Panagiotakis, Epsilon, PHIL@S2022;VICE@S2023;PRES@F2023;PRES@S2024;MSTR@F2024
             Nick Condoleo, Iota
-            Ben Agatone, Iota, K:F2024;K:S2025;S:F2025;B:S2026
-                Max Mayer, Lambda, K:F2025;S:S2026
+            Ben Agatone, Iota, TRES@F2024;TRES@S2025;VICE@F2025;PRES@S2026
+                Max Mayer, Lambda, TRES@F2025;VICE@S2026
         Sam Gildea, Alpha
-    Tyler Kavanaugh, Alpha, M:S2022
+    Tyler Kavanaugh, Alpha, VPHS@S2022
         Alex Levin, Epsilon
             Nate Nagel, Iota
-    Evan Massa, Alpha, S:F2019;B:F2021;P:S2023
-        Harry Merzin, Epsilon, G:S2023
-            Ben Clott, Zeta, K:S2023;K:F2023;K:S2024;S:F2024
-                George Foster, Iota, I:S2024;G:F2024
-                    Marley McKinsey, Lambda, G:S2024;P:F2025
-                        Thomas Clark, Mu, I:S2026
+    Evan Massa, Alpha, VICE@F2019;PRES@F2021;MSTR@S2023
+        Harry Merzin, Epsilon, PHIL@S2023
+            Ben Clott, Zeta, TRES@S2023;TRES@F2023;TRES@S2024;VICE@F2024
+                George Foster, Iota, SECR@S2024;PHIL@F2024
+                    Marley McKinsey, Lambda, PHIL@S2024;MSTR@F2025
+                        Thomas Clark, Mu, SECR@S2026
                             Hunter Lund, Nu
-    Will von Ahnen, Alpha, B:F2020;B:S2021;P:S2021
-        Noah Mack, Alpha, P:F2020;A:F2021
-            Alex Menikoff, Gamma, A:S2022
+    Will von Ahnen, Alpha, PRES@F2020;PRES@S2021;MSTR@S2021
+        Noah Mack, Alpha, MSTR@F2020;RUSH@F2021
+            Alex Menikoff, Gamma, RUSH@S2022
                 Alex Prokey, Epsilon
                     Ian Menachery, Iota
                         Theo Cairns, Mu
                             Guilherme Barcellos, Nu
-    Aidan Webster, Alpha, K:S2021;K:S2022
-        Max Brotman, Gamma, A:S2021;S:F2021;S:S2022;S:F2022;I:S2023
-            Matt Hiller, Epsilon, M:F2023
-                Chris Wilk, Eta, G:F2023
+    Aidan Webster, Alpha, TRES@S2021;TRES@S2022
+        Max Brotman, Gamma, RUSH@S2021;VICE@F2021;VICE@S2022;VICE@F2022;SECR@S2023
+            Matt Hiller, Epsilon, VPHS@F2023
+                Chris Wilk, Eta, PHIL@F2023
                     Luke Lange, Iota
                         Chris Pyle, Lambda
                             Mikhail Utyashev, Nu
@@ -103,25 +103,25 @@ Adam Akkach, Alpha
                         Chris Bialzik, Kappa
                             Sid Chandra, Nu
                         Jack Guo, Nu
-            Klaus Ohlweiler, Iota, D:S2025;A:F2025
-                Tyler Heidke, Lambda, D:F2025;A:S2026
+            Klaus Ohlweiler, Iota, SOCL@S2025;RUSH@F2025
+                Tyler Heidke, Lambda, SOCL@F2025;RUSH@S2026
                     Jason Liku, Nu
-        Tim Vaquero, Epsilon, G:F2022;S:S2024;B:F2024
-            Chase Houser, Iota, A:F2024;A:S2025
-                Zach Berde, Kappa, P:S2026
-                    Harrison Mitchell, Lambda, M:S2026
+        Tim Vaquero, Epsilon, PHIL@F2022;VICE@S2024;PRES@F2024
+            Chase Houser, Iota, RUSH@F2024;RUSH@S2025
+                Zach Berde, Kappa, MSTR@S2026
+                    Harrison Mitchell, Lambda, VPHS@S2026
                         Fernando Ramos, Nu
                     Ian Cole, Nu
     REDACTED
-        Max Leblang, Unknown, D:S2022;D:F2022;A:S2023
-            KJ Graham, Eta, D:F2023;D:S2024;M:F2024;B:S2025;B:F2025
-                Jonathan Grbic, Iota, D:F2024
+        Max Leblang, Unknown, SOCL@S2022;SOCL@F2022;RUSH@S2023
+            KJ Graham, Eta, SOCL@F2023;SOCL@S2024;VPHS@F2024;PRES@S2025;PRES@F2025
+                Jonathan Grbic, Iota, SOCL@F2024
     REDACTED
-        Martin Bulanowski, Beta, M:F2021
-            Josh Weissert, Epsilon, A:F2022
-                Declan Javers, Eta, I:F2023;M:S2024
+        Martin Bulanowski, Beta, VPHS@F2021
+            Josh Weissert, Epsilon, RUSH@F2022
+                Declan Javers, Eta, SECR@F2023;VPHS@S2024
                     Jayden Romano, Lambda
-                        Luke Daniel, Mu, K:S2026
+                        Luke Daniel, Mu, TRES@S2026
                             Beck Carlson, Nu
                         Baris Inandi, Nu
                 Fred Hodgson, Kappa

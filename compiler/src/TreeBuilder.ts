@@ -50,7 +50,7 @@ export class TreeBuilder {
 
     const eboardRaw = (line.eboard as string) ?? "";
     const eboard: BrotherEboardHistory =
-      eboardRaw === "[REDACTED]" || !eboardRaw || !eboardRaw.includes(":")
+      eboardRaw === "[REDACTED]" || !eboardRaw || !eboardRaw.includes("@")
         ? []
         : this.eboard.splitEboardString(eboardRaw);
 

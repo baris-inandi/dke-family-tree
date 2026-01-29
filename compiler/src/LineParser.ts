@@ -57,7 +57,7 @@ export class LineParser {
     }
 
     const eboardVal = parsed.eboard;
-    if (typeof eboardVal === "string" && eboardVal.includes(":")) {
+    if (typeof eboardVal === "string" && eboardVal.includes("@")) {
       this.eboard.splitEboardString(eboardVal);
     }
 
