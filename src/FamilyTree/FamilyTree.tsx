@@ -13,30 +13,10 @@ import {
 } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
 import { useEffect, useMemo, useState } from "react";
-import compiledData from "../../tree.json";
+import { dkeNaFamilyTree, type Tree } from "../../familytree-output/tree";
 import { BROTHER_NODE_SIZE } from "../consts";
 import { Sidebar } from "../Sidebar";
 import { BrotherNode } from "./BrotherNode";
-
-interface Color {
-  foreground: string;
-  background: string;
-}
-
-interface Brother {
-  id: string;
-  info: Record<string, string | { byFamily: Color; byClass: Color }>; // All schema fields + colors
-  children: Brother[];
-}
-
-interface CompiledData {
-  tree: Brother[];
-  metadata: {
-    allClasses: string[];
-  };
-}
-
-const familyTreeData = compiledData as unknown as CompiledData;
 
 const nodeTypes = {
   brother: BrotherNode,
@@ -44,7 +24,7 @@ const nodeTypes = {
 
 // Convert hierarchical data to nodes and edges with hierarchical layout
 function convertToFlowData(
-  data: Brother[],
+  data: Tree[],
   hideRedacted: boolean,
   viewClass: string,
   colorBy: "class" | "family",
@@ -54,7 +34,7 @@ function convertToFlowData(
   const parentChildMap = new Map<string, string[]>(); // parentId -> [childIds]
 
   function createTree(
-    brothers: Brother[],
+    brothers: Tree[],
     parentId: string | null,
     level: number,
     startX: number,
@@ -81,12 +61,17 @@ function convertToFlowData(
           ? "[REDACTED]"
           : classValue
               .split(/\s+/)
-              .map((w) => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())
+              .map(
+                (w: string) =>
+                  w.charAt(0).toUpperCase() + w.slice(1).toLowerCase(),
+              )
               .join(" ");
 
       const normalizedViewClass = viewClass
         .split(/\s+/)
-        .map((w) => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())
+        .map(
+          (w: string) => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase(),
+        )
         .join(" ");
 
       const isTargetClass =
@@ -140,10 +125,7 @@ function convertToFlowData(
     return { endX: currentX, nodeIds };
   }
 
-  function calculateSubtreeWidth(
-    brother: Brother,
-    nodeSpacing: number,
-  ): number {
+  function calculateSubtreeWidth(brother: Tree, nodeSpacing: number): number {
     if (brother.children.length === 0) {
       return nodeSpacing;
     }
@@ -255,7 +237,7 @@ function FlowCanvas({
 
     const timeoutId = setTimeout(() => {
       const match = nodes.find((node) => {
-        const data = node.data as { brother?: Brother };
+        const data = node.data as { brother?: Tree };
         if (!data.brother) return false;
         const nameValue =
           typeof data.brother.info.name === "string"
@@ -329,13 +311,20 @@ export default function FamilyTree() {
   const [viewClass, setViewClass] = useState("All Classes");
   const [searchQuery, setSearchQuery] = useState("");
 
+  const clearSearchAnd =
+    <T,>(fn: (value: T) => void) =>
+    (value: T) => {
+      setSearchQuery("");
+      return fn(value);
+    };
+
   // Use pre-computed metadata from compilation
-  const { allClasses: availableClasses } = familyTreeData.metadata;
+  const { allClasses: availableClasses } = dkeNaFamilyTree.metadata;
 
   const { nodes: initialNodes, edges: initialEdges } = useMemo(
     () =>
       convertToFlowData(
-        familyTreeData.tree,
+        dkeNaFamilyTree.tree,
         excludeRedacted,
         viewClass,
         colorBy,
@@ -362,14 +351,12 @@ export default function FamilyTree() {
   return (
     <div className="w-full h-screen relative">
       <Sidebar
-        nodeCount={initialNodes.length}
-        edgeCount={initialEdges.length}
         hideRedacted={excludeRedacted}
-        onHideRedactedChange={setExcludeRedacted}
+        onHideRedactedChange={clearSearchAnd(setExcludeRedacted)}
         colorBy={colorBy}
-        onColorByChange={setColorBy}
+        onColorByChange={clearSearchAnd(setColorBy)}
         viewClass={viewClass}
-        onViewClassChange={setViewClass}
+        onViewClassChange={clearSearchAnd(setViewClass)}
         availableClasses={availableClasses}
         searchQuery={searchQuery}
         onSearchQueryChange={setSearchQuery}

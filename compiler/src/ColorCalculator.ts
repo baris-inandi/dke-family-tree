@@ -93,11 +93,9 @@ export class ColorCalculator {
       background: "hsla(0 0% 60% / 0.15)",
     };
 
-    // Now assign colors to each brother's info
     const assignToBrother = (brother: Brother) => {
       const classValue = (brother.info.class as string) || "";
 
-      // Redacted entries get gray in class mode (check before normalization)
       const byClass =
         classValue === "[REDACTED]" || classValue === "[Redacted]"
           ? redactedGrayColor
@@ -107,7 +105,7 @@ export class ColorCalculator {
             })();
       const byFamily = familyColorMap.get(brother.id) || this.createColor(0);
 
-      brother.info.colors = { byFamily, byClass };
+      brother.colors = { byFamily, byClass };
       brother.children.forEach(assignToBrother);
     };
 

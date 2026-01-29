@@ -1,8 +1,6 @@
 import React from "react";
 
 interface SidebarProps {
-  nodeCount: number;
-  edgeCount: number;
   hideRedacted: boolean;
   onHideRedactedChange: (value: boolean) => void;
   colorBy: "class" | "family";
@@ -17,8 +15,6 @@ interface SidebarProps {
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({
-  nodeCount,
-  edgeCount,
   hideRedacted,
   onHideRedactedChange,
   colorBy,

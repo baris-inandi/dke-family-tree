@@ -1,4 +1,9 @@
-import type { Brother, ParsedLine } from "../types.js";
+import type { Brother, Color, ParsedLine } from "../types.js";
+
+const PLACEHOLDER_COLOR: Color = {
+  foreground: "hsl(0 0% 0%)",
+  background: "hsla(0 0% 0% / 0)",
+};
 
 export class TreeBuilder {
   private idCounter = 0;
@@ -34,13 +39,12 @@ export class TreeBuilder {
 
   /**
    * Creates a Brother object from a parsed line.
+   * Colors are assigned later by ColorCalculator.
    */
   private createBrother(line: ParsedLine): Brother {
-    // Extract name and class for ID generation
     const name = (line.name as string) || "";
     const classValue = (line.class as string) || "";
 
-    // Build info object with all schema fields (excluding indent)
     const info: Record<string, string> = {};
     for (const key in line) {
       if (key !== "indent") {
@@ -48,16 +52,14 @@ export class TreeBuilder {
       }
     }
 
-    // Build brother object
-    const brother: Brother = {
+    return {
       id: `${name}${classValue}${this.idCounter++}`
         .toLowerCase()
         .replace(/ /g, ""),
       info,
+      colors: { byFamily: PLACEHOLDER_COLOR, byClass: PLACEHOLDER_COLOR }, // overwritten by ColorCalculator
       children: [],
     };
-
-    return brother;
   }
 
   /**

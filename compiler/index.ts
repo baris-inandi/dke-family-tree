@@ -1,7 +1,7 @@
 import { join } from "path";
 import { FamilyTreeCompiler } from "./src/FamilyTreeCompiler.js";
 
-function main() {
+async function main() {
   const inputPath = process.argv[2];
   if (!inputPath) {
     console.error("Error: Input file path required as first argument");
@@ -13,7 +13,7 @@ function main() {
   const absoluteInputPath = join(cwd, inputPath);
 
   const compiler = new FamilyTreeCompiler();
-  compiler.compile(absoluteInputPath);
+  await compiler.compile(absoluteInputPath);
 }
 
 main();

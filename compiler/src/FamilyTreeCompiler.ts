@@ -1,13 +1,16 @@
 import { mkdirSync, readFileSync, writeFileSync } from "fs";
-import { dirname, join } from "path";
+import { join } from "path";
 import type { FinalCompiledOutput } from "../types.js";
-import { VARIABLES } from "../variables.js";
 import { ClassExtractor } from "./ClassExtractor.js";
 import { ColorCalculator } from "./ColorCalculator.js";
+import { Eboard } from "./Eboard.js";
 import { FamilyTreeLinter } from "./FamilyTreeLinter.js";
 import { LineParser } from "./LineParser.js";
 import { TreeBuilder } from "./TreeBuilder.js";
 import { VariableParser } from "./VariableParser.js";
+import { writeFamilyTreeTypes } from "./generateFamilyTreeTypes.js";
+
+const OUTPUT_DIR = "familytree-output";
 
 export class FamilyTreeCompiler {
   private readonly parser: LineParser;
@@ -16,9 +19,11 @@ export class FamilyTreeCompiler {
   private readonly classExtractor: ClassExtractor;
   private readonly linter: FamilyTreeLinter;
   private readonly directiveParser: VariableParser;
+  private readonly eboard: Eboard;
 
   constructor() {
-    this.parser = new LineParser();
+    this.eboard = new Eboard();
+    this.parser = new LineParser(this.eboard);
     this.treeBuilder = new TreeBuilder();
     this.colorCalculator = new ColorCalculator();
     this.classExtractor = new ClassExtractor();
@@ -41,28 +46,20 @@ export class FamilyTreeCompiler {
   }
 
   /**
-   * Compiles the family tree from input file to output JSON.
-   * @throws Error if linting fails
+   * Compiles the family tree from input file to ./familytree-output/tree.json
+   * and generates types to ./familytree-output/FamilyTree.ts.
    */
-  compile(inputPath: string, outputPath?: string): void {
+  async compile(inputPath: string): Promise<void> {
     console.log(`Reading from ${inputPath}...`);
     const content = readFileSync(inputPath, "utf-8");
 
     this.precompile(content);
 
-    // Get output filename from VARIABLES (already validated in precompile)
-    const outputFilename = VARIABLES.get("output")!;
+    const cwd = process.cwd();
+    const outputDir = join(cwd, OUTPUT_DIR);
+    const finalOutputPath = join(outputDir, "tree.json");
 
-    // Use provided outputPath or construct from output variable
-    // If outputFilename is relative, it's relative to the input file's directory
-    // If it's absolute, use it as-is
-    const finalOutputPath = outputPath
-      ? outputPath
-      : outputFilename.startsWith("/")
-        ? outputFilename
-        : join(dirname(inputPath), outputFilename);
-
-    // Parse lines
+    // Parse lines (eboard fields like G:S-2026 are validated and stored per brother)
     const parsedLines = this.parser.parseLines(content);
 
     // Build tree structure
@@ -84,22 +81,20 @@ export class FamilyTreeCompiler {
       tree,
     };
 
-    // Ensure output directory exists
-    const outputDir = dirname(finalOutputPath);
     try {
       mkdirSync(outputDir, { recursive: true });
     } catch {
-      // Directory might already exist, ignore
+      // ignore
     }
 
-    // Write output
     const json = JSON.stringify(compiledData, null, 2);
     writeFileSync(finalOutputPath, json, "utf-8");
 
-    // Log results
     const totalBrothers = this.treeBuilder.countBrothers(tree);
     console.log(`Successfully compiled to ${finalOutputPath}`);
     console.log(`Total brothers: ${totalBrothers}`);
     console.log(`Available classes: ${availableClasses.length}`);
+
+    await writeFamilyTreeTypes(compiledData, outputDir);
   }
 }

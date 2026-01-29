@@ -4,17 +4,14 @@
 #############################
 
 # Add Brothers to this file using the following comma-separated notation:
-# First Last, Greek Letter Class, College Graduation
+# First Last, Greek Letter Class, Eboard Positions Array
 
-@def schema name, class
+@SCHEMA name, class, eboard
 
 # Indent with four spaces to denote a lineage.
 # To redact someone, replace their line with "REDACTED" in all caps.
 # Start a line with a hash to comment.
 # Run `bun compile <path>` to compile this file.
-
-# the path to the output json the compiler will generate
-@def output tree.json
 
 ##########################
 #  START OF FAMILY TREE  #
@@ -35,7 +32,7 @@ Adam Akkach, Alpha
                     Evan Yee, Kappa
                         Dom Cheng, Nu
                     Brayden Ramseier, Lambda
-                        Zach Upson, Mu
+                        Zach Upson, Mu, G:S-2026
             Umut Tanrivierdi, Epsilon
                 Armagan Karakas, Eta
                     Matt Bertoncini, Nu
@@ -49,7 +46,7 @@ Adam Akkach, Alpha
         Kieran Heneghan, Zeta
             Brandon Petersen, Iota
             Ellis Coco, Lambda
-                George Giakouminakis, Mu
+                George Giakouminakis, Mu, D:S-2026
                     Gio Malpartida, Nu
     Matt Lowe, Alpha
         John Berry, Delta
@@ -73,8 +70,8 @@ Adam Akkach, Alpha
     Jacob Horowitz, Alpha
         Gio Panagiotakis, Epsilon
             Nick Condoleo, Iota
-            Ben Agatone, Iota
-                Max Mayer, Lambda
+            Ben Agatone, Iota, B:S-2026
+                Max Mayer, Lambda, S:S-2026
         Sam Gildea, Alpha
     Tyler Kavanaugh, Alpha
         Alex Levin, Epsilon
@@ -84,7 +81,7 @@ Adam Akkach, Alpha
             Ben Clott, Zeta
                 George Foster, Iota
                     Marley McKinsey, Lambda
-                        Thomas Clark, Mu
+                        Thomas Clark, Mu, I:S-2026
                             Hunter Lund, Nu
     Will von Ahnen, Alpha
         Noah Mack, Alpha
@@ -107,12 +104,12 @@ Adam Akkach, Alpha
                             Sid Chandra, Nu
                         Jack Guo, Nu
             Klaus Ohlweiler, Iota
-                Tyler Heidke, Lambda
+                Tyler Heidke, Lambda, A:S-2026
                     Jason Liku, Nu
         Tim Vaquero, Epsilon
             Chase Houser, Iota
-                Zach Berde, Kappa
-                    Harrison Mitchell, Lambda
+                Zach Berde, Kappa, P:S-2026
+                    Harrison Mitchell, Lambda, M:S-2026
                         Fernando Ramos, Nu
                     Ian Cole, Nu
     REDACTED
@@ -124,7 +121,7 @@ Adam Akkach, Alpha
             Josh Weissert, Epsilon
                 Declan Javers, Eta
                     Jayden Romano, Lambda
-                        Luke Daniel, Mu
+                        Luke Daniel, Mu, K:S-2026
                             Beck Carlson, Nu
                         Baris Inandi, Nu
                 Fred Hodgson, Kappa

@@ -1,21 +1,12 @@
 import { Handle, Position } from "@xyflow/react";
+import type { Tree } from "../../familytree-output/tree";
 import RedactableText from "./RedactableText";
-
-interface Color {
-  foreground: string;
-  background: string;
-}
-
-interface Brother {
-  id: string;
-  info: Record<string, string | { byFamily: Color; byClass: Color }>;
-}
 
 export const BrotherNode = ({
   data,
 }: {
   data: {
-    brother: Brother;
+    brother: Tree;
     faded?: boolean;
     colorBy?: "class" | "family";
     isHighlighted?: boolean;
@@ -26,19 +17,14 @@ export const BrotherNode = ({
   const isHighlighted = data.isHighlighted ?? false;
 
   // Extract values from brother
-  const nameValue = (data.brother.info.name as string) ?? "[UNKNOWN]";
-  const classValue = (data.brother.info.class as string) ?? "[UNKNOWN]";
-  const gradValue = (data.brother.info.grad as string) ?? "[UNKNOWN]";
+  const nameValue = data.brother.info.name ?? "[UNKNOWN]";
+  const classValue = data.brother.info.class ?? "[UNKNOWN]";
 
-  // Get colors from brother's info
-  const colors = data.brother.info.colors as
-    | { byFamily: Color; byClass: Color }
-    | undefined;
+  const colors = data.brother.colors;
 
-  // Get color based on mode - use pre-computed colors
-  const color = (colorBy === "family" && colors?.byFamily
+  const color = (colorBy === "family" && colors.byFamily
     ? colors.byFamily
-    : colors?.byClass) || {
+    : colors.byClass) || {
     foreground: "hsl(0 0% 25%)",
     background: "hsla(0 0% 35% / 0.2)",
   };
@@ -84,16 +70,6 @@ export const BrotherNode = ({
       >
         <RedactableText length={4}>{classValue}</RedactableText> Class
       </div>
-      {data.brother.info.grad && (
-        <div
-          className="text-xs opacity-70"
-          style={{
-            color: color.foreground,
-          }}
-        >
-          Northeastern <RedactableText length={4}>{gradValue}</RedactableText>
-        </div>
-      )}
     </div>
   );
 };

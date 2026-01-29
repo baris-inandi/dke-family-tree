@@ -1,457 +1,456 @@
-@def schema name, class, grad
-@def output tree.json
+@SCHEMA name, class, eboard
 
-Adam Akkach, Alpha, 2021
-    Steve Holt, Alpha, 2022
+Adam Akkach, Alpha
+    Steve Holt, Alpha
         REDACTED
             REDACTED
-                Marcus Yi, Theta, 2026
-                    Aashish Hassam, Iota, 2027
-                        Matt Kohen, Lambda, 2027
-                            Ryan Alexander, Nu, 2029
-                                Jake Morrison, Xi, 2030
-                                    Tyler Chen, Omicron, 2031
-                                        Sam Patel, Pi, 2032
-                                            Lucas Wright, Rho, 2033
-                                                Nathan Kim, Sigma, 2034
-                                            Josh Anderson, Rho, 2033
-                                                Eric Lawson, Sigma, 2034
-                                                    Brad Stevens, Tau, 2035
-                                                        Kyle Martinez, Upsilon, 2036
-                                                            Dylan Cooper, Phi, 2037
-                                                                Adam Foster, Chi, 2038
-                                                                    Chris Bailey, Psi, 2039
-                                                                        James Reed, Omega, 2040
-                                                                            Tyler Brooks, Alpha Alpha, 2041
-                                                                                Mason Cole, Alpha Beta, 2042
-                                                Mike Roberts, Sigma, 2034
-                                    Derek Nelson, Omicron, 2031
-                            Ryan Hatcher, Nu, 2027
-                                Connor Walsh, Xi, 2030
-                                    Derek Thompson, Omicron, 2031
-                                        Andrew Miller, Pi, 2032
-                                            Brandon Lee, Rho, 2033
-                                Justin Park, Xi, 2030
-                        Briggs Kroeger, Lambda, 2028
-                            Brendan Keefe, Nu, 2029
-                                Mason Brooks, Xi, 2030
-                                    Ethan Reed, Omicron, 2031
-                                Logan Hayes, Xi, 2030
-                                    Cameron Scott, Omicron, 2031
-                                        Austin Hall, Pi, 2032
-                                            Jordan Nelson, Rho, 2033
-                                                Dylan Mitchell, Sigma, 2034
-                                                    Tyler Adams, Tau, 2035
-                                                        Kevin Baker, Upsilon, 2036
-                                                            Brian Collins, Phi, 2037
-                                                        Jack Rivera, Tau, 2035
-                            James Mallon, Nu, 2028
-                                Owen Peterson, Xi, 2030
-                                    Henry Clark, Omicron, 2031
-                                        Isaac Rodriguez, Pi, 2032
-                                            Gavin Martinez, Rho, 2033
-                                                Chase Anderson, Sigma, 2034
-                    Evan Yee, Kappa, 2026
-                        Dom Cheng, Nu, 2028
-                            Marcus Lin, Xi, 2030
-                                David Wu, Omicron, 2031
-                                Kevin Chang, Omicron, 2031
-                                    Jason Huang, Pi, 2032
-                                        Andrew Nguyen, Rho, 2033
-                                            Michael Tran, Sigma, 2034
-                                                Daniel Kim, Tau, 2035
-                                                    Steven Lee, Upsilon, 2036
-                                                        Chris Park, Phi, 2037
-                                                            John Chen, Chi, 2038
-                                                                Tony Wang, Psi, 2039
-                                                                    Eric Liu, Omega, 2040
-                                        Blake Chen, Pi, 2032
-                    Matt Bertoncini, Nu, 2028
-                        Graham Foster, Xi, 2030
-                            Blake Morrison, Omicron, 2031
-                                Trent Hughes, Pi, 2032
-                                    Cole Bennett, Rho, 2033
-                    Brayden Ramseier, Lambda, 2027
-                        Zach Upson, Mu, 2028
-                            Parker Stevens, Xi, 2030
-                                Reed Hamilton, Omicron, 2031
-                                    Spencer Gray, Pi, 2032
-                                        Marshall Webb, Rho, 2033
-                                            Fletcher Ross, Sigma, 2034
-                                                Porter Kennedy, Tau, 2035
-                                                    Archer Cole, Upsilon, 2036
-                                                        Hunter Dixon, Phi, 2037
-                                                            Fisher Hunt, Chi, 2038
-                                                                Tucker Lane, Psi, 2039
-                                                                    Sawyer Stone, Omega, 2040
-                                                                        Walker Price, Alpha Alpha, 2041
-                            Carson Blake, Xi, 2030
-            Umut Tanrivierdi, Epsilon, 2025
-                Armagan Karakas, Eta, 2026
-            Adil Ikiz, Epsilon, 2025
-                Derek Uhrich, Kappa, 2027
-    Calvin Norstad, Alpha, 2022
+                Marcus Yi, Theta
+                    Aashish Hassam, Iota
+                        Matt Kohen, Lambda
+                            Ryan Alexander, Nu
+                                Jake Morrison, Xi
+                                    Tyler Chen, Omicron
+                                        Sam Patel, Pi
+                                            Lucas Wright, Rho
+                                                Nathan Kim, Sigma
+                                            Josh Anderson, Rho
+                                                Eric Lawson, Sigma
+                                                    Brad Stevens, Tau
+                                                        Kyle Martinez, Upsilon
+                                                            Dylan Cooper, Phi
+                                                                Adam Foster, Chi
+                                                                    Chris Bailey, Psi
+                                                                        James Reed, Omega
+                                                                            Tyler Brooks, Alpha Alpha
+                                                                                Mason Cole, Alpha Beta
+                                                Mike Roberts, Sigma
+                                    Derek Nelson, Omicron
+                            Ryan Hatcher, Nu
+                                Connor Walsh, Xi
+                                    Derek Thompson, Omicron
+                                        Andrew Miller, Pi
+                                            Brandon Lee, Rho
+                                Justin Park, Xi
+                        Briggs Kroeger, Lambda
+                            Brendan Keefe, Nu
+                                Mason Brooks, Xi
+                                    Ethan Reed, Omicron
+                                Logan Hayes, Xi
+                                    Cameron Scott, Omicron
+                                        Austin Hall, Pi
+                                            Jordan Nelson, Rho
+                                                Dylan Mitchell, Sigma
+                                                    Tyler Adams, Tau
+                                                        Kevin Baker, Upsilon
+                                                            Brian Collins, Phi
+                                                        Jack Rivera, Tau
+                            James Mallon, Nu
+                                Owen Peterson, Xi
+                                    Henry Clark, Omicron
+                                        Isaac Rodriguez, Pi
+                                            Gavin Martinez, Rho
+                                                Chase Anderson, Sigma
+                    Evan Yee, Kappa
+                        Dom Cheng, Nu
+                            Marcus Lin, Xi
+                                David Wu, Omicron
+                                Kevin Chang, Omicron
+                                    Jason Huang, Pi
+                                        Andrew Nguyen, Rho
+                                            Michael Tran, Sigma
+                                                Daniel Kim, Tau
+                                                    Steven Lee, Upsilon
+                                                        Chris Park, Phi
+                                                            John Chen, Chi
+                                                                Tony Wang, Psi
+                                                                    Eric Liu, Omega
+                                        Blake Chen, Pi
+                    Matt Bertoncini, Nu
+                        Graham Foster, Xi
+                            Blake Morrison, Omicron
+                                Trent Hughes, Pi
+                                    Cole Bennett, Rho
+                    Brayden Ramseier, Lambda
+                        Zach Upson, Mu
+                            Parker Stevens, Xi
+                                Reed Hamilton, Omicron
+                                    Spencer Gray, Pi
+                                        Marshall Webb, Rho
+                                            Fletcher Ross, Sigma
+                                                Porter Kennedy, Tau
+                                                    Archer Cole, Upsilon
+                                                        Hunter Dixon, Phi
+                                                            Fisher Hunt, Chi
+                                                                Tucker Lane, Psi
+                                                                    Sawyer Stone, Omega
+                                                                        Walker Price, Alpha Alpha
+                            Carson Blake, Xi
+            Umut Tanrivierdi, Epsilon
+                Armagan Karakas, Eta
+            Adil Ikiz, Epsilon
+                Derek Uhrich, Kappa
+    Calvin Norstad, Alpha
         REDACTED
             Sepehr Rashigi, Unknown, Unknown
-            Matt O'Rourke, Epsilon, 2025
-                Bobby Palazzi, Iota, 2027
-        Kieran Heneghan, Zeta, 2025
-            Brandon Petersen, Iota, 2025
-            Ellis Coco, Lambda, 2028
-                George Giakouminakis, Mu, 2028
-                    Gio Malpartida, Nu, 2028
-                        Luca Rossi, Xi, 2030
-                            Marco Bianchi, Omicron, 2031
-                                Angelo Romano, Pi, 2032
-                                    Matteo Ferrari, Rho, 2033
-                                        Leonardo Conti, Sigma, 2034
-                                            Davide Ricci, Tau, 2035
-                                                Giovanni Bruno, Upsilon, 2036
-                                                    Francesco Russo, Phi, 2037
-                                            Carlo Martini, Tau, 2035
-    Matt Lowe, Alpha, 2021
-        John Berry, Delta, 2024
-            Rod Tavangar, Theta, 2025
-                Finn Oldenburg, Lambda, 2028
-                    Nick Vallary, Nu, 2029
-                        Henrik Nielsen, Xi, 2030
-                            Lars Andersen, Omicron, 2031
-                                Erik Johansen, Pi, 2032
-                                    Magnus Olsen, Rho, 2033
-                                        Soren Hansen, Sigma, 2034
-                            Mikkel Berg, Omicron, 2031
-    Tanner Lederman, Alpha, 2022
-        Jacob Gottesman, Zeta, 2025
-            Batu Isik, Eta, 2026
-                Cameron Hornbarger, Theta, 2024
-                    Jack Podesta, Kappa, 2027
-                        Alex Keefe, Lambda, 2027
-                            David Panin, Nu, 2028
-                                Dimitri Volkov, Xi, 2030
-                                    Alexei Petrov, Omicron, 2031
-                                        Sergei Ivanov, Pi, 2032
-                                            Mikhail Sokolov, Rho, 2033
-                                                Andrei Popov, Sigma, 2034
-                                                    Viktor Lebedev, Tau, 2035
-                                                        Nikolai Kozlov, Upsilon, 2036
-                                                            Pavel Vasiliev, Phi, 2037
-                                                                Yuri Fedorov, Chi, 2038
-                                                                    Igor Novikov, Psi, 2039
-                                                                        Oleg Morozov, Omega, 2040
-                                                                            Roman Petrov, Alpha Alpha, 2041
-                                                Dmitri Orlov, Sigma, 2034
-                        Brian Yang, Nu, 2027
-                            Wei Zhang, Xi, 2030
-                                Li Wang, Omicron, 2031
-                                    Han Chen, Pi, 2032
-                                        Feng Liu, Rho, 2033
-                                            Ming Wu, Sigma, 2034
-                                                Jian Zhou, Tau, 2035
-                                        Bo Yang, Rho, 2033
-                Ben Marler, Kappa, 2027
-                    Harrison Feldman, Mu, 2028
-                        Nolan Fischer, Xi, 2030
-                            Grant Werner, Omicron, 2031
-                                Pierce Schultz, Pi, 2032
-                                    Garrett Wagner, Rho, 2033
-                                        Brooks Zimmerman, Sigma, 2034
-                                            Reid Krueger, Tau, 2035
-                                                Clay Mueller, Upsilon, 2036
-                                                    Tate Schmidt, Phi, 2037
-                            Jett Weber, Omicron, 2031
-            Mike Grbic, Kappa, 2026
-                Matt Tobin, Nu, 2028
-                    Jake Mueller, Xi, 2030
-                        Brett Wagner, Omicron, 2031
-                            Shane Becker, Pi, 2032
-                                Lance Fischer, Rho, 2033
-                                    Wade Schultz, Sigma, 2034
-                        Drew Hoffman, Omicron, 2031
-                            Chase Schmidt, Pi, 2032
-    Agastya Das, Alpha, 2023
-        Tom Glassman, Zeta, 2025
-    Jacob Horowitz, Alpha, 2023
-        Gio Panagiotakis, Epsilon, 2025
-            Nick Condoleo, Iota, 2027
-            Ben Agatone, Iota, 2027
-                Max Mayer, Lambda, 2027
-        Sam Gildea, Alpha, 2022
-    Tyler Kavanaugh, Alpha, 2023
-        Alex Levin, Epsilon, 2025
-            Nate Nagel, Iota, 2027
-    Evan Massa, Alpha, 2023
-        Harry Merzin, Epsilon, 2023
-            Ben Clott, Zeta, 2025
-                George Foster, Iota, 2027
-                    Marley McKinsey, Lambda, 2027
-                        Thomas Clark, Mu, 2027
-                            Hunter Lund, Nu, 2028
-                                Wyatt Stone, Xi, 2030
-                                    Colton Price, Omicron, 2031
-                                        Dalton Reed, Pi, 2032
-                                            Preston Ward, Rho, 2033
-                                                Easton Long, Sigma, 2034
-                                                    Weston Hughes, Tau, 2035
-                                                        Landon Bell, Upsilon, 2036
-                                                            Brayden Wood, Phi, 2037
-                                                                Grayson Barnes, Chi, 2038
-                                                                    Kayden Ross, Psi, 2039
-                                                                        Jayden Henderson, Omega, 2040
-                                                                            Hayden Coleman, Alpha Alpha, 2041
-                                                                                Aiden Jenkins, Alpha Beta, 2042
-                                                            Jaxon Pierce, Phi, 2037
-                                                        Carter Mills, Upsilon, 2036
-                                                Trenton Shaw, Sigma, 2034
-    Will von Ahnen, Alpha, 2022
-        Noah Mack, Alpha, 2023
-            Alex Menikoff, Gamma, 2024
-                Alex Prokey, Epsilon, 2025
-                    Ian Menachery, Iota, 2027
-                        Theo Cairns, Mu, 2028
-                            Guilherme Barcellos, Nu, 2029
-                                Rafael Silva, Xi, 2030
-                                    Carlos Santos, Omicron, 2031
-                                        Diego Oliveira, Pi, 2032
-                                            Lucas Pereira, Rho, 2033
-                                                Felipe Costa, Sigma, 2034
-                                                    Bruno Alves, Tau, 2035
-                                                        Marcos Rodrigues, Upsilon, 2036
-                                                            Pedro Fernandes, Phi, 2037
-                                                                Thiago Ribeiro, Chi, 2038
-                                                                    Vinicius Sousa, Psi, 2039
-                                                        Andre Martins, Upsilon, 2036
-                                                            Gabriel Lima, Phi, 2037
-                                            Mateus Rocha, Rho, 2033
-    Aidan Webster, Alpha, 2022
-        Max Brotman, Gamma, 2024
-            Matt Hiller, Epsilon, 2024
-                Chris Wilk, Eta, 2025
-                    Luke Lange, Iota, 2026
-                        Chris Pyle, Lambda, 2027
-                            Mikhail Utyashev, Nu, 2029
-                                Dimitri Kuznetsov, Xi, 2030
-                                    Boris Makarov, Omicron, 2031
-                                        Ivan Zaitsev, Pi, 2032
-                                            Konstantin Pavlov, Rho, 2033
-                                                Maxim Romanov, Sigma, 2034
-                                                    Artem Mikhailov, Tau, 2035
-                                                        Kirill Volkov, Upsilon, 2036
-                                                            Ruslan Solovyov, Phi, 2037
-                                                                Vadim Karpov, Chi, 2038
-                                                                    Stanislav Belov, Psi, 2039
-                                                                        Gleb Orlov, Omega, 2040
-                                                                            Timur Egorov, Alpha Alpha, 2041
-                                                            Alexei Morozov, Phi, 2037
-                                                                Denis Medvedev, Chi, 2038
-                                                    Igor Popov, Tau, 2035
-                                        Yuri Volkov, Pi, 2032
-                        Lex Tremblay, Mu, 2028
-                            Vincenzo Fardella, Nu, 2028
-                                Lorenzo Esposito, Xi, 2030
-                                    Alessandro Rizzo, Omicron, 2031
-                                        Matteo Lombardi, Pi, 2032
-                                            Simone Gallo, Rho, 2033
-                                                Davide Mancini, Sigma, 2034
-                                                    Francesco Vitale, Tau, 2035
-                                                        Giuseppe Santoro, Upsilon, 2036
-                                                            Antonio Caruso, Phi, 2037
-                                                                Luca Rinaldi, Chi, 2038
-                                                                    Marco De Luca, Psi, 2039
-                                                                        Andrea Marini, Omega, 2040
-                                                            Paolo Giordano, Phi, 2037
-                                        Stefano Barbieri, Pi, 2032
-                    Kai Barbara, Iota, 2027
-                        Chris Bialzik, Kappa, 2027
-                            Sid Chandra, Nu, 2028
-                                Rohan Patel, Xi, 2030
-                                    Arjun Sharma, Omicron, 2031
-                                        Raj Gupta, Pi, 2032
-                                            Vikram Singh, Rho, 2033
-                                                Aditya Kumar, Sigma, 2034
-                                                    Karan Reddy, Tau, 2035
-                                                        Nikhil Mehta, Upsilon, 2036
-                                                            Rahul Iyer, Phi, 2037
-                                                                Pranav Joshi, Chi, 2038
-                                                                    Siddharth Kapoor, Psi, 2039
-                                                        Varun Nair, Upsilon, 2036
-                                            Aakash Bhat, Rho, 2033
-                        Jack Guo, Nu, 2029
-                            Henry Wu, Xi, 2030
-                                Alex Chen, Omicron, 2031
-                                    Ryan Zhang, Pi, 2032
-                                        Kevin Liu, Rho, 2033
-                                            Brian Wang, Sigma, 2034
-                                                Justin Lin, Tau, 2035
-                                                    Eric Huang, Upsilon, 2036
-                                                        Michael Chang, Phi, 2037
-                                Ryan Lee, Omicron, 2031
-                                    Andrew Yang, Pi, 2032
-                                        Steven Park, Rho, 2033
-            Klaus Ohlweiler, Iota, 2027
-                Tyler Heidke, Lambda, 2028
-                    Jason Liku, Nu, 2029
-                        Otto Schmidt, Xi, 2030
-                            Franz Becker, Omicron, 2031
-                                Klaus Fischer, Pi, 2032
-                                    Wilhelm Meyer, Rho, 2033
-                                        Hans Wagner, Sigma, 2034
-                                            Jurgen Schultz, Tau, 2035
-                                                Dieter Weber, Upsilon, 2036
-                                                    Helmut Koch, Phi, 2037
-                                                        Wolfgang Bauer, Chi, 2038
-                                                            Gunther Hoffman, Psi, 2039
-                                            Horst Neumann, Tau, 2035
-        Tim Vaquero, Epsilon, 2025
-            Chase Houser, Iota, 2027
-                Zach Berde, Kappa, 2027
-                    Harrison Mitchell, Lambda, 2028
-                        Fernando Ramos, Nu, 2028
-                            Santiago Garcia, Xi, 2030
-                                Miguel Rodriguez, Omicron, 2031
-                                    Alejandro Martinez, Pi, 2032
-                                        Javier Lopez, Rho, 2033
-                                            Carlos Hernandez, Sigma, 2034
-                                                Luis Gonzalez, Tau, 2035
-                                                    Pablo Perez, Upsilon, 2036
-                                                        Antonio Sanchez, Phi, 2037
-                                                            Manuel Ramirez, Chi, 2038
-                                                                Francisco Torres, Psi, 2039
-                                                                    Jorge Flores, Omega, 2040
-                                                                        Ricardo Rivera, Alpha Alpha, 2041
-                                                        Eduardo Morales, Phi, 2037
-                                            Diego Reyes, Sigma, 2034
-                    Ian Cole, Nu, 2029
-                        Liam Murphy, Xi, 2030
-                            Sean O'Brien, Omicron, 2031
-                                Connor Sullivan, Pi, 2032
-                                    Finn McCarthy, Rho, 2033
-                                        Declan Ryan, Sigma, 2034
-                                            Patrick Kelly, Tau, 2035
-                                                Brendan Quinn, Upsilon, 2036
-                                                    Colin Walsh, Phi, 2037
-                                        Aidan Brennan, Sigma, 2034
-                            Ronan Doherty, Omicron, 2031
+            Matt O'Rourke, Epsilon
+                Bobby Palazzi, Iota
+        Kieran Heneghan, Zeta
+            Brandon Petersen, Iota
+            Ellis Coco, Lambda
+                George Giakouminakis, Mu
+                    Gio Malpartida, Nu
+                        Luca Rossi, Xi
+                            Marco Bianchi, Omicron
+                                Angelo Romano, Pi
+                                    Matteo Ferrari, Rho
+                                        Leonardo Conti, Sigma
+                                            Davide Ricci, Tau
+                                                Giovanni Bruno, Upsilon
+                                                    Francesco Russo, Phi
+                                            Carlo Martini, Tau
+    Matt Lowe, Alpha
+        John Berry, Delta
+            Rod Tavangar, Theta
+                Finn Oldenburg, Lambda
+                    Nick Vallary, Nu
+                        Henrik Nielsen, Xi
+                            Lars Andersen, Omicron
+                                Erik Johansen, Pi
+                                    Magnus Olsen, Rho
+                                        Soren Hansen, Sigma
+                            Mikkel Berg, Omicron
+    Tanner Lederman, Alpha
+        Jacob Gottesman, Zeta
+            Batu Isik, Eta
+                Cameron Hornbarger, Theta
+                    Jack Podesta, Kappa
+                        Alex Keefe, Lambda
+                            David Panin, Nu
+                                Dimitri Volkov, Xi
+                                    Alexei Petrov, Omicron
+                                        Sergei Ivanov, Pi
+                                            Mikhail Sokolov, Rho
+                                                Andrei Popov, Sigma
+                                                    Viktor Lebedev, Tau
+                                                        Nikolai Kozlov, Upsilon
+                                                            Pavel Vasiliev, Phi
+                                                                Yuri Fedorov, Chi
+                                                                    Igor Novikov, Psi
+                                                                        Oleg Morozov, Omega
+                                                                            Roman Petrov, Alpha Alpha
+                                                Dmitri Orlov, Sigma
+                        Brian Yang, Nu
+                            Wei Zhang, Xi
+                                Li Wang, Omicron
+                                    Han Chen, Pi
+                                        Feng Liu, Rho
+                                            Ming Wu, Sigma
+                                                Jian Zhou, Tau
+                                        Bo Yang, Rho
+                Ben Marler, Kappa
+                    Harrison Feldman, Mu
+                        Nolan Fischer, Xi
+                            Grant Werner, Omicron
+                                Pierce Schultz, Pi
+                                    Garrett Wagner, Rho
+                                        Brooks Zimmerman, Sigma
+                                            Reid Krueger, Tau
+                                                Clay Mueller, Upsilon
+                                                    Tate Schmidt, Phi
+                            Jett Weber, Omicron
+            Mike Grbic, Kappa
+                Matt Tobin, Nu
+                    Jake Mueller, Xi
+                        Brett Wagner, Omicron
+                            Shane Becker, Pi
+                                Lance Fischer, Rho
+                                    Wade Schultz, Sigma
+                        Drew Hoffman, Omicron
+                            Chase Schmidt, Pi
+    Agastya Das, Alpha
+        Tom Glassman, Zeta
+    Jacob Horowitz, Alpha
+        Gio Panagiotakis, Epsilon
+            Nick Condoleo, Iota
+            Ben Agatone, Iota
+                Max Mayer, Lambda
+        Sam Gildea, Alpha
+    Tyler Kavanaugh, Alpha
+        Alex Levin, Epsilon
+            Nate Nagel, Iota
+    Evan Massa, Alpha
+        Harry Merzin, Epsilon
+            Ben Clott, Zeta
+                George Foster, Iota
+                    Marley McKinsey, Lambda
+                        Thomas Clark, Mu
+                            Hunter Lund, Nu
+                                Wyatt Stone, Xi
+                                    Colton Price, Omicron
+                                        Dalton Reed, Pi
+                                            Preston Ward, Rho
+                                                Easton Long, Sigma
+                                                    Weston Hughes, Tau
+                                                        Landon Bell, Upsilon
+                                                            Brayden Wood, Phi
+                                                                Grayson Barnes, Chi
+                                                                    Kayden Ross, Psi
+                                                                        Jayden Henderson, Omega
+                                                                            Hayden Coleman, Alpha Alpha
+                                                                                Aiden Jenkins, Alpha Beta
+                                                            Jaxon Pierce, Phi
+                                                        Carter Mills, Upsilon
+                                                Trenton Shaw, Sigma
+    Will von Ahnen, Alpha
+        Noah Mack, Alpha
+            Alex Menikoff, Gamma
+                Alex Prokey, Epsilon
+                    Ian Menachery, Iota
+                        Theo Cairns, Mu
+                            Guilherme Barcellos, Nu
+                                Rafael Silva, Xi
+                                    Carlos Santos, Omicron
+                                        Diego Oliveira, Pi
+                                            Lucas Pereira, Rho
+                                                Felipe Costa, Sigma
+                                                    Bruno Alves, Tau
+                                                        Marcos Rodrigues, Upsilon
+                                                            Pedro Fernandes, Phi
+                                                                Thiago Ribeiro, Chi
+                                                                    Vinicius Sousa, Psi
+                                                        Andre Martins, Upsilon
+                                                            Gabriel Lima, Phi
+                                            Mateus Rocha, Rho
+    Aidan Webster, Alpha
+        Max Brotman, Gamma
+            Matt Hiller, Epsilon
+                Chris Wilk, Eta
+                    Luke Lange, Iota
+                        Chris Pyle, Lambda
+                            Mikhail Utyashev, Nu
+                                Dimitri Kuznetsov, Xi
+                                    Boris Makarov, Omicron
+                                        Ivan Zaitsev, Pi
+                                            Konstantin Pavlov, Rho
+                                                Maxim Romanov, Sigma
+                                                    Artem Mikhailov, Tau
+                                                        Kirill Volkov, Upsilon
+                                                            Ruslan Solovyov, Phi
+                                                                Vadim Karpov, Chi
+                                                                    Stanislav Belov, Psi
+                                                                        Gleb Orlov, Omega
+                                                                            Timur Egorov, Alpha Alpha
+                                                            Alexei Morozov, Phi
+                                                                Denis Medvedev, Chi
+                                                    Igor Popov, Tau
+                                        Yuri Volkov, Pi
+                        Lex Tremblay, Mu
+                            Vincenzo Fardella, Nu
+                                Lorenzo Esposito, Xi
+                                    Alessandro Rizzo, Omicron
+                                        Matteo Lombardi, Pi
+                                            Simone Gallo, Rho
+                                                Davide Mancini, Sigma
+                                                    Francesco Vitale, Tau
+                                                        Giuseppe Santoro, Upsilon
+                                                            Antonio Caruso, Phi
+                                                                Luca Rinaldi, Chi
+                                                                    Marco De Luca, Psi
+                                                                        Andrea Marini, Omega
+                                                            Paolo Giordano, Phi
+                                        Stefano Barbieri, Pi
+                    Kai Barbara, Iota
+                        Chris Bialzik, Kappa
+                            Sid Chandra, Nu
+                                Rohan Patel, Xi
+                                    Arjun Sharma, Omicron
+                                        Raj Gupta, Pi
+                                            Vikram Singh, Rho
+                                                Aditya Kumar, Sigma
+                                                    Karan Reddy, Tau
+                                                        Nikhil Mehta, Upsilon
+                                                            Rahul Iyer, Phi
+                                                                Pranav Joshi, Chi
+                                                                    Siddharth Kapoor, Psi
+                                                        Varun Nair, Upsilon
+                                            Aakash Bhat, Rho
+                        Jack Guo, Nu
+                            Henry Wu, Xi
+                                Alex Chen, Omicron
+                                    Ryan Zhang, Pi
+                                        Kevin Liu, Rho
+                                            Brian Wang, Sigma
+                                                Justin Lin, Tau
+                                                    Eric Huang, Upsilon
+                                                        Michael Chang, Phi
+                                Ryan Lee, Omicron
+                                    Andrew Yang, Pi
+                                        Steven Park, Rho
+            Klaus Ohlweiler, Iota
+                Tyler Heidke, Lambda
+                    Jason Liku, Nu
+                        Otto Schmidt, Xi
+                            Franz Becker, Omicron
+                                Klaus Fischer, Pi
+                                    Wilhelm Meyer, Rho
+                                        Hans Wagner, Sigma
+                                            Jurgen Schultz, Tau
+                                                Dieter Weber, Upsilon
+                                                    Helmut Koch, Phi
+                                                        Wolfgang Bauer, Chi
+                                                            Gunther Hoffman, Psi
+                                            Horst Neumann, Tau
+        Tim Vaquero, Epsilon
+            Chase Houser, Iota
+                Zach Berde, Kappa
+                    Harrison Mitchell, Lambda
+                        Fernando Ramos, Nu
+                            Santiago Garcia, Xi
+                                Miguel Rodriguez, Omicron
+                                    Alejandro Martinez, Pi
+                                        Javier Lopez, Rho
+                                            Carlos Hernandez, Sigma
+                                                Luis Gonzalez, Tau
+                                                    Pablo Perez, Upsilon
+                                                        Antonio Sanchez, Phi
+                                                            Manuel Ramirez, Chi
+                                                                Francisco Torres, Psi
+                                                                    Jorge Flores, Omega
+                                                                        Ricardo Rivera, Alpha Alpha
+                                                        Eduardo Morales, Phi
+                                            Diego Reyes, Sigma
+                    Ian Cole, Nu
+                        Liam Murphy, Xi
+                            Sean O'Brien, Omicron
+                                Connor Sullivan, Pi
+                                    Finn McCarthy, Rho
+                                        Declan Ryan, Sigma
+                                            Patrick Kelly, Tau
+                                                Brendan Quinn, Upsilon
+                                                    Colin Walsh, Phi
+                                        Aidan Brennan, Sigma
+                            Ronan Doherty, Omicron
     REDACTED
         Max Leblang, Unknown, Unknown
-            KJ Graham, Eta, 2026
-                Jonathan Grbic, Iota, 2027
+            KJ Graham, Eta
+                Jonathan Grbic, Iota
     REDACTED
-        Martin Bulanowski, Beta, 2022
-            Josh Weissert, Epsilon, 2025
-                Declan Javers, Eta, 2026
-                    Jayden Romano, Lambda, 2027
-                        Luke Daniel, Mu, 2028
-                            Beck Carlson, Nu, 2028
-                                Zane Cooper, Xi, 2030
-                                    Troy Bennett, Omicron, 2031
-                                        Jace Morgan, Pi, 2032
-                                            Cruz Bailey, Rho, 2033
-                                                Cash Peterson, Sigma, 2034
-                                                    Brock Russell, Tau, 2035
-                                                        Trey Campbell, Upsilon, 2036
-                                                            Colt Sanders, Phi, 2037
-                                                                Ridge Patterson, Chi, 2038
-                                                                    Blaze Hughes, Psi, 2039
-                                                                        Dash Powell, Omega, 2040
-                                                            Steel Washington, Phi, 2037
-                                                                Flint Butler, Chi, 2038
-                                                                    Ace Morgan, Psi, 2039
-                                                                        Hawk Bennett, Omega, 2040
-                                                                            Slate Rivera, Alpha Alpha, 2041
-                                                                                Stone Parker, Alpha Beta, 2042
-                                                                                    Jet Coleman, Alpha Gamma, 2043
-                                                                                        Blaze Tucker, Alpha Delta, 2044
-                                                                                            Bolt Harrison, Alpha Epsilon, 2045
-                                                                                                Flash Cooper, Alpha Zeta, 2046
-                                        Ridge Coleman, Pi, 2032
-                                            Clay Foster, Rho, 2033
-                                                Duke Russell, Sigma, 2034
-                                                    Rex Murphy, Tau, 2035
-                                Maverick Hayes, Omicron, 2031
-                        Baris Inandi, Nu, 2028
-                            Emre Yilmaz, Xi, 2030
-                                Kerem Ozturk, Omicron, 2031
-                                    Arda Demir, Pi, 2032
-                                        Kaan Yildiz, Rho, 2033
-                                            Ege Arslan, Sigma, 2034
-                                                Deniz Celik, Tau, 2035
-                                                    Mert Kaya, Upsilon, 2036
-                                                        Onur Sahin, Phi, 2037
-                                                            Tolga Yilmaz, Chi, 2038
-                                                        Can Ozdemir, Phi, 2037
-                                                            Serkan Polat, Chi, 2038
-                                                                Hakan Karaca, Psi, 2039
-                                                                    Emre Demir, Omega, 2040
-                                                                        Baran Ozkan, Alpha Alpha, 2041
-                                                                            Cem Yildiz, Alpha Beta, 2042
-                                                                                Ugur Arslan, Alpha Gamma, 2043
-                                            Burak Kaya, Sigma, 2034
-                                                Deniz Yilmaz, Tau, 2035
-                                Burak Aydin, Omicron, 2031
-                                    Mert Ozturk, Pi, 2032
-                                        Can Demir, Rho, 2033
-                            Ahmet Celik, Xi, 2030
-                                Mehmet Yildiz, Omicron, 2031
-                                    Mustafa Kaya, Pi, 2032
-                Fred Hodgson, Kappa, 2027
-                    Shane Mitchell, Nu, 2028
-                        Trent Edwards, Xi, 2030
-                            Cole Harrison, Omicron, 2031
-                                Drew Bennett, Pi, 2032
-                                    Blake Foster, Rho, 2033
-                                        Chase Coleman, Sigma, 2034
-                                            Wade Tucker, Tau, 2035
-                                                Brett Manning, Upsilon, 2036
-                                                    Lance Cooper, Phi, 2037
-                                                        Todd Richards, Chi, 2038
-                                                            Scott Wallace, Psi, 2039
-                                                                Greg Palmer, Omega, 2040
-                                                                    Neil Hughes, Alpha Alpha, 2041
-                                                                        Craig Stevens, Alpha Beta, 2042
-                                                                            Keith Murray, Alpha Gamma, 2043
-                                                                                Dale Foster, Alpha Delta, 2044
-                                                                                    Ross Bennett, Alpha Epsilon, 2045
-                                                                                        Grant Dixon, Alpha Zeta, 2046
-                                            Troy Russell, Tau, 2035
-                                                Dean Murphy, Upsilon, 2036
-                                    Lance Weber, Pi, 2032
-                                        Brett Fischer, Rho, 2033
-                                            Shane Hoffman, Sigma, 2034
-                        Reid Parker, Xi, 2030
-                            Garrett Wells, Omicron, 2031
-                                Pierce Chapman, Pi, 2032
-                                    Brooks Kennedy, Rho, 2033
-                    Jake Phillips, Nu, 2028
-                        Mason Carter, Xi, 2030
-                            Logan Reed, Omicron, 2031
-                                Tyler Hughes, Pi, 2032
-                                    Connor Bailey, Rho, 2033
-                                        Austin Ward, Sigma, 2034
-                                            Dylan Price, Tau, 2035
-                                                Cameron Ross, Upsilon, 2036
-                                                    Jordan Cole, Phi, 2037
-                                                        Ryan Barnes, Chi, 2038
-                                                            Kyle Henderson, Psi, 2039
-                                                                Sean Mitchell, Omega, 2040
-                                        Blake Turner, Sigma, 2034
-                                            Chase Morgan, Tau, 2035
-                                                Brett Coleman, Upsilon, 2036
-                                Brock Manning, Pi, 2032
-                    Marcus Hayes, Nu, 2028
-                        Derek Palmer, Xi, 2030
-                            Lance Cooper, Omicron, 2031
-                                Wade Richards, Pi, 2032
-                                    Troy Wallace, Rho, 2033
-                                        Dean Murray, Sigma, 2034
-                                            Grant Stevens, Tau, 2035
-                                                Keith Hughes, Upsilon, 2036
-                                                    Craig Foster, Phi, 2037
-                                                        Ross Bennett, Chi, 2038
-                                                            Dale Dixon, Psi, 2039
-                                                                Neil Parker, Omega, 2040
-                                                                    Greg Wells, Alpha Alpha, 2041
-                                                                        Scott Chapman, Alpha Beta, 2042
-                                                                            Todd Kennedy, Alpha Gamma, 2043
-                                                                                Brett Russell, Alpha Delta, 2044
-                                                                                    Shane Weber, Alpha Epsilon, 2045
-                                                                                        Cole Fischer, Alpha Zeta, 2046
+        Martin Bulanowski, Beta
+            Josh Weissert, Epsilon
+                Declan Javers, Eta
+                    Jayden Romano, Lambda
+                        Luke Daniel, Mu
+                            Beck Carlson, Nu
+                                Zane Cooper, Xi
+                                    Troy Bennett, Omicron
+                                        Jace Morgan, Pi
+                                            Cruz Bailey, Rho
+                                                Cash Peterson, Sigma
+                                                    Brock Russell, Tau
+                                                        Trey Campbell, Upsilon
+                                                            Colt Sanders, Phi
+                                                                Ridge Patterson, Chi
+                                                                    Blaze Hughes, Psi
+                                                                        Dash Powell, Omega
+                                                            Steel Washington, Phi
+                                                                Flint Butler, Chi
+                                                                    Ace Morgan, Psi
+                                                                        Hawk Bennett, Omega
+                                                                            Slate Rivera, Alpha Alpha
+                                                                                Stone Parker, Alpha Beta
+                                                                                    Jet Coleman, Alpha Gamma
+                                                                                        Blaze Tucker, Alpha Delta
+                                                                                            Bolt Harrison, Alpha Epsilon
+                                                                                                Flash Cooper, Alpha Zeta
+                                        Ridge Coleman, Pi
+                                            Clay Foster, Rho
+                                                Duke Russell, Sigma
+                                                    Rex Murphy, Tau
+                                Maverick Hayes, Omicron
+                        Baris Inandi, Nu
+                            Emre Yilmaz, Xi
+                                Kerem Ozturk, Omicron
+                                    Arda Demir, Pi
+                                        Kaan Yildiz, Rho
+                                            Ege Arslan, Sigma
+                                                Deniz Celik, Tau
+                                                    Mert Kaya, Upsilon
+                                                        Onur Sahin, Phi
+                                                            Tolga Yilmaz, Chi
+                                                        Can Ozdemir, Phi
+                                                            Serkan Polat, Chi
+                                                                Hakan Karaca, Psi
+                                                                    Emre Demir, Omega
+                                                                        Baran Ozkan, Alpha Alpha
+                                                                            Cem Yildiz, Alpha Beta
+                                                                                Ugur Arslan, Alpha Gamma
+                                            Burak Kaya, Sigma
+                                                Deniz Yilmaz, Tau
+                                Burak Aydin, Omicron
+                                    Mert Ozturk, Pi
+                                        Can Demir, Rho
+                            Ahmet Celik, Xi
+                                Mehmet Yildiz, Omicron
+                                    Mustafa Kaya, Pi
+                Fred Hodgson, Kappa
+                    Shane Mitchell, Nu
+                        Trent Edwards, Xi
+                            Cole Harrison, Omicron
+                                Drew Bennett, Pi
+                                    Blake Foster, Rho
+                                        Chase Coleman, Sigma
+                                            Wade Tucker, Tau
+                                                Brett Manning, Upsilon
+                                                    Lance Cooper, Phi
+                                                        Todd Richards, Chi
+                                                            Scott Wallace, Psi
+                                                                Greg Palmer, Omega
+                                                                    Neil Hughes, Alpha Alpha
+                                                                        Craig Stevens, Alpha Beta
+                                                                            Keith Murray, Alpha Gamma
+                                                                                Dale Foster, Alpha Delta
+                                                                                    Ross Bennett, Alpha Epsilon
+                                                                                        Grant Dixon, Alpha Zeta
+                                            Troy Russell, Tau
+                                                Dean Murphy, Upsilon
+                                    Lance Weber, Pi
+                                        Brett Fischer, Rho
+                                            Shane Hoffman, Sigma
+                        Reid Parker, Xi
+                            Garrett Wells, Omicron
+                                Pierce Chapman, Pi
+                                    Brooks Kennedy, Rho
+                    Jake Phillips, Nu
+                        Mason Carter, Xi
+                            Logan Reed, Omicron
+                                Tyler Hughes, Pi
+                                    Connor Bailey, Rho
+                                        Austin Ward, Sigma
+                                            Dylan Price, Tau
+                                                Cameron Ross, Upsilon
+                                                    Jordan Cole, Phi
+                                                        Ryan Barnes, Chi
+                                                            Kyle Henderson, Psi
+                                                                Sean Mitchell, Omega
+                                        Blake Turner, Sigma
+                                            Chase Morgan, Tau
+                                                Brett Coleman, Upsilon
+                                Brock Manning, Pi
+                    Marcus Hayes, Nu
+                        Derek Palmer, Xi
+                            Lance Cooper, Omicron
+                                Wade Richards, Pi
+                                    Troy Wallace, Rho
+                                        Dean Murray, Sigma
+                                            Grant Stevens, Tau
+                                                Keith Hughes, Upsilon
+                                                    Craig Foster, Phi
+                                                        Ross Bennett, Chi
+                                                            Dale Dixon, Psi
+                                                                Neil Parker, Omega
+                                                                    Greg Wells, Alpha Alpha
+                                                                        Scott Chapman, Alpha Beta
+                                                                            Todd Kennedy, Alpha Gamma
+                                                                                Brett Russell, Alpha Delta
+                                                                                    Shane Weber, Alpha Epsilon
+                                                                                        Cole Fischer, Alpha Zeta

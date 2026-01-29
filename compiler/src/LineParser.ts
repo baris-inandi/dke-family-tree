@@ -1,8 +1,11 @@
 import { toTitleCase } from "../constants.js";
 import type { ParsedLine } from "../types.js";
 import { VARIABLES } from "../variables.js";
+import { Eboard } from "./Eboard.js";
 
 export class LineParser {
+  constructor(private readonly eboard: Eboard) {}
+
   /**
    * Gets the schema fields from VARIABLES.
    */
@@ -17,9 +20,10 @@ export class LineParser {
   /**
    * Parses a single line from the input file.
    * Returns null for empty lines or comments.
+   * Optional third field may be eboard (POSITION:SEMESTER-YEAR, e.g. G:S-2026); validated via Eboard and stored as eboard.
    * @throws Error if line format is invalid
    */
-  parseLine(line: string): ParsedLine | null {
+  parseLine(line: string, lineNumber?: number): ParsedLine | null {
     // Skip empty lines and comments
     const trimmed = line.trim();
     if (!trimmed || trimmed.startsWith("#") || trimmed.startsWith("@")) {
@@ -67,6 +71,15 @@ export class LineParser {
       parsed[fieldName] = value;
     }
 
+    // Optional third field: eboard (e.g. G:S-2026). Validate and store.
+    if (parts[2] !== undefined && parts[2].trim() !== "") {
+      const third = parts[2].trim();
+      if (Eboard.EBOARD_FIELD_REGEX.test(third)) {
+        this.eboard.validateEboardField(third, lineNumber);
+        parsed.eboard = third;
+      }
+    }
+
     return parsed;
   }
 
@@ -74,11 +87,11 @@ export class LineParser {
    * Parses all lines from the input content.
    */
   parseLines(content: string): ParsedLine[] {
-    const lines = content.split("\n");
+    const lines = content.split(/\r?\n/);
     const parsedLines: ParsedLine[] = [];
 
     for (let i = 0; i < lines.length; i++) {
-      const parsed = this.parseLine(lines[i]);
+      const parsed = this.parseLine(lines[i], i + 1);
       if (parsed) {
         parsedLines.push(parsed);
       }
