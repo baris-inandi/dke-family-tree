@@ -1,40 +1,24 @@
 import { toTitleCase } from "../constants.js";
 import type { ParsedLine } from "../types.js";
-import { VARIABLES } from "../variables.js";
 import { Eboard } from "./Eboard.js";
 
 export class LineParser {
   constructor(private readonly eboard: Eboard) {}
 
   /**
-   * Gets the schema fields from VARIABLES.
+   * Parses a single line. Returns null for empty lines or comments.
    */
-  private getSchemaFields(): string[] {
-    const schema = VARIABLES.get("schema");
-    if (!schema) {
-      throw new Error("Schema not defined. Ensure @def schema is set.");
-    }
-    return schema.split(",").map((field) => field.trim());
-  }
-
-  /**
-   * Parses a single line from the input file.
-   * Returns null for empty lines or comments.
-   * Optional third field may be eboard (POSITION:SEMESTER-YEAR, e.g. G:S-2026); validated via Eboard and stored as eboard.
-   * @throws Error if line format is invalid
-   */
-  parseLine(line: string, lineNumber?: number): ParsedLine | null {
-    // Skip empty lines and comments
+  parseLine(
+    line: string,
+    schemaFields: string[],
+    lineNumber?: number,
+  ): ParsedLine | null {
     const trimmed = line.trim();
     if (!trimmed || trimmed.startsWith("#") || trimmed.startsWith("@")) {
       return null;
     }
 
-    // Count leading spaces (4 spaces = 1 indent level)
     const indent = (line.match(/^ */)?.[0]?.length ?? 0) / 4;
-
-    // Get schema fields
-    const schemaFields = this.getSchemaFields();
 
     // Special case: if line is just "REDACTED" (no commas), set all fields to "[REDACTED]"
     if (trimmed === "REDACTED" || trimmed.toUpperCase() === "REDACTED") {
@@ -83,20 +67,14 @@ export class LineParser {
     return parsed;
   }
 
-  /**
-   * Parses all lines from the input content.
-   */
-  parseLines(content: string): ParsedLine[] {
+  parseLines(content: string, schema: string): ParsedLine[] {
+    const schemaFields = schema.split(",").map((f) => f.trim());
     const lines = content.split(/\r?\n/);
-    const parsedLines: ParsedLine[] = [];
-
+    const out: ParsedLine[] = [];
     for (let i = 0; i < lines.length; i++) {
-      const parsed = this.parseLine(lines[i], i + 1);
-      if (parsed) {
-        parsedLines.push(parsed);
-      }
+      const parsed = this.parseLine(lines[i], schemaFields, i + 1);
+      if (parsed) out.push(parsed);
     }
-
-    return parsedLines;
+    return out;
   }
 }

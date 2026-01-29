@@ -24,7 +24,6 @@ export class Eboard {
 
   private readonly validPositions = new Set(Object.keys(this.expansion));
 
-  /** Regex for a single eboard field on a brother line: POSITION:SEMESTER-YEAR (e.g. G:S-2026) */
   static readonly EBOARD_FIELD_REGEX = /^[A-Za-z]:[FS](-?\d*)$/i;
 
   /**

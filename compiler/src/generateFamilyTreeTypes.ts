@@ -8,7 +8,7 @@ import {
 import type { FinalCompiledOutput } from "../types.js";
 
 const ROOT_NAME = "DkeNaFamilyTree";
-const TYPES_FILENAME = "FamilyTree.ts";
+const TYPES_FILENAME = "Quicktype.ts";
 
 export async function writeFamilyTreeTypes(
   data: FinalCompiledOutput,
@@ -28,23 +28,31 @@ export async function writeFamilyTreeTypes(
     outputFilename: TYPES_FILENAME,
   });
 
-  const contents = result.lines.join("\n");
+  let contents = result.lines.join("\n");
+  // erasableSyntaxOnly: replace enums with type aliases
+  contents = contents.replaceAll(
+    /export enum (\w+) \{\s*[\s\S]*?\n\}/g,
+    "export type $1 = string;",
+  );
+  // noUnusedLocals: prefix unused helpers
+  contents = contents.replaceAll(/\bfunction u\(/g, "function _u(");
+  contents = contents.replaceAll(/\bfunction m\(/g, "function _m(");
+
   const typesPath = join(outputDir, TYPES_FILENAME);
   writeFileSync(typesPath, contents, "utf-8");
   console.log(`Types: ${typesPath}`);
 
-  const treeTs = `import type {
+  const treeTs = `import jsonTree from "./tree.json";
+import type {
   By,
   Colors,
   DkeNaFamilyTree,
   Info,
   Metadata,
   Tree,
-} from "./FamilyTree.ts";
-import jsonTree from "./tree.json";
+} from "./${TYPES_FILENAME}";
 export type { By, Colors, DkeNaFamilyTree, Info, Metadata, Tree };
 export const dkeNaFamilyTree = jsonTree as DkeNaFamilyTree;
-
 `;
 
   writeFileSync(join(outputDir, "tree.ts"), treeTs, "utf-8");

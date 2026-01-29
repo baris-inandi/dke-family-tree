@@ -113,27 +113,55 @@ export class ColorCalculator {
   }
 
   /**
-   * Calculates class colors for all classes.
+   * Extracts unique class names from the tree (Title Case, excludes Unknown/redacted).
    */
-  calculateClassColors(availableClasses: string[]): Record<string, Color> {
+  extractClasses(data: Brother[]): string[] {
+    const set = new Set<string>();
+    const collect = (brothers: Brother[]) => {
+      for (const b of brothers) {
+        let v = b.info.class;
+        if (typeof v === "string" && v !== "[REDACTED]") v = toTitleCase(v);
+        if (
+          typeof v === "string" &&
+          v !== "Unknown" &&
+          v !== "All Classes" &&
+          v !== "[REDACTED]"
+        )
+          set.add(v);
+        if (b.children?.length) collect(b.children);
+      }
+    };
+    collect(data);
+    const orderIndex = new Map<string, number>();
+    GREEK_ORDER.forEach((name, idx) => orderIndex.set(name, idx));
+    return Array.from(set).sort((a, b) => {
+      const ai = orderIndex.get(a) ?? Number.MAX_SAFE_INTEGER;
+      const bi = orderIndex.get(b) ?? Number.MAX_SAFE_INTEGER;
+      return ai !== bi ? ai - bi : a.localeCompare(b);
+    });
+  }
+
+  /**
+   * Calculates class colors and returns them plus the list of class names (for metadata).
+   */
+  calculateClassColors(data: Brother[]): {
+    classColors: Record<string, Color>;
+    allClasses: string[];
+  } {
+    const allClasses = this.extractClasses(data);
     const classColors: Record<string, Color> = {};
     const orderIndex = new Map<string, number>();
     GREEK_ORDER.forEach((name, idx) => orderIndex.set(name, idx));
 
-    for (const className of availableClasses) {
-      // Normalize to Title Case (should already be Title Case, but ensure it)
+    for (const className of allClasses) {
       const normalized = className ? toTitleCase(className) : "";
-      if (!normalized || normalized === "Null" || normalized === "Unknown") {
+      if (!normalized || normalized === "Null" || normalized === "Unknown")
         continue;
-      }
-
       const colorIndex = this.getClassColorIndex(normalized, orderIndex);
-      if (colorIndex !== null) {
+      if (colorIndex !== null)
         classColors[normalized] = this.createColor(colorIndex);
-      }
     }
-
-    return classColors;
+    return { classColors, allClasses };
   }
 
   /**
