@@ -6,7 +6,7 @@
 # Add Brothers to this file using the following comma-separated notation:
 # First Last, Greek Letter Class, Eboard Positions Array
 
-@SCHEMA name, class
+@SCHEMA name, class, eboard
 
 # Indent with four spaces to denote a lineage.
 # To redact someone, replace their line with "REDACTED" in all caps.
@@ -21,8 +21,8 @@ Adam Akkach, Alpha
     Steve Holt, Alpha
         REDACTED
             REDACTED
-                Marcus Yi, Theta
-                    Aashish Hassam, Iota
+                Marcus Yi, Theta, G:S2024
+                    Aashish Hassam, Iota, G:F2025
                         Matt Kohen, Lambda
                             Ryan Alexander, Nu
                             Ryan Hatcher, Nu
@@ -32,8 +32,8 @@ Adam Akkach, Alpha
                     Evan Yee, Kappa
                         Dom Cheng, Nu
                     Brayden Ramseier, Lambda
-                        Zach Upson, Mu
-            Umut Tanrivierdi, Epsilon
+                        Zach Upson, Mu, G:S2026
+            Umut Tanriverdi, Epsilon, K:F2022
                 Armagan Karakas, Eta
                     Matt Bertoncini, Nu
             Adil Ikiz, Epsilon
@@ -41,22 +41,22 @@ Adam Akkach, Alpha
     Calvin Norstad, Alpha
         REDACTED
             Sepehr Rashigi, Unknown, Unknown
-            Matt O'Rourke, Epsilon
-                Bobby Palazzi, Iota
-        Kieran Heneghan, Zeta
+            Matt O'Rourke, Epsilon, M:S2022;I:S2022
+                Bobby Palazzi, Iota, I:F2024;M:S2025
+        Kieran Heneghan, Zeta, D:S2023
             Brandon Petersen, Iota
             Ellis Coco, Lambda
-                George Giakouminakis, Mu
+                George Giakouminakis, Mu, D:S2026
                     Gio Malpartida, Nu
-    Matt Lowe, Alpha
-        John Berry, Delta
-            Rod Tavangar, Theta
+    Matt Lowe, Alpha, B:F2019;B:S2020;P:S2020
+        John Berry, Delta, I:F2021;P:F2021;P:S2022;B:F2022;B:S2023
+            Rod Tavangar, Theta, P:S2024
                 Finn Oldenburg, Lambda
                     Nick Vallary, Nu
     Tanner Lederman, Alpha
         Jacob Gottesman, Zeta
-            Batu Isik, Eta
-                Cameron Hornbarger, Theta
+            Batu Isik, Eta, P:S2025
+                Cameron Hornbarger, Theta, A:S2024
                     Jack Podesta, Kappa
                         Alex Keefe, Lambda
                             David Panin, Nu
@@ -66,34 +66,34 @@ Adam Akkach, Alpha
             Mike Grbic, Kappa
                 Matt Tobin, Nu
     Agastya Das, Alpha
-        Tom Glassman, Zeta
-    Jacob Horowitz, Alpha
-        Gio Panagiotakis, Epsilon
+        Tom Glassman, Zeta, M:S2023;S:F2023
+    Jacob Horowitz, Alpha, G:F2021
+        Gio Panagiotakis, Epsilon, G:S2022;S:S2023;B:F2023;B:S2024;P:F2024
             Nick Condoleo, Iota
-            Ben Agatone, Iota
-                Max Mayer, Lambda
+            Ben Agatone, Iota, K:F2024;K:S2025;S:F2025;B:S2026
+                Max Mayer, Lambda, K:F2025;S:S2026
         Sam Gildea, Alpha
-    Tyler Kavanaugh, Alpha
+    Tyler Kavanaugh, Alpha, M:S2022
         Alex Levin, Epsilon
             Nate Nagel, Iota
-    Evan Massa, Alpha
-        Harry Merzin, Epsilon
-            Ben Clott, Zeta
-                George Foster, Iota
-                    Marley McKinsey, Lambda
-                        Thomas Clark, Mu
+    Evan Massa, Alpha, S:F2019;B:F2021;P:S2023
+        Harry Merzin, Epsilon, G:S2023
+            Ben Clott, Zeta, K:S2023;K:F2023;K:S2024;S:F2024
+                George Foster, Iota, I:S2024;G:F2024
+                    Marley McKinsey, Lambda, G:S2024;P:F2025
+                        Thomas Clark, Mu, I:S2026
                             Hunter Lund, Nu
-    Will von Ahnen, Alpha
-        Noah Mack, Alpha
-            Alex Menikoff, Gamma
+    Will von Ahnen, Alpha, B:F2020;B:S2021;P:S2021
+        Noah Mack, Alpha, P:F2020;A:F2021
+            Alex Menikoff, Gamma, A:S2022
                 Alex Prokey, Epsilon
                     Ian Menachery, Iota
                         Theo Cairns, Mu
                             Guilherme Barcellos, Nu
-    Aidan Webster, Alpha
-        Max Brotman, Gamma
-            Matt Hiller, Epsilon
-                Chris Wilk, Eta
+    Aidan Webster, Alpha, K:S2021;K:S2022
+        Max Brotman, Gamma, A:S2021;S:F2021;S:S2022;S:F2022;I:S2023
+            Matt Hiller, Epsilon, M:F2023
+                Chris Wilk, Eta, G:F2023
                     Luke Lange, Iota
                         Chris Pyle, Lambda
                             Mikhail Utyashev, Nu
@@ -103,26 +103,25 @@ Adam Akkach, Alpha
                         Chris Bialzik, Kappa
                             Sid Chandra, Nu
                         Jack Guo, Nu
-            Klaus Ohlweiler, Iota
-                Tyler Heidke, Lambda
+            Klaus Ohlweiler, Iota, D:S2025;A:F2025
+                Tyler Heidke, Lambda, D:F2025;A:S2026
                     Jason Liku, Nu
-        Tim Vaquero, Epsilon
-            Chase Houser, Iota
-                Zach Berde, Kappa
-                    Harrison Mitchell, Lambda
+        Tim Vaquero, Epsilon, G:F2022;S:S2024;B:F2024
+            Chase Houser, Iota, A:F2024;A:S2025
+                Zach Berde, Kappa, P:S2026
+                    Harrison Mitchell, Lambda, M:S2026
                         Fernando Ramos, Nu
                     Ian Cole, Nu
     REDACTED
-        Max Leblang, Unknown, Unknown
-            KJ Graham, Eta
-                Jonathan Grbic, Iota
+        Max Leblang, Unknown, D:S2022;D:F2022;A:S2023
+            KJ Graham, Eta, D:F2023;D:S2024;M:F2024;B:S2025;B:F2025
+                Jonathan Grbic, Iota, D:F2024
     REDACTED
-        Martin Bulanowski, Beta
-            Josh Weissert, Epsilon
-                Declan Javers, Eta
+        Martin Bulanowski, Beta, M:F2021
+            Josh Weissert, Epsilon, A:F2022
+                Declan Javers, Eta, I:F2023;M:S2024
                     Jayden Romano, Lambda
-                        Luke Daniel, Mu
+                        Luke Daniel, Mu, K:S2026
                             Beck Carlson, Nu
                         Baris Inandi, Nu
                 Fred Hodgson, Kappa
-    
