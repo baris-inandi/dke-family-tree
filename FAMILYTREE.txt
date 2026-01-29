@@ -80,7 +80,7 @@ Adam Akkach, Alpha
         Harry Merzin, Epsilon, PHIL@S2023
             Ben Clott, Zeta, TRES@S2023;TRES@F2023;TRES@S2024;VICE@F2024
                 George Foster, Iota, SECR@S2024;PHIL@F2024
-                    Marley McKinsey, Lambda, PHIL@S2024;MSTR@F2025
+                    Marley McKinsey, Lambda, PHIL@S2025;MSTR@F2025
                         Thomas Clark, Mu, SECR@S2026
                             Hunter Lund, Nu
     Will von Ahnen, Alpha, PRES@F2020;PRES@S2021;MSTR@S2021

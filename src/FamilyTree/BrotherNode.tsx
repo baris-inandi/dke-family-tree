@@ -19,6 +19,7 @@ export const BrotherNode = ({
   // Extract values from brother (info.eboard is BrotherEboardHistory from Eboard.ts)
   const nameValue = data.brother.info.name ?? "[UNKNOWN]";
   const classValue = data.brother.info.class ?? "[UNKNOWN]";
+  const eboardValue = data.brother.info.eboard;
 
   const colors = data.brother.colors;
 

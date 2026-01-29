@@ -27,5 +27,10 @@ export interface FinalCompiledOutput {
   tree: Brother[];
   metadata: {
     allClasses: string[];
+    eboard: {
+      bySemester: Record<string, Record<string, string>>;
+      byPosition: Record<string, Record<string, string>>;
+    };
+    mostRecentSemester: string;
   };
 }

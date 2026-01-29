@@ -1,11 +1,76 @@
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
-import type { FinalCompiledOutput } from "../types.js";
+import type { Brother, FinalCompiledOutput } from "../types.js";
 import { ColorCalculator } from "./ColorCalculator.js";
 import { Eboard } from "./Eboard.js";
 import { LineParser } from "./LineParser.js";
 import { TreeBuilder } from "./TreeBuilder.js";
 import { writeFamilyTreeTypes } from "./generateFamilyTreeTypes.js";
+
+function semesterKey(s: string): [number, number] {
+  const [season, yearStr] = s.split(" ");
+  const year = Number.parseInt(yearStr, 10) || 0;
+  const order = season === "Spring" ? 1 : 0;
+  return [year, order];
+}
+
+function sortSemesters(semesters: string[]): string[] {
+  return [...semesters].sort((a, b) => {
+    const [yA, oA] = semesterKey(a);
+    const [yB, oB] = semesterKey(b);
+    return yA !== yB ? yA - yB : oA - oB;
+  });
+}
+
+function buildEboardMetadata(tree: Brother[]): {
+  bySemester: Record<string, Record<string, string>>;
+  byPosition: Record<string, Record<string, string>>;
+  mostRecentSemester: string;
+} {
+  /** semester → { position → id } */
+  const bySemester: Record<string, Record<string, string>> = {};
+  /** position → { semester → id } (we'll sort semester keys per position at the end) */
+  const byPositionRaw: Record<string, Record<string, string>> = {};
+
+  function walk(brothers: Brother[]) {
+    for (const b of brothers) {
+      const history = b.info.eboard ?? [];
+      for (const pos of history) {
+        (bySemester[pos.semester] ??= {})[pos.positionName] = b.id;
+        (byPositionRaw[pos.positionName] ??= {})[pos.semester] = b.id;
+      }
+      walk(b.children);
+    }
+  }
+  walk(tree);
+
+  const byPosition: Record<string, Record<string, string>> = {};
+  for (const [position, semesterToId] of Object.entries(byPositionRaw)) {
+    const sorted = sortSemesters(Object.keys(semesterToId));
+    byPosition[position] = {};
+    for (const s of sorted) byPosition[position][s] = semesterToId[s];
+  }
+
+  let mostRecentSemester = "";
+  let max: [number, number] = [-1, -1];
+  for (const s of Object.keys(bySemester)) {
+    const [y, o] = semesterKey(s);
+    if (y > max[0] || (y === max[0] && o > max[1])) {
+      max = [y, o];
+      mostRecentSemester = s;
+    }
+  }
+
+  const sortedSemesterKeys = sortSemesters(Object.keys(bySemester));
+  const bySemesterSorted: Record<string, Record<string, string>> = {};
+  for (const s of sortedSemesterKeys) bySemesterSorted[s] = bySemester[s];
+
+  return {
+    bySemester: bySemesterSorted,
+    byPosition,
+    mostRecentSemester,
+  };
+}
 
 const OUTPUT_DIR = "familytree-output";
 
@@ -126,8 +191,17 @@ export class FamilyTreeCompiler {
       this.colorCalculator.calculateClassColors(tree);
     this.colorCalculator.assignColorsToBrothers(tree, classColors);
 
+    const eboardMeta = buildEboardMetadata(tree);
+
     const compiled: FinalCompiledOutput = {
-      metadata: { allClasses },
+      metadata: {
+        allClasses,
+        eboard: {
+          bySemester: eboardMeta.bySemester,
+          byPosition: eboardMeta.byPosition,
+        },
+        mostRecentSemester: eboardMeta.mostRecentSemester,
+      },
       tree,
     };
 
