@@ -22,7 +22,6 @@
       "info": {
         "name": "Adam Akkach",
         "class": "Alpha",
-        "grad": "2021",
         "colors": {
           "byFamily": {
             "foreground": "hsl(0 100% 25%)",
@@ -40,7 +39,6 @@
           "info": {
             "name": "Steve Holt",
             "class": "Alpha",
-            "grad": "2022",
             "colors": {
               "byFamily": {
                 "foreground": "hsl(0 100% 25%)",
@@ -58,7 +56,6 @@
               "info": {
                 "name": "[REDACTED]",
                 "class": "[REDACTED]",
-                "grad": "[REDACTED]",
                 "colors": {
                   "byFamily": {
                     "foreground": "hsl(0 100% 25%)",
@@ -76,7 +73,6 @@
                   "info": {
                     "name": "[REDACTED]",
                     "class": "[REDACTED]",
-                    "grad": "[REDACTED]",
                     "colors": {
                       "byFamily": {
                         "foreground": "hsl(0 100% 25%)",
@@ -94,7 +90,6 @@
                       "info": {
                         "name": "Marcus Yi",
                         "class": "Theta",
-                        "grad": "2026",
                         "colors": {
                           "byFamily": {
                             "foreground": "hsl(0 100% 25%)",
@@ -112,7 +107,6 @@
                           "info": {
                             "name": "Aashish Hassam",
                             "class": "Iota",
-                            "grad": "2027",
                             "colors": {
                               "byFamily": {
                                 "foreground": "hsl(0 100% 25%)",
@@ -130,7 +124,6 @@
                               "info": {
                                 "name": "Matt Kohen",
                                 "class": "Lambda",
-                                "grad": "2027",
                                 "colors": {
                                   "byFamily": {
                                     "foreground": "hsl(0 100% 25%)",
@@ -148,7 +141,6 @@
                                   "info": {
                                     "name": "Ryan Alexander",
                                     "class": "Nu",
-                                    "grad": "2029",
                                     "colors": {
                                       "byFamily": {
                                         "foreground": "hsl(0 100% 25%)",
@@ -167,7 +159,6 @@
                                   "info": {
                                     "name": "Ryan Hatcher",
                                     "class": "Nu",
-                                    "grad": "2027",
                                     "colors": {
                                       "byFamily": {
                                         "foreground": "hsl(0 100% 25%)",
@@ -188,7 +179,6 @@
                               "info": {
                                 "name": "Briggs Kroeger",
                                 "class": "Lambda",
-                                "grad": "2028",
                                 "colors": {
                                   "byFamily": {
                                     "foreground": "hsl(0 100% 25%)",
@@ -206,7 +196,6 @@
                                   "info": {
                                     "name": "Brendan Keefe",
                                     "class": "Nu",
-                                    "grad": "2029",
                                     "colors": {
                                       "byFamily": {
                                         "foreground": "hsl(0 100% 25%)",
@@ -225,7 +214,6 @@
                                   "info": {
                                     "name": "James Mallon",
                                     "class": "Nu",
-                                    "grad": "2028",
                                     "colors": {
                                       "byFamily": {
                                         "foreground": "hsl(0 100% 25%)",
@@ -248,7 +236,6 @@
                           "info": {
                             "name": "Evan Yee",
                             "class": "Kappa",
-                            "grad": "2026",
                             "colors": {
                               "byFamily": {
                                 "foreground": "hsl(0 100% 25%)",
@@ -266,7 +253,6 @@
                               "info": {
                                 "name": "Dom Cheng",
                                 "class": "Nu",
-                                "grad": "2028",
                                 "colors": {
                                   "byFamily": {
                                     "foreground": "hsl(0 100% 25%)",
@@ -283,30 +269,10 @@
                           ]
                         },
                         {
-                          "id": "mattbertoncininu14",
-                          "info": {
-                            "name": "Matt Bertoncini",
-                            "class": "Nu",
-                            "grad": "2028",
-                            "colors": {
-                              "byFamily": {
-                                "foreground": "hsl(0 100% 25%)",
-                                "background": "hsla(0 110% 35% / 0.15)"
-                              },
-                              "byClass": {
-                                "foreground": "hsl(0 75% 37%)",
-                                "background": "hsla(0 85% 47% / 0.15)"
-                              }
-                            }
-                          },
-                          "children": []
-                        },
-                        {
-                          "id": "braydenramseierlambda15",
+                          "id": "braydenramseierlambda14",
                           "info": {
                             "name": "Brayden Ramseier",
                             "class": "Lambda",
-                            "grad": "2027",
                             "colors": {
                               "byFamily": {
                                 "foreground": "hsl(0 100% 25%)",
@@ -320,11 +286,10 @@
                           },
                           "children": [
                             {
-                              "id": "zachupsonmu16",
+                              "id": "zachupsonmu15",
                               "info": {
                                 "name": "Zach Upson",
                                 "class": "Mu",
-                                "grad": "2027",
                                 "colors": {
                                   "byFamily": {
                                     "foreground": "hsl(0 100% 25%)",
@@ -345,11 +310,10 @@
                   ]
                 },
                 {
-                  "id": "umuttanrivierdiepsilon17",
+                  "id": "umuttanrivierdiepsilon16",
                   "info": {
                     "name": "Umut Tanrivierdi",
                     "class": "Epsilon",
-                    "grad": "2025",
                     "colors": {
                       "byFamily": {
                         "foreground": "hsl(0 100% 25%)",
@@ -363,11 +327,10 @@
                   },
                   "children": [
                     {
-                      "id": "armagankarakaseta18",
+                      "id": "armagankarakaseta17",
                       "info": {
                         "name": "Armagan Karakas",
                         "class": "Eta",
-                        "grad": "2026",
                         "colors": {
                           "byFamily": {
                             "foreground": "hsl(0 100% 25%)",
@@ -379,7 +342,26 @@
                           }
                         }
                       },
-                      "children": []
+                      "children": [
+                        {
+                          "id": "mattbertoncininu18",
+                          "info": {
+                            "name": "Matt Bertoncini",
+                            "class": "Nu",
+                            "colors": {
+                              "byFamily": {
+                                "foreground": "hsl(0 100% 25%)",
+                                "background": "hsla(0 110% 35% / 0.15)"
+                              },
+                              "byClass": {
+                                "foreground": "hsl(0 75% 37%)",
+                                "background": "hsla(0 85% 47% / 0.15)"
+                              }
+                            }
+                          },
+                          "children": []
+                        }
+                      ]
                     }
                   ]
                 },
@@ -388,7 +370,6 @@
                   "info": {
                     "name": "Adil Ikiz",
                     "class": "Epsilon",
-                    "grad": "2025",
                     "colors": {
                       "byFamily": {
                         "foreground": "hsl(0 100% 25%)",
@@ -406,7 +387,6 @@
                       "info": {
                         "name": "Derek Uhrich",
                         "class": "Kappa",
-                        "grad": "2027",
                         "colors": {
                           "byFamily": {
                             "foreground": "hsl(0 100% 25%)",
@@ -431,7 +411,6 @@
           "info": {
             "name": "Calvin Norstad",
             "class": "Alpha",
-            "grad": "2022",
             "colors": {
               "byFamily": {
                 "foreground": "hsl(30 100% 25%)",
@@ -449,7 +428,6 @@
               "info": {
                 "name": "[REDACTED]",
                 "class": "[REDACTED]",
-                "grad": "[REDACTED]",
                 "colors": {
                   "byFamily": {
                     "foreground": "hsl(30 100% 25%)",
@@ -467,7 +445,6 @@
                   "info": {
                     "name": "Sepehr Rashigi",
                     "class": "Unknown",
-                    "grad": "Unknown",
                     "colors": {
                       "byFamily": {
                         "foreground": "hsl(30 100% 25%)",
@@ -486,7 +463,6 @@
                   "info": {
                     "name": "Matt O'Rourke",
                     "class": "Epsilon",
-                    "grad": "2025",
                     "colors": {
                       "byFamily": {
                         "foreground": "hsl(30 100% 25%)",
@@ -504,7 +480,6 @@
                       "info": {
                         "name": "Bobby Palazzi",
                         "class": "Iota",
-                        "grad": "2027",
                         "colors": {
                           "byFamily": {
                             "foreground": "hsl(30 100% 25%)",
@@ -527,7 +502,6 @@
               "info": {
                 "name": "Kieran Heneghan",
                 "class": "Zeta",
-                "grad": "2025",
                 "colors": {
                   "byFamily": {
                     "foreground": "hsl(30 100% 25%)",
@@ -545,7 +519,6 @@
                   "info": {
                     "name": "Brandon Petersen",
                     "class": "Iota",
-                    "grad": "2025",
                     "colors": {
                       "byFamily": {
                         "foreground": "hsl(30 100% 25%)",
@@ -564,7 +537,6 @@
                   "info": {
                     "name": "Ellis Coco",
                     "class": "Lambda",
-                    "grad": "2028",
                     "colors": {
                       "byFamily": {
                         "foreground": "hsl(30 100% 25%)",
@@ -582,7 +554,6 @@
                       "info": {
                         "name": "George Giakouminakis",
                         "class": "Mu",
-                        "grad": "2028",
                         "colors": {
                           "byFamily": {
                             "foreground": "hsl(30 100% 25%)",
@@ -600,7 +571,6 @@
                           "info": {
                             "name": "Gio Malpartida",
                             "class": "Nu",
-                            "grad": "2028",
                             "colors": {
                               "byFamily": {
                                 "foreground": "hsl(30 100% 25%)",
@@ -627,7 +597,6 @@
           "info": {
             "name": "Matt Lowe",
             "class": "Alpha",
-            "grad": "2021",
             "colors": {
               "byFamily": {
                 "foreground": "hsl(60 100% 25%)",
@@ -645,7 +614,6 @@
               "info": {
                 "name": "John Berry",
                 "class": "Delta",
-                "grad": "2024",
                 "colors": {
                   "byFamily": {
                     "foreground": "hsl(60 100% 25%)",
@@ -663,7 +631,6 @@
                   "info": {
                     "name": "Rod Tavangar",
                     "class": "Theta",
-                    "grad": "2025",
                     "colors": {
                       "byFamily": {
                         "foreground": "hsl(60 100% 25%)",
@@ -681,7 +648,6 @@
                       "info": {
                         "name": "Finn Oldenburg",
                         "class": "Lambda",
-                        "grad": "2028",
                         "colors": {
                           "byFamily": {
                             "foreground": "hsl(60 100% 25%)",
@@ -699,7 +665,6 @@
                           "info": {
                             "name": "Nick Vallary",
                             "class": "Nu",
-                            "grad": "2029",
                             "colors": {
                               "byFamily": {
                                 "foreground": "hsl(60 100% 25%)",
@@ -726,7 +691,6 @@
           "info": {
             "name": "Tanner Lederman",
             "class": "Alpha",
-            "grad": "2022",
             "colors": {
               "byFamily": {
                 "foreground": "hsl(90 100% 25%)",
@@ -744,7 +708,6 @@
               "info": {
                 "name": "Jacob Gottesman",
                 "class": "Zeta",
-                "grad": "2025",
                 "colors": {
                   "byFamily": {
                     "foreground": "hsl(90 100% 25%)",
@@ -762,7 +725,6 @@
                   "info": {
                     "name": "Batu Isik",
                     "class": "Eta",
-                    "grad": "2026",
                     "colors": {
                       "byFamily": {
                         "foreground": "hsl(90 100% 25%)",
@@ -780,7 +742,6 @@
                       "info": {
                         "name": "Cameron Hornbarger",
                         "class": "Theta",
-                        "grad": "2024",
                         "colors": {
                           "byFamily": {
                             "foreground": "hsl(90 100% 25%)",
@@ -798,7 +759,6 @@
                           "info": {
                             "name": "Jack Podesta",
                             "class": "Kappa",
-                            "grad": "2027",
                             "colors": {
                               "byFamily": {
                                 "foreground": "hsl(90 100% 25%)",
@@ -816,7 +776,6 @@
                               "info": {
                                 "name": "Alex Keefe",
                                 "class": "Lambda",
-                                "grad": "2027",
                                 "colors": {
                                   "byFamily": {
                                     "foreground": "hsl(90 100% 25%)",
@@ -834,7 +793,6 @@
                                   "info": {
                                     "name": "David Panin",
                                     "class": "Nu",
-                                    "grad": "2028",
                                     "colors": {
                                       "byFamily": {
                                         "foreground": "hsl(90 100% 25%)",
@@ -855,7 +813,6 @@
                               "info": {
                                 "name": "Brian Yang",
                                 "class": "Nu",
-                                "grad": "2027",
                                 "colors": {
                                   "byFamily": {
                                     "foreground": "hsl(90 100% 25%)",
@@ -878,7 +835,6 @@
                       "info": {
                         "name": "Ben Marler",
                         "class": "Kappa",
-                        "grad": "2027",
                         "colors": {
                           "byFamily": {
                             "foreground": "hsl(90 100% 25%)",
@@ -896,7 +852,6 @@
                           "info": {
                             "name": "Harrison Feldman",
                             "class": "Mu",
-                            "grad": "2028",
                             "colors": {
                               "byFamily": {
                                 "foreground": "hsl(90 100% 25%)",
@@ -919,7 +874,6 @@
                   "info": {
                     "name": "Mike Grbic",
                     "class": "Kappa",
-                    "grad": "2026",
                     "colors": {
                       "byFamily": {
                         "foreground": "hsl(90 100% 25%)",
@@ -937,7 +891,6 @@
                       "info": {
                         "name": "Matt Tobin",
                         "class": "Nu",
-                        "grad": "2028",
                         "colors": {
                           "byFamily": {
                             "foreground": "hsl(90 100% 25%)",
@@ -962,7 +915,6 @@
           "info": {
             "name": "Agastya Das",
             "class": "Alpha",
-            "grad": "2023",
             "colors": {
               "byFamily": {
                 "foreground": "hsl(120 100% 25%)",
@@ -980,7 +932,6 @@
               "info": {
                 "name": "Tom Glassman",
                 "class": "Zeta",
-                "grad": "2025",
                 "colors": {
                   "byFamily": {
                     "foreground": "hsl(120 100% 25%)",
@@ -1001,7 +952,6 @@
           "info": {
             "name": "Jacob Horowitz",
             "class": "Alpha",
-            "grad": "2023",
             "colors": {
               "byFamily": {
                 "foreground": "hsl(150 100% 25%)",
@@ -1019,7 +969,6 @@
               "info": {
                 "name": "Gio Panagiotakis",
                 "class": "Epsilon",
-                "grad": "2025",
                 "colors": {
                   "byFamily": {
                     "foreground": "hsl(150 100% 25%)",
@@ -1037,7 +986,6 @@
                   "info": {
                     "name": "Nick Condoleo",
                     "class": "Iota",
-                    "grad": "2027",
                     "colors": {
                       "byFamily": {
                         "foreground": "hsl(150 100% 25%)",
@@ -1056,7 +1004,6 @@
                   "info": {
                     "name": "Ben Agatone",
                     "class": "Iota",
-                    "grad": "2027",
                     "colors": {
                       "byFamily": {
                         "foreground": "hsl(150 100% 25%)",
@@ -1074,7 +1021,6 @@
                       "info": {
                         "name": "Max Mayer",
                         "class": "Lambda",
-                        "grad": "2027",
                         "colors": {
                           "byFamily": {
                             "foreground": "hsl(150 100% 25%)",
@@ -1097,7 +1043,6 @@
               "info": {
                 "name": "Sam Gildea",
                 "class": "Alpha",
-                "grad": "2022",
                 "colors": {
                   "byFamily": {
                     "foreground": "hsl(150 100% 25%)",
@@ -1118,7 +1063,6 @@
           "info": {
             "name": "Tyler Kavanaugh",
             "class": "Alpha",
-            "grad": "2023",
             "colors": {
               "byFamily": {
                 "foreground": "hsl(180 100% 25%)",
@@ -1136,7 +1080,6 @@
               "info": {
                 "name": "Alex Levin",
                 "class": "Epsilon",
-                "grad": "2025",
                 "colors": {
                   "byFamily": {
                     "foreground": "hsl(180 100% 25%)",
@@ -1154,7 +1097,6 @@
                   "info": {
                     "name": "Nate Nagel",
                     "class": "Iota",
-                    "grad": "2027",
                     "colors": {
                       "byFamily": {
                         "foreground": "hsl(180 100% 25%)",
@@ -1177,7 +1119,6 @@
           "info": {
             "name": "Evan Massa",
             "class": "Alpha",
-            "grad": "2023",
             "colors": {
               "byFamily": {
                 "foreground": "hsl(210 100% 25%)",
@@ -1195,7 +1136,6 @@
               "info": {
                 "name": "Harry Merzin",
                 "class": "Epsilon",
-                "grad": "2023",
                 "colors": {
                   "byFamily": {
                     "foreground": "hsl(210 100% 25%)",
@@ -1213,7 +1153,6 @@
                   "info": {
                     "name": "Ben Clott",
                     "class": "Zeta",
-                    "grad": "2025",
                     "colors": {
                       "byFamily": {
                         "foreground": "hsl(210 100% 25%)",
@@ -1231,7 +1170,6 @@
                       "info": {
                         "name": "George Foster",
                         "class": "Iota",
-                        "grad": "2027",
                         "colors": {
                           "byFamily": {
                             "foreground": "hsl(210 100% 25%)",
@@ -1249,7 +1187,6 @@
                           "info": {
                             "name": "Marley McKinsey",
                             "class": "Lambda",
-                            "grad": "2027",
                             "colors": {
                               "byFamily": {
                                 "foreground": "hsl(210 100% 25%)",
@@ -1267,7 +1204,6 @@
                               "info": {
                                 "name": "Thomas Clark",
                                 "class": "Mu",
-                                "grad": "2027",
                                 "colors": {
                                   "byFamily": {
                                     "foreground": "hsl(210 100% 25%)",
@@ -1285,7 +1221,6 @@
                                   "info": {
                                     "name": "Hunter Lund",
                                     "class": "Nu",
-                                    "grad": "2028",
                                     "colors": {
                                       "byFamily": {
                                         "foreground": "hsl(210 100% 25%)",
@@ -1316,7 +1251,6 @@
           "info": {
             "name": "Will von Ahnen",
             "class": "Alpha",
-            "grad": "2022",
             "colors": {
               "byFamily": {
                 "foreground": "hsl(240 100% 25%)",
@@ -1334,7 +1268,6 @@
               "info": {
                 "name": "Noah Mack",
                 "class": "Alpha",
-                "grad": "2023",
                 "colors": {
                   "byFamily": {
                     "foreground": "hsl(240 100% 25%)",
@@ -1352,7 +1285,6 @@
                   "info": {
                     "name": "Alex Menikoff",
                     "class": "Gamma",
-                    "grad": "2024",
                     "colors": {
                       "byFamily": {
                         "foreground": "hsl(240 100% 25%)",
@@ -1370,7 +1302,6 @@
                       "info": {
                         "name": "Alex Prokey",
                         "class": "Epsilon",
-                        "grad": "2025",
                         "colors": {
                           "byFamily": {
                             "foreground": "hsl(240 100% 25%)",
@@ -1388,7 +1319,6 @@
                           "info": {
                             "name": "Ian Menachery",
                             "class": "Iota",
-                            "grad": "2027",
                             "colors": {
                               "byFamily": {
                                 "foreground": "hsl(240 100% 25%)",
@@ -1406,7 +1336,6 @@
                               "info": {
                                 "name": "Theo Cairns",
                                 "class": "Mu",
-                                "grad": "2028",
                                 "colors": {
                                   "byFamily": {
                                     "foreground": "hsl(240 100% 25%)",
@@ -1424,7 +1353,6 @@
                                   "info": {
                                     "name": "Guilherme Barcellos",
                                     "class": "Nu",
-                                    "grad": "2029",
                                     "colors": {
                                       "byFamily": {
                                         "foreground": "hsl(240 100% 25%)",
@@ -1455,7 +1383,6 @@
           "info": {
             "name": "Aidan Webster",
             "class": "Alpha",
-            "grad": "2022",
             "colors": {
               "byFamily": {
                 "foreground": "hsl(270 100% 25%)",
@@ -1473,7 +1400,6 @@
               "info": {
                 "name": "Max Brotman",
                 "class": "Gamma",
-                "grad": "2024",
                 "colors": {
                   "byFamily": {
                     "foreground": "hsl(270 100% 25%)",
@@ -1491,7 +1417,6 @@
                   "info": {
                     "name": "Matt Hiller",
                     "class": "Epsilon",
-                    "grad": "2024",
                     "colors": {
                       "byFamily": {
                         "foreground": "hsl(270 100% 25%)",
@@ -1509,7 +1434,6 @@
                       "info": {
                         "name": "Chris Wilk",
                         "class": "Eta",
-                        "grad": "2025",
                         "colors": {
                           "byFamily": {
                             "foreground": "hsl(270 100% 25%)",
@@ -1527,7 +1451,6 @@
                           "info": {
                             "name": "Luke Lange",
                             "class": "Iota",
-                            "grad": "2026",
                             "colors": {
                               "byFamily": {
                                 "foreground": "hsl(270 100% 25%)",
@@ -1545,7 +1468,6 @@
                               "info": {
                                 "name": "Chris Pyle",
                                 "class": "Lambda",
-                                "grad": "2027",
                                 "colors": {
                                   "byFamily": {
                                     "foreground": "hsl(270 100% 25%)",
@@ -1563,7 +1485,6 @@
                                   "info": {
                                     "name": "Mikhail Utyashev",
                                     "class": "Nu",
-                                    "grad": "2029",
                                     "colors": {
                                       "byFamily": {
                                         "foreground": "hsl(270 100% 25%)",
@@ -1584,7 +1505,6 @@
                               "info": {
                                 "name": "Lex Tremblay",
                                 "class": "Mu",
-                                "grad": "2028",
                                 "colors": {
                                   "byFamily": {
                                     "foreground": "hsl(270 100% 25%)",
@@ -1602,7 +1522,6 @@
                                   "info": {
                                     "name": "Vincenzo Fardella",
                                     "class": "Nu",
-                                    "grad": "2028",
                                     "colors": {
                                       "byFamily": {
                                         "foreground": "hsl(270 100% 25%)",
@@ -1625,7 +1544,6 @@
                           "info": {
                             "name": "Kai Barbara",
                             "class": "Iota",
-                            "grad": "2027",
                             "colors": {
                               "byFamily": {
                                 "foreground": "hsl(270 100% 25%)",
@@ -1643,7 +1561,6 @@
                               "info": {
                                 "name": "Chris Bialzik",
                                 "class": "Kappa",
-                                "grad": "2027",
                                 "colors": {
                                   "byFamily": {
                                     "foreground": "hsl(270 100% 25%)",
@@ -1661,7 +1578,6 @@
                                   "info": {
                                     "name": "Sid Chandra",
                                     "class": "Nu",
-                                    "grad": "2028",
                                     "colors": {
                                       "byFamily": {
                                         "foreground": "hsl(270 100% 25%)",
@@ -1682,7 +1598,6 @@
                               "info": {
                                 "name": "Jack Guo",
                                 "class": "Nu",
-                                "grad": "2029",
                                 "colors": {
                                   "byFamily": {
                                     "foreground": "hsl(270 100% 25%)",
@@ -1707,7 +1622,6 @@
                   "info": {
                     "name": "Klaus Ohlweiler",
                     "class": "Iota",
-                    "grad": "2027",
                     "colors": {
                       "byFamily": {
                         "foreground": "hsl(270 100% 25%)",
@@ -1725,7 +1639,6 @@
                       "info": {
                         "name": "Tyler Heidke",
                         "class": "Lambda",
-                        "grad": "2028",
                         "colors": {
                           "byFamily": {
                             "foreground": "hsl(270 100% 25%)",
@@ -1743,7 +1656,6 @@
                           "info": {
                             "name": "Jason Liku",
                             "class": "Nu",
-                            "grad": "2029",
                             "colors": {
                               "byFamily": {
                                 "foreground": "hsl(270 100% 25%)",
@@ -1768,7 +1680,6 @@
               "info": {
                 "name": "Tim Vaquero",
                 "class": "Epsilon",
-                "grad": "2025",
                 "colors": {
                   "byFamily": {
                     "foreground": "hsl(270 100% 25%)",
@@ -1786,7 +1697,6 @@
                   "info": {
                     "name": "Chase Houser",
                     "class": "Iota",
-                    "grad": "2027",
                     "colors": {
                       "byFamily": {
                         "foreground": "hsl(270 100% 25%)",
@@ -1804,7 +1714,6 @@
                       "info": {
                         "name": "Zach Berde",
                         "class": "Kappa",
-                        "grad": "",
                         "colors": {
                           "byFamily": {
                             "foreground": "hsl(270 100% 25%)",
@@ -1822,7 +1731,6 @@
                           "info": {
                             "name": "Harrison Mitchell",
                             "class": "Lambda",
-                            "grad": "2028",
                             "colors": {
                               "byFamily": {
                                 "foreground": "hsl(270 100% 25%)",
@@ -1840,7 +1748,6 @@
                               "info": {
                                 "name": "Fernando Ramos",
                                 "class": "Nu",
-                                "grad": "2028",
                                 "colors": {
                                   "byFamily": {
                                     "foreground": "hsl(270 100% 25%)",
@@ -1861,7 +1768,6 @@
                           "info": {
                             "name": "Ian Cole",
                             "class": "Nu",
-                            "grad": "2029",
                             "colors": {
                               "byFamily": {
                                 "foreground": "hsl(270 100% 25%)",
@@ -1888,7 +1794,6 @@
           "info": {
             "name": "[REDACTED]",
             "class": "[REDACTED]",
-            "grad": "[REDACTED]",
             "colors": {
               "byFamily": {
                 "foreground": "hsl(300 100% 25%)",
@@ -1906,7 +1811,6 @@
               "info": {
                 "name": "Max Leblang",
                 "class": "Unknown",
-                "grad": "Unknown",
                 "colors": {
                   "byFamily": {
                     "foreground": "hsl(300 100% 25%)",
@@ -1924,7 +1828,6 @@
                   "info": {
                     "name": "KJ Graham",
                     "class": "Eta",
-                    "grad": "2026",
                     "colors": {
                       "byFamily": {
                         "foreground": "hsl(300 100% 25%)",
@@ -1942,7 +1845,6 @@
                       "info": {
                         "name": "Jonathan Grbic",
                         "class": "Iota",
-                        "grad": "2027",
                         "colors": {
                           "byFamily": {
                             "foreground": "hsl(300 100% 25%)",
@@ -1967,7 +1869,6 @@
           "info": {
             "name": "[REDACTED]",
             "class": "[REDACTED]",
-            "grad": "[REDACTED]",
             "colors": {
               "byFamily": {
                 "foreground": "hsl(330 100% 25%)",
@@ -1985,7 +1886,6 @@
               "info": {
                 "name": "Martin Bulanowski",
                 "class": "Beta",
-                "grad": "2022",
                 "colors": {
                   "byFamily": {
                     "foreground": "hsl(330 100% 25%)",
@@ -2003,7 +1903,6 @@
                   "info": {
                     "name": "Josh Weissert",
                     "class": "Epsilon",
-                    "grad": "2025",
                     "colors": {
                       "byFamily": {
                         "foreground": "hsl(330 100% 25%)",
@@ -2021,7 +1920,6 @@
                       "info": {
                         "name": "Declan Javers",
                         "class": "Eta",
-                        "grad": "2026",
                         "colors": {
                           "byFamily": {
                             "foreground": "hsl(330 100% 25%)",
@@ -2039,7 +1937,6 @@
                           "info": {
                             "name": "Jayden Romano",
                             "class": "Lambda",
-                            "grad": "2027",
                             "colors": {
                               "byFamily": {
                                 "foreground": "hsl(330 100% 25%)",
@@ -2057,7 +1954,6 @@
                               "info": {
                                 "name": "Luke Daniel",
                                 "class": "Mu",
-                                "grad": "2028",
                                 "colors": {
                                   "byFamily": {
                                     "foreground": "hsl(330 100% 25%)",
@@ -2075,7 +1971,6 @@
                                   "info": {
                                     "name": "Beck Carlson",
                                     "class": "Nu",
-                                    "grad": "2028",
                                     "colors": {
                                       "byFamily": {
                                         "foreground": "hsl(330 100% 25%)",
@@ -2096,7 +1991,6 @@
                               "info": {
                                 "name": "Baris Inandi",
                                 "class": "Nu",
-                                "grad": "2028",
                                 "colors": {
                                   "byFamily": {
                                     "foreground": "hsl(330 100% 25%)",
@@ -2119,7 +2013,6 @@
                       "info": {
                         "name": "Fred Hodgson",
                         "class": "Kappa",
-                        "grad": "2027",
                         "colors": {
                           "byFamily": {
                             "foreground": "hsl(330 100% 25%)",

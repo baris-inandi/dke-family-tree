@@ -57,12 +57,6 @@ export const Sidebar: React.FC<SidebarProps> = ({
       <div className="h-full w-full bg-white/60 backdrop-blur-lg border border-gray-300 rounded-xl shadow-lg pointer-events-auto p-4 overflow-y-auto flex flex-col">
         <h2 className="text-2xl font-bold mb-4">∆KE</h2>
 
-        {/* Stats */}
-        <div className="text-sm text-gray-600 mb-4">
-          <p className="mb-1">Total Brothers: {nodeCount}</p>
-          <p>Total Connections: {edgeCount}</p>
-        </div>
-
         {/* Search */}
         <div className="mb-6">
           <label className="block text-sm font-medium mb-1">Search</label>
