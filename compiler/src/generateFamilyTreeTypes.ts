@@ -29,17 +29,13 @@ export async function writeFamilyTreeTypes(
   });
 
   let contents = result.lines.join("\n");
-  // erasableSyntaxOnly: replace enums with type aliases
   contents = contents.replaceAll(
     /export enum (\w+) \{\s*[\s\S]*?\n\}/g,
     "export type $1 = string;",
   );
-  // noUnusedLocals: prefix unused helpers
-  contents = contents.replaceAll(/\bfunction u\(/g, "function _u(");
-  contents = contents.replaceAll(/\bfunction m\(/g, "function _m(");
 
   const typesPath = join(outputDir, TYPES_FILENAME);
-  writeFileSync(typesPath, contents, "utf-8");
+  writeFileSync(typesPath, "/* eslint-disable */\n" + contents, "utf-8");
   console.log(`Types: ${typesPath}`);
 
   const treeTs = `import type { DkeNaFamilyTree } from "./Quicktype.ts";

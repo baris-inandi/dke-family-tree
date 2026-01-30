@@ -71,6 +71,20 @@ export const BrotherNode = ({
       >
         <RedactableText length={4}>{classValue}</RedactableText> Class
       </div>
+      {eboardValue.length > 0 && (
+        <div
+          className="text-[0.5rem] font-medium pt-1"
+          style={{
+            color: color.foreground,
+          }}
+        >
+          {eboardValue.map((eboard) => (
+            <div key={eboard.positionName} className="leading-tight">
+              {eboard.positionName}, {eboard.semester}
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
