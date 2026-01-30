@@ -10,7 +10,7 @@ import { writeFamilyTreeTypes } from "./generateFamilyTreeTypes.js";
 function semesterKey(s: string): [number, number] {
   const [season, yearStr] = s.split(" ");
   const year = Number.parseInt(yearStr, 10) || 0;
-  const order = season === "Spring" ? 1 : 0;
+  const order = season === "Fall" ? 1 : 0;
   return [year, order];
 }
 

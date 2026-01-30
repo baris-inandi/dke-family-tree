@@ -13,6 +13,16 @@
 # Start a line with a hash to comment.
 # Run `bun compile <path>` to compile this file.
 
+# The eboard entry (optional)
+# Format: POSITION@SEMESTERYEAR ; POSITION@SEMESTERYEAR ; ...
+#   - Semicolon-separated list of positions. Omit the whole eboard field if none.
+# Semester: F = Fall, S = Spring. Year: 4 digits, no space (e.g. F2025, S2026).
+# Position shorthands:
+#   PRES = President       VICE = Vice President          VPHS = VP Health & Safety
+#   TRES = Treasurer       MSTR = Master of Ceremonies    RUSH = Rush Chair
+#   SOCL = Social Chair    PHIL = Philanthropy Chair      SECR = Secretary
+# Examples: PHIL@S2024   SECR@F2024;VPHS@S2025   PRES@F2019;PRES@S2020;MSTR@S2020
+
 ##########################
 #  START OF FAMILY TREE  #
 ##########################

@@ -62,12 +62,12 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
   return (
     <div className="absolute p-4 top-0 left-0 h-full max-w-80 z-50 pointer-events-none">
-      <div className="h-fit w-full bg-white/60 backdrop-blur-lg border border-neutral-300 rounded-xl shadow-lg pointer-events-auto p-4 overflow-y-auto flex flex-col">
+      <div className="h-fit w-full bg-white/60 backdrop-blur-xl border border-neutral-400 rounded-xl shadow-xl pointer-events-auto p-4 overflow-y-auto flex flex-col">
         <h2 className="text-xl font-bold mb-4">Our Brothers</h2>
 
         {/* Search */}
         <div className="mb-6">
-          <div className="flex items-center gap-2 border border-neutral-300 rounded-lg shadow-sm bg-white focus-within:ring-2 focus-within:ring-blue-500 focus-within:border-blue-500">
+          <div className="flex items-center gap-2 border border-neutral-300 rounded-lg bg-white focus-within:ring-2 focus-within:ring-blue-500 focus-within:border-blue-500">
             <input
               type="text"
               ref={searchInputRef}
