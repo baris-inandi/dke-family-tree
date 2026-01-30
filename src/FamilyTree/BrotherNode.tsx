@@ -73,7 +73,7 @@ export const BrotherNode = ({
       </div>
       {eboardValue.length > 0 && (
         <div
-          className="text-[0.5rem] font-medium pt-1"
+          className="text-[0.5rem] font-medium py-0.5"
           style={{
             color: color.foreground,
           }}

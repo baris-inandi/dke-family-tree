@@ -22,12 +22,51 @@ const nodeTypes = {
   brother: BrotherNode,
 };
 
+const NO_FILTER = "No Filter";
+const ANY_POSITION = "Any Position";
+
+function getAllEboardMemberIds(
+  bySemester: Record<string, Record<string, string>>,
+): Set<string> {
+  const ids = new Set<string>();
+  for (const semesterData of Object.values(bySemester)) {
+    for (const id of Object.values(semesterData)) ids.add(id);
+  }
+  return ids;
+}
+
+function getEboardHighlightedIds(
+  bySemester: Record<string, Record<string, string>>,
+  byPosition: Record<string, Record<string, string>>,
+  semesterFilter: string,
+  positionFilter: string,
+): Set<string> {
+  const semActive = semesterFilter && semesterFilter !== NO_FILTER;
+  const posActive = positionFilter && positionFilter !== NO_FILTER;
+  const anyPosition = positionFilter === ANY_POSITION;
+
+  if (!semActive && !posActive) return new Set();
+
+  if (semActive && posActive) {
+    if (anyPosition)
+      return new Set(Object.values(bySemester[semesterFilter] ?? {}));
+    const id = bySemester[semesterFilter]?.[positionFilter];
+    return id ? new Set([id]) : new Set();
+  }
+  if (semActive) {
+    return new Set(Object.values(bySemester[semesterFilter] ?? {}));
+  }
+  if (anyPosition) return getAllEboardMemberIds(bySemester);
+  return new Set(Object.values(byPosition[positionFilter] ?? {}));
+}
+
 // Convert hierarchical data to nodes and edges with hierarchical layout
 function convertToFlowData(
   data: Tree[],
   hideRedacted: boolean,
   viewClass: string,
   colorBy: "class" | "family",
+  eboardHighlightedIds: Set<string>,
 ): { nodes: Node[]; edges: Edge[] } {
   const nodes: Node[] = [];
   const edges: Edge[] = [];
@@ -79,8 +118,10 @@ function convertToFlowData(
         normalizedClassValue === normalizedViewClass ||
         (viewClass === "All Classes" && normalizedClassValue === "Unknown");
 
-      // Faded flag: based on class filter or if redacted when hideRedacted is on
-      const faded = !isTargetClass || (hideRedacted && isRedacted);
+      const eboardFaded =
+        eboardHighlightedIds.size > 0 && !eboardHighlightedIds.has(id);
+      const faded =
+        !isTargetClass || (hideRedacted && isRedacted) || eboardFaded;
 
       // Calculate width needed for this subtree
       const subtreeWidth = calculateSubtreeWidth(brother, nodeSpacing);
@@ -318,8 +359,43 @@ export default function FamilyTree() {
       return fn(value);
     };
 
-  // Use pre-computed metadata from compilation
-  const { allClasses: availableClasses } = dkeNaFamilyTree.metadata;
+  const { allClasses: availableClasses, eboard: eboardMeta } =
+    dkeNaFamilyTree.metadata;
+
+  const [eboardSemesterFilter, setEboardSemesterFilter] = useState(NO_FILTER);
+  const [eboardPositionFilter, setEboardPositionFilter] = useState(NO_FILTER);
+
+  // Preserve order from metadata (same as tree.json / tree.ts)
+  const eboardSemesterOptions = useMemo(
+    () => Object.keys(eboardMeta?.bySemester ?? {}),
+    [eboardMeta],
+  );
+  const eboardPositionOptions = useMemo(
+    () => Object.keys(eboardMeta?.byPosition ?? {}),
+    [eboardMeta],
+  );
+
+  const eboardHighlightedIds = useMemo(
+    () =>
+      getEboardHighlightedIds(
+        (eboardMeta?.bySemester ?? {}) as unknown as Record<
+          string,
+          Record<string, string>
+        >,
+        (eboardMeta?.byPosition ?? {}) as unknown as Record<
+          string,
+          Record<string, string>
+        >,
+        eboardSemesterFilter,
+        eboardPositionFilter,
+      ),
+    [
+      eboardMeta?.bySemester,
+      eboardMeta?.byPosition,
+      eboardSemesterFilter,
+      eboardPositionFilter,
+    ],
+  );
 
   const { nodes: initialNodes, edges: initialEdges } = useMemo(
     () =>
@@ -328,8 +404,9 @@ export default function FamilyTree() {
         excludeRedacted,
         viewClass,
         colorBy,
+        eboardHighlightedIds,
       ),
-    [excludeRedacted, viewClass, colorBy],
+    [excludeRedacted, viewClass, colorBy, eboardHighlightedIds],
   );
 
   const resultCount = useMemo(() => {
@@ -345,6 +422,8 @@ export default function FamilyTree() {
     setExcludeRedacted(false);
     setViewClass("All Classes");
     setSearchQuery("");
+    setEboardSemesterFilter(NO_FILTER);
+    setEboardPositionFilter(NO_FILTER);
     setExcludeRedacted(true);
   };
 
@@ -362,6 +441,12 @@ export default function FamilyTree() {
         onSearchQueryChange={setSearchQuery}
         resultCount={resultCount}
         onClearFilters={handleClearFilters}
+        eboardSemesterOptions={eboardSemesterOptions}
+        eboardPositionOptions={eboardPositionOptions}
+        eboardSemesterFilter={eboardSemesterFilter}
+        eboardPositionFilter={eboardPositionFilter}
+        onEboardSemesterChange={setEboardSemesterFilter}
+        onEboardPositionChange={setEboardPositionFilter}
       />
 
       <ReactFlowProvider>

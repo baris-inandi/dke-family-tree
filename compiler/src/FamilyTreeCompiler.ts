@@ -14,12 +14,17 @@ function semesterKey(s: string): [number, number] {
   return [year, order];
 }
 
-function sortSemesters(semesters: string[]): string[] {
+function sortSemestersChronological(semesters: string[]): string[] {
   return [...semesters].sort((a, b) => {
     const [yA, oA] = semesterKey(a);
     const [yB, oB] = semesterKey(b);
     return yA !== yB ? yA - yB : oA - oB;
   });
+}
+
+/** Newest first (reverse chronological) for UI dropdowns and tree.json order */
+function sortSemestersReverseChronological(semesters: string[]): string[] {
+  return sortSemestersChronological(semesters).reverse();
 }
 
 function buildEboardMetadata(tree: Brother[]): {
@@ -46,7 +51,7 @@ function buildEboardMetadata(tree: Brother[]): {
 
   const byPosition: Record<string, Record<string, string>> = {};
   for (const [position, semesterToId] of Object.entries(byPositionRaw)) {
-    const sorted = sortSemesters(Object.keys(semesterToId));
+    const sorted = sortSemestersReverseChronological(Object.keys(semesterToId));
     byPosition[position] = {};
     for (const s of sorted) byPosition[position][s] = semesterToId[s];
   }
@@ -61,7 +66,9 @@ function buildEboardMetadata(tree: Brother[]): {
     }
   }
 
-  const sortedSemesterKeys = sortSemesters(Object.keys(bySemester));
+  const sortedSemesterKeys = sortSemestersReverseChronological(
+    Object.keys(bySemester),
+  );
   const bySemesterSorted: Record<string, Record<string, string>> = {};
   for (const s of sortedSemesterKeys) bySemesterSorted[s] = bySemester[s];
 
